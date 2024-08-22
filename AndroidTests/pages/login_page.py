@@ -15,4 +15,9 @@ class LoginPage(BasePage):
     def click_login(self):
         self.click(self.login_button)
 
-
+class footer_main_page(BasePage):
+    accounts_button = (AppiumBy.ID, "net.kicb.ibankprod.dev:id/navigation_account")
+    payments_button = (AppiumBy.ID, "net.kicb.ibankprod.dev:id/navigation_payments")
+    qr_button = (AppiumBy.ID, "net.kicb.ibankprod.dev:id/navigation_qr")
+    services_button = (AppiumBy.ID, "net.kicb.ibankprod.dev:id/navigation_showcase")
+    history_button = (AppiumBy.ID, "net.kicb.ibankprod.dev:id/navigation_history")

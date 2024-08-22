@@ -70,14 +70,6 @@
                   <llm>
                     <model value="anthropic/claude-3-5-sonnet-20240620" />
                     <provider value="Anthropic" />
-                    <tags>
-                      <list>
-                        <option value="gateway" />
-                        <option value="accuracy" />
-                        <option value="recommended" />
-                        <option value="free" />
-                      </list>
-                    </tags>
                     <title value="Claude 3.5 Sonnet" />
                     <usage>
                       <list>
@@ -122,14 +114,6 @@
                   <llm>
                     <model value="anthropic/claude-3-5-sonnet-20240620" />
                     <provider value="Anthropic" />
-                    <tags>
-                      <list>
-                        <option value="gateway" />
-                        <option value="accuracy" />
-                        <option value="recommended" />
-                        <option value="free" />
-                      </list>
-                    </tags>
                     <title value="Claude 3.5 Sonnet" />
                     <usage>
                       <list>
@@ -146,14 +130,6 @@
                   <llm>
                     <model value="anthropic/claude-3-5-sonnet-20240620" />
                     <provider value="Anthropic" />
-                    <tags>
-                      <list>
-                        <option value="gateway" />
-                        <option value="accuracy" />
-                        <option value="recommended" />
-                        <option value="free" />
-                      </list>
-                    </tags>
                     <title value="Claude 3.5 Sonnet" />
                     <usage>
                       <list>
@@ -191,14 +167,6 @@
                   <llm>
                     <model value="anthropic/claude-3-5-sonnet-20240620" />
                     <provider value="Anthropic" />
-                    <tags>
-                      <list>
-                        <option value="gateway" />
-                        <option value="accuracy" />
-                        <option value="recommended" />
-                        <option value="free" />
-                      </list>
-                    </tags>
                     <title value="Claude 3.5 Sonnet" />
                     <usage>
                       <list>
@@ -215,14 +183,6 @@
                   <llm>
                     <model value="anthropic/claude-3-5-sonnet-20240620" />
                     <provider value="Anthropic" />
-                    <tags>
-                      <list>
-                        <option value="gateway" />
-                        <option value="accuracy" />
-                        <option value="recommended" />
-                        <option value="free" />
-                      </list>
-                    </tags>
                     <title value="Claude 3.5 Sonnet" />
                     <usage>
                       <list>
@@ -232,6 +192,12 @@
                     </usage>
                   </llm>
                 </llm>
+              </chat>
+              <chat>
+                <internalId value="06388ac6-3936-4b71-8391-d9393805b764" />
+              </chat>
+              <chat>
+                <internalId value="bea237d6-d4c2-4fd5-bb07-1019a3a341bf" />
               </chat>
             </list>
           </chats>
