@@ -1,9 +1,9 @@
-from AndroidTests.utils.adb_utils import ADBUtils
+from AndroidTests.utils.adb_utils import ADBUtils_otp
 
 class OTPPage:
     def __init__(self):
-        self.adb = ADBUtils()
-    otp = "111111"
+        self.adb = ADBUtils_otp()
 
-    def enter_otp(user, otp):
-        user.adb.enter_text_via_adb(otp)
+    def enter_otp(self, otp):
+        self.adb.enter_text_via_adb(otp)
+

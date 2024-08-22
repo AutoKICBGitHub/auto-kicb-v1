@@ -12,7 +12,7 @@ capabilities = {
     'locale': 'US',
     'platformVersion': '12'
 }
-
+adb_path = r'C:\platform-tools\adb.exe'
 capabilities_options = UiAutomator2Options().load_capabilities(capabilities)
 appium_server_url = 'http://localhost:4723'
 
