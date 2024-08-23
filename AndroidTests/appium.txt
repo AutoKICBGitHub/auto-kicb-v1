@@ -1,0 +1,20 @@
+cd C:\platform-tools
+adb shell dumpsys window | find "mCurrentFocus"
+
+mCurrentFocus=Window{3a77f6a u0 net.kicb.ibankprod.dev/net.kicb.newibank.activity.MainActivity}
+
+
+{
+  "platformName": "Android",
+  "appium:automationName": "uiautomator2",
+  "appium:deviceName": "e8d72950",
+  "appium:platformVersion": "12",
+  "appium:appPackage": "net.kicb.ibankprod.dev",
+  "appium:appActivity": "net.kicb.newibank.activity.MainActivity",
+  "appium:noReset": "true",
+  "appium:secure": "true"
+}
+
+
+
+cd ../../../../../../
