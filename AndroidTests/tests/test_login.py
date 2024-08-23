@@ -1,58 +1,62 @@
 import pytest
 import time
-from AndroidTests.pages.login_page import LoginPage
-from AndroidTests.utils.adb_utils import ADBUtils_otp
-from AndroidTests.utils.adb_utils import ADBUtils_coords
+from AndroidTests.pages.login_page import LoginPage, FooterMainPage
+from AndroidTests.pages.payments_page import PaymentsTopUp
+from AndroidTests.utils.adb_utils import ADBUtils
 from AndroidTests.users import get_user
+from AndroidTests.pages.Visa_AFT import Visa_AFT
+from AndroidTests.Visa_card_info import get_visa_card
 
 @pytest.fixture()
 def driver(appium_driver):
     return appium_driver
 
-class login_user_3_steps:
-    def test_login(driver):
-        user = get_user('1')
+class LoginUser3Steps:
+    def test_login(self, driver):
+        user = get_user('3')
         login_page = LoginPage(driver)
-        # home_page = HomePage(driver)
+        login_page.wait_for_page_to_load()  # Ожидание загрузки страницы логина
         login_page.enter_username(user.username)
         login_page.enter_password(user.password)
         login_page.click_login()
         time.sleep(2)
 
-    def test_otp_page(driver):
-        user = get_user('1')
-        ADBUtils_otp.enter_otp_via_adb(user.otp)
+    def test_otp_page(self, driver):
+        user = get_user('3')
+        ADBUtils.enter_otp_via_adb(user.otp)
         time.sleep(1)
 
-    def test_phone_password(driver):
-        x = 106
-        y = 2240
-        z = 750
-        c = 1100
-        ADBUtils_coords.click_by_coordinates(ADBUtils_coords.click_by_coordinates, x, y)
-        ADBUtils_coords.enter_pin_code_via_adb(ADBUtils_coords.enter_pin_code_via_adb, "3385")
-        ADBUtils_coords.click_by_coordinates(ADBUtils_coords.click_by_coordinates, z, c)
-
-
-
-
+    def test_phone_password(self, driver):
+        ADBUtils.click_by_coordinates(106, 2240)
+        ADBUtils.enter_pin_code_via_adb("3385")
+        ADBUtils.click_by_coordinates(750, 1100)
 
 def test_login_init(driver):
-    login_user_3_steps.test_login(driver)
-    login_user_3_steps.test_otp_page(driver)
-    login_user_3_steps.test_phone_password(driver)
+    steps = LoginUser3Steps()
+    steps.test_login(driver)
+    steps.test_otp_page(driver)
+    steps.test_phone_password(driver)
 
-# def test_enter_visa_details(driver):
-#     AFT = Visa_AFT(driver)
-#     footer_main_page.payments_button.click()
-#     payments_top_up.Visa_top_up_button.click()
-#     card = get_visa_card('Anna_Mironova')
-#     AFT.click(Visa_AFT.bank_account_parent_layout_AFT)
-#     AFT.send_keys(driver, Visa_AFT.card_number_input_AFT, card.card_number)
-#     AFT.send_keys(driver, Visa_AFT.full_name_AFT, card.full_name)
-#     AFT.send_keys(driver, Visa_AFT.expiry_date_AFT, card.expiry_date)
-#     AFT.send_keys(driver, Visa_AFT.security_code_AFT, card.security_code)
-#     AFT.send_keys(driver, Visa_AFT.amount_to_transfer_AFT, card.amount_to_transfer)
-#     AFT.click(Visa_AFT.submit_button_AFT)
-#     time.sleep(2)
+def test_enter_visa_details(driver):
+    footer = FooterMainPage(driver)
+    footer.wait_for_page_to_load()  # Ожидание загрузки элементов футера
+    footer.click(footer.payments_button)
 
+    top_up = PaymentsTopUp(driver)
+    top_up.wait_for_page_to_load()  # Ожидание загрузки элементов страницы пополнения
+    top_up.click(top_up.Visa_top_up_button)
+
+    card = get_visa_card('Anna_Mironova')
+    AFT = Visa_AFT(driver)
+    AFT.wait_for_page_to_load()  # Ожидание загрузки элементов страницы Visa AFT
+
+    AFT.click(AFT.bank_account_parent_layout_AFT)
+    AFT.click(AFT.select_bank_account_AFT)
+    AFT.send_keys(AFT.card_number_input_AFT, card.card_number)
+    AFT.send_keys(AFT.full_name_AFT, card.full_name)
+    AFT.send_keys(AFT.expiry_date_AFT, card.expiry_date)
+    AFT.send_keys(AFT.security_code_AFT, card.security_code)
+    AFT.send_keys(AFT.amound_to_transfer_AFT, card.amount_to_transfer)
+
+    AFT.click(AFT.submit_button_AFT)
+    time.sleep(2)

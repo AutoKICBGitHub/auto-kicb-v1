@@ -5,9 +5,8 @@ class User:
         self.otp = otp
 
 users = {
-    '1': User(username="00727272", password="password1", otp="111111"),
-    '2': User(username="aigerimk", password="password1", otp="111111"),
-    # Добавьте других пользователей по мере необходимости
+    '1': User(username="aigerimk", password="password1", otp="111111"),
+    '3': User(username="aigerimk", password="password1", otp="111111"),
 }
 
 def get_user(name):
