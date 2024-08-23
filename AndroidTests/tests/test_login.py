@@ -36,21 +36,19 @@ def test_login_init(driver):
     steps.test_login(driver)
     steps.test_otp_page(driver)
     steps.test_phone_password(driver)
+    time.sleep(15)
 
 def test_enter_visa_details(driver):
     footer = FooterMainPage(driver)
-    footer.wait_for_page_to_load()  # Ожидание загрузки элементов футера
     footer.click(footer.payments_button)
-
     top_up = PaymentsTopUp(driver)
-    top_up.wait_for_page_to_load()  # Ожидание загрузки элементов страницы пополнения
     top_up.click(top_up.Visa_top_up_button)
-
+    time.sleep(10)
     card = get_visa_card('Anna_Mironova')
     AFT = Visa_AFT(driver)
-    AFT.wait_for_page_to_load()  # Ожидание загрузки элементов страницы Visa AFT
 
     AFT.click(AFT.bank_account_parent_layout_AFT)
+    time.sleep(5)
     AFT.click(AFT.select_bank_account_AFT)
     AFT.send_keys(AFT.card_number_input_AFT, card.card_number)
     AFT.send_keys(AFT.full_name_AFT, card.full_name)
