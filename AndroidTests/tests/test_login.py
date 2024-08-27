@@ -37,8 +37,9 @@ def test_login_init(driver):
     steps.test_otp_page(driver)
     steps.test_phone_password(driver)
 
+
 def test_enter_visa_details(driver):
-    
+
     footer = FooterMainPage(driver)
     footer.click(footer.payments_button)
     top_up = PaymentsTopUp(driver)
