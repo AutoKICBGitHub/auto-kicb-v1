@@ -78,4 +78,4 @@ def test_average_load_time(load_times):
         print(f"Среднее время загрузки страницы: {average_load_time:.2f} секунд")
 
         for i, load_time in enumerate(load_times, start=1):
-            assert load_time < 120, f"Время загрузки страницы на запуске {i} слишком велико"
+            assert load_time < 120, f"0Время загрузки страницы на запуске {i} слишком велико"
