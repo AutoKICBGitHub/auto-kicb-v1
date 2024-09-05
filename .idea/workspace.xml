@@ -7,7 +7,8 @@
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webTest/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/webTest/test_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webTest/test3.py" beforeDir="false" afterPath="$PROJECT_DIR$/webTest/test_auth_without_accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webTest/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/webTest/test_auth_accounts_tenge.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,22 +73,7 @@
       <recent name="C:\web_auto_proj\auto-kicb-v1\androidTest" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_auth.test_run">
-    <configuration name="Python tests for test_auth.test_run" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webTest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_auth.test_run&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for webTest.test_auth_accounts_tenge">
     <configuration name="Python tests for tests.test_enter_visa_details" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,7 +104,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_auth.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for webTest.test_auth_accounts_tenge" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,7 +115,22 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/webTest/test_auth.py&quot;" />
+      <option name="_new_target" value="&quot;webTest.test_auth_accounts_tenge&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_auth_accounts_tenge.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webTest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/webTest/test_auth_accounts_tenge.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -150,8 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_auth.test_run" />
-        <item itemvalue="Python tests.Python tests in test_auth.py" />
+        <item itemvalue="Python tests.Python tests for webTest.test_auth_accounts_tenge" />
+        <item itemvalue="Python tests.Python tests in test_auth_accounts_tenge.py" />
         <item itemvalue="Python tests.Python tests for tests.test_enter_visa_details" />
         <item itemvalue="Python tests.Python tests for tests.test_login_init" />
         <item itemvalue="Python tests.Python tests in test_login.py" />
@@ -201,6 +202,8 @@
       <workItem from="1724996760310" duration="2892000" />
       <workItem from="1725338745129" duration="11632000" />
       <workItem from="1725419025369" duration="3852000" />
+      <workItem from="1725443061305" duration="5044000" />
+      <workItem from="1725450850573" duration="2189000" />
     </task>
     <servers />
   </component>

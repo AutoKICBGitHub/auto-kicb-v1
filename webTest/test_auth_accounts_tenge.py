@@ -66,7 +66,7 @@ def run(playwright: Playwright, run_number: int, load_times: list) -> None:
     print(f"[Запуск {run_number}] Продолжительность теста: {test_end_time - test_start_time}")
 
 
-@pytest.mark.parametrize("run_number", range(1, 51))
+@pytest.mark.parametrize("run_number", range(1, 151))
 def test_sequential_runs(run_number, load_times):
     with sync_playwright() as playwright:
         run(playwright, run_number, load_times)
