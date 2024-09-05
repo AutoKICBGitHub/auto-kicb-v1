@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webTest/test3.py" beforeDir="false" afterPath="$PROJECT_DIR$/webTest/test_auth_without_accounts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webTest/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/webTest/test_auth_accounts_tenge.py" afterDir="false" />
-    </list>
+    <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +198,7 @@
       <workItem from="1725338745129" duration="11632000" />
       <workItem from="1725419025369" duration="3852000" />
       <workItem from="1725443061305" duration="5044000" />
-      <workItem from="1725450850573" duration="2189000" />
+      <workItem from="1725450850573" duration="2818000" />
     </task>
     <servers />
   </component>
