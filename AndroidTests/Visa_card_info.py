@@ -10,7 +10,7 @@ class VisaCard:
 
 
 visa_cards = {
-    'Anna_Mironova': VisaCard(card_number="4446732000690489", full_name="ANNA MIRONOVA", expiry_date="09/26", security_code="625", amount_to_transfer="1"),
+    '1': VisaCard(card_number="4446732000690489", full_name="ANNA MIRONOVA", expiry_date="09/26", security_code="625", amount_to_transfer="1"),
     '2': VisaCard(card_number="4222222222222222", full_name="Jane Doe", expiry_date="11/24", security_code="456", amount_to_transfer="500"),
     # Add more Visa card details as needed
 }

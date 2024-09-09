@@ -18,3 +18,6 @@ class ADBUtils:
         time.sleep(2)
         command = f'{adb_path} shell input text {pin_code}'
         subprocess.run(command, shell=True)
+
+
+

@@ -10,7 +10,7 @@ capabilities = {
     'appActivity': 'net.kicb.newibank.activity.MainActivity',
     'language': 'en',
     'locale': 'US',
-    'platformVersion': '12'
+    'platformVersion': '10'
 }
 adb_path = r'C:\\platform-tools\\adb.exe'
 capabilities_options = UiAutomator2Options().load_capabilities(capabilities)
