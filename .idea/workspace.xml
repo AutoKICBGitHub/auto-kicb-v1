@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/account_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/history_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/login_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/messages_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/otp_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/payments_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/pages/profile_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/tests/test_currency_exchange.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/utils/otp_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/Web_test_page_object/utils/users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webTest/web_prod_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidTests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AndroidTests/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidTests/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTests/useless_tests/1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTests/useless_tests/2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTests/useless_tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTests/utils/TouchActions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTests/utils/adb_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidTests/utils/adb_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,54 +96,70 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project_kicb\webTest" />
+      <recent name="C:\project_kicb" />
+      <recent name="C:\project_kicb\webTest\Web_test_page_object" />
       <recent name="C:\web_auto_proj\auto-kicb-v1\AndroidTests" />
       <recent name="C:\web_auto_proj\auto-kicb-v1\androidTest\useless_tests" />
-      <recent name="C:\web_auto_proj\auto-kicb-v1\androidTest" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_enter_visa_details">
-    <configuration name="Python tests for tests.test_enter_visa_details" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_currency_exchange.test_currency_exchange">
+    <configuration name="web_prod_tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AndroidTests/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_enter_visa_details&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.test_login_init" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AndroidTests/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_login_init&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for webTest.test_auth_accounts_tenge" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\project_kicb\webTest\web_prod_tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="web_prod_tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webTest/Web_test_page_object" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\project_kicb\webTest\web_prod_tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_currency_exchange.test_currency_exchange" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webTest/Web_test_page_object/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;webTest.test_auth_accounts_tenge&quot;" />
+      <option name="_new_target" value="&quot;test_currency_exchange.test_currency_exchange&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -168,6 +193,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_currency_exchange.test_currency_exchange" />
+        <item itemvalue="Python.web_prod_tests (1)" />
+        <item itemvalue="Python.web_prod_tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -221,6 +253,9 @@
       <workItem from="1725537377336" duration="1158000" />
       <workItem from="1725856350287" duration="758000" />
       <workItem from="1725878788535" duration="4426000" />
+      <workItem from="1725937061433" duration="3059000" />
+      <workItem from="1725941487590" duration="3692000" />
+      <workItem from="1725949082567" duration="12238000" />
     </task>
     <servers />
   </component>
@@ -240,9 +275,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/projects$test.coverage" NAME="test Coverage Results" MODIFIED="1720681762749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/project_kicb$web_prod_tests.coverage" NAME="web_prod_tests Coverage Results" MODIFIED="1725949546287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
+    <SUITE FILE_PATH="coverage/project_kicb$web_prod_tests__1_.coverage" NAME="web_prod_tests (1) Coverage Results" MODIFIED="1725949664489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest/Web_test_page_object" />
     <SUITE FILE_PATH="coverage/auto_kicb_v1$.coverage" NAME=" Coverage Results" MODIFIED="1724302055604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AndroidTests/tests" />
     <SUITE FILE_PATH="coverage/projects$.coverage" NAME=" Coverage Results" MODIFIED="1723631531442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/androidTest" />
-    <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1725339882592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
+    <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1725962054553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest/Web_test_page_object/tests" />
     <SUITE FILE_PATH="coverage/projects$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1720774570992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
   </component>
 </project>
