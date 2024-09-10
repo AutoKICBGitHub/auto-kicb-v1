@@ -1,5 +1,4 @@
-from webTest.Web_test_page_object.utils import users
-
+import time
 class LoginPage:
     def __init__(self, page):
         self.page = page
@@ -13,4 +12,7 @@ class LoginPage:
         self.page.locator("input[type=\"text\"]").press("Tab")
         self.page.locator("input[type=\"password\"]").wait_for(timeout=30000)
         self.page.locator("input[type=\"password\"]").fill(password)
-        self.page.locator("input[type=\"password\"]").press("Enter")
+        self.page.locator("//div [@class='auth-form__buttons'] //button").nth(0).is_enabled()
+        self.page.locator("//div [@class='auth-form__buttons'] //button").nth(0).click()
+        self.page.locator("//div [@class='auth-form__buttons'] //button").nth(0).click()
+        self.page.locator("//div [@class='auth-form__buttons'] //button").nth(0).click()
