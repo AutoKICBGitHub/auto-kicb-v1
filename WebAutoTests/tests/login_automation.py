@@ -40,14 +40,21 @@ class LoginAutomation:
             logger.error("Карты не удалось загрузить после нескольких попыток.")
             self.page.reload()
 
-class PaymentExchangeUsdKgs(PaymentsPage):
+class PaymentExchangeUsdKgs:
     def __init__(self, page):
-        super().__init__(page)
+        # Assume 'page' is passed in and is already initialized
+        self.page = page
+
+        # Initialize PaymentsPage with the existing page object
+        self.payments_page = PaymentsPage(self.page)
 
     def perform_exchange(self):
-        self.open_payments()
-        self.open_exchange()
-        self.exchange_usd_kgs()
+        # Call methods to perform the currency exchange
+        self.payments_page.open_payments()  # Open the payments page
+        self.payments_page.open_exchange()  # Navigate to the exchange section
+        self.payments_page.exchange_usd_kgs()  # Perform the USD to KGS exchange
+
+
 
 
 def close(self):
