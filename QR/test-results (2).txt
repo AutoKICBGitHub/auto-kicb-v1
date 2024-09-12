@@ -1,0 +1,40 @@
+Constraints Warning: Restrictive constraints. Output will not contain following values: 
+  Type_of_bank_credit: Mbank-KICB
+Constraints Warning: All or no values satisfy relation [Type_of_BIC_credit] = "533"
+Type_of_user	Type_of_acc	Type_of_tariff	Type_of_tariffs	Type_of_BIC	Type_of_cur	Type_of_user_credit	Type_of_acc_credit	Type_of_tariff_credit	Type_of_tariffs_credit	Type_of_BIC_credit	Type_of_bank_credit	Type_of_cur_credit
+CORP	Account	Ind	Ind-Corp	001	KGS_USD	CORP	Card	Ind	Ind-Corp	___533	KICB-Mbank	USD_KGS
+IND	Card	Ind	Ind-Corp	___533	USD_USD	GOV	Account	Ind	Ind-Gov		001	KICB-KICB	KGS_USD
+GOV	Account	Glob	Gov-Gov		___533	USD_KGS	IND	Account	Ind	Ind-Corp	___533	KICB-KICB	KGS_KGS
+GOV	Card	Ind	Ind-Ind		001	KGS_KGS	IND	Card	Glob	Glob-Corp	001	KICB-Mbank	USD_USD
+CORP	Card	Glob	Gov-Gov		___533	USD_KGS	CORP	Card	Glob	Gov-Ind		001	KICB-KICB	USD_USD
+IND	Account	Ind	Ind-Corp	001	USD_USD	GOV	Account	Glob	Glob-Corp	___533	KICB-Mbank	KGS_KGS
+CORP	Card	Glob	Gov-Gov		___533	KGS_KGS	GOV	Account	Ind	Ind-Gov		___533	KICB-Mbank	USD_KGS
+IND	Card	Ind	Ind-Ind		001	KGS_USD	GOV	Card	Ind	Ind-Corp	___533	KICB-KICB	KGS_USD
+GOV	Account	Glob	Glob-Corp	001	KGS_USD	CORP	Account	Glob	Gov-Ind		___533	KICB-Mbank	KGS_USD
+IND	Account	Glob	Gov-Gov		___533	KGS_USD	IND	Card	Glob	Glob-Corp	001	KICB-KICB	KGS_USD
+GOV	Account	Glob	Glob-Corp	___533	USD_USD	GOV	Card	Ind	Ind-Gov		001	KICB-KICB	USD_USD
+CORP	Account	Glob	Gov-Gov		001	USD_USD	IND	Account	Glob	Gov-Gov		001	KICB-KICB	USD_KGS
+IND	Card	Ind	Ind-Corp	001	USD_KGS	CORP	Card	Glob	Gov-Gov		___533	KICB-Mbank	USD_USD
+CORP	Card	Ind	Ind-Corp	___533	KGS_KGS	CORP	Card	Ind	Ind-Ind		001	KICB-KICB	KGS_KGS
+IND	Card	Glob	Glob-Corp	001	KGS_KGS	IND	Account	Ind	Ind-Corp	001	KICB-Mbank	USD_KGS
+IND	Card	Glob	Gov-Ind		___533	USD_KGS	GOV	Card	Glob	Gov-Ind		001	KICB-KICB	USD_KGS
+IND	Account	Ind	Ind-Gov		001	USD_KGS	IND	Account	Ind	Ind-Ind		___533	KICB-Mbank	KGS_USD
+CORP	Account	Glob	Glob-Corp	001	KGS_USD	GOV	Account	Ind	Ind-Ind		___533	KICB-KICB	USD_USD
+GOV	Account	Ind	Ind-Ind		___533	USD_USD	CORP	Account	Ind	Ind-Ind		___533	KICB-KICB	USD_KGS
+GOV	Card	Ind	Ind-Gov		___533	USD_USD	CORP	Card	Ind	Ind-Corp	001	KICB-KICB	USD_USD
+CORP	Account	Glob	Gov-Ind		001	KGS_KGS	IND	Account	Ind	Ind-Corp	___533	KICB-Mbank	KGS_USD
+GOV	Account	Glob	Gov-Ind		___533	KGS_USD	GOV	Card	Glob	Gov-Gov		___533	KICB-KICB	KGS_KGS
+CORP	Account	Ind	Ind-Ind		___533	KGS_KGS	IND	Account	Glob	Gov-Gov		001	KICB-Mbank	KGS_USD
+CORP	Card	Ind	Ind-Ind		001	USD_KGS	IND	Card	Ind	Ind-Gov		001	KICB-Mbank	KGS_KGS
+CORP	Account	Glob	Gov-Ind		001	USD_KGS	CORP	Account	Glob	Glob-Corp	___533	KICB-KICB	USD_USD
+GOV	Account	Ind	Ind-Corp	___533	USD_USD	IND	Card	Glob	Gov-Ind		001	KICB-Mbank	KGS_KGS
+GOV	Account	Glob	Gov-Ind		001	USD_USD	CORP	Account	Ind	Ind-Gov		001	KICB-KICB	KGS_KGS
+IND	Card	Ind	Ind-Ind		___533	KGS_KGS	GOV	Account	Glob	Gov-Ind		001	KICB-KICB	KGS_KGS
+CORP	Account	Glob	Glob-Corp	001	USD_KGS	GOV	Account	Glob	Gov-Gov		___533	KICB-Mbank	KGS_KGS
+IND	Card	Glob	Gov-Ind		001	USD_USD	IND	Account	Ind	Ind-Ind		001	KICB-KICB	USD_USD
+CORP	Account	Ind	Ind-Gov		001	KGS_USD	GOV	Account	Ind	Ind-Gov		001	KICB-Mbank	USD_KGS
+IND	Card	Glob	Glob-Corp	___533	USD_KGS	GOV	Account	Glob	Glob-Corp	___533	KICB-Mbank	USD_KGS
+IND	Card	Glob	Gov-Gov		001	KGS_KGS	CORP	Account	Ind	Ind-Ind		___533	KICB-Mbank	KGS_KGS
+CORP	Card	Ind	Ind-Gov		___533	KGS_KGS	GOV	Card	Glob	Gov-Ind		___533	KICB-KICB	KGS_KGS
+IND	Card	Ind	Ind-Gov		___533	USD_USD	CORP	Card	Glob	Gov-Gov		001	KICB-KICB	KGS_USD
+IND	Card	Ind	Ind-Gov		___533	KGS_USD	GOV	Account	Glob	Glob-Corp	001	KICB-Mbank	KGS_USD
