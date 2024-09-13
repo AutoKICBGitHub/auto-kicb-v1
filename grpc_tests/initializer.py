@@ -1,5 +1,5 @@
 import uuid
-from grpc_tests.Arrays.operations_data import operations  # Импортируем массив операций из файла
+from grpc_tests.Arrays.operations_data import operations
 
 class Generatives:
     """Класс для генерации UUID и работы с массивом данных."""

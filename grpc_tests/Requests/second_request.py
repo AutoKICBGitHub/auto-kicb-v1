@@ -1,8 +1,8 @@
 import grpc
 import json
 from google.protobuf.json_format import MessageToDict
-from protofile_pb2_grpc import WebTransferApiStub
-from webTransferApi_pb2 import IncomingWebTransfer
+from grpc_tests.Protofiles.protofile_pb2_grpc import WebTransferApiStub
+from grpc_tests.Protofiles.webTransferApi_pb2 import IncomingWebTransfer
 
 def make_request(uuid, operation_data):
     channel = grpc.secure_channel('newibanktest.kicb.net:443', grpc.ssl_channel_credentials())
