@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/QR/final.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QR/final_optimized_tariff_flows1.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QR/full_tariff_flows_with_directions.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QR/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QR/main1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QR/main2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QR/test-results (2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Arrays/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Arrays/operations_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Arrays/positive_customers_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/protofile.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/protofile_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/protofile_pb2_grpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/webTransferApi.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/webTransferApi_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Protofiles/webTransferApi_pb2_grpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Requests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Requests/first_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/Requests/second_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/SQL/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/SQL/db_connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/confirmTransfer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_tests/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,51 +66,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python tests.Python tests for test.test_find_battery.executor": "Run",
-    "Python tests.Python tests for test.test_login.executor": "Run",
-    "Python tests.Python tests for test.test_open_accounts.executor": "Run",
-    "Python tests.Python tests in test.py.executor": "Run",
-    "Python.test (1).executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/project_bot_janat",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test.test_find_battery.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test.test_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test.test_open_accounts.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/project_kicb/grpc&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project_kicb\grpc" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project_kicb\grpc_tests\Arrays" />
+      <recent name="C:\project_kicb\grpc_tests\Protofiles" />
+      <recent name="C:\project_kicb\grpc_tests\SQL" />
+      <recent name="C:\project_kicb\grpc_tests\Requests" />
       <recent name="C:\project_kicb\WebAutoTests" />
-      <recent name="C:\project_kicb\webTest" />
-      <recent name="C:\project_kicb" />
-      <recent name="C:\project_kicb\webTest\Web_test_page_object" />
-      <recent name="C:\web_auto_proj\auto-kicb-v1\AndroidTests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main2">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.db_connection (1)">
+    <configuration name="db_connection (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,12 +121,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QR" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests/SQL" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QR/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/SQL/db_connection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="db_connection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,12 +143,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QR" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QR/main1.py" />
+      <option name="SCRIPT_NAME" value="C:\project_kicb\grpc_tests\SQL\db_connection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="first_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -149,12 +165,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QR" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QR/main2.py" />
+      <option name="SCRIPT_NAME" value="C:\project_kicb\grpc_tests\Requests\first_request.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,7 +179,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="web_prod_tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="initializer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -171,12 +187,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webTest/Web_test_page_object" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\project_kicb\webTest\web_prod_tests.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/initializer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,43 +201,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for WebAutoTests.tests.test_runs.test_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="second_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebAutoTests/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;WebAutoTests.tests.test_runs.test_login&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in main.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QR" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/QR/main.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="C:\project_kicb\grpc_tests\Requests\second_request.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main2" />
-        <item itemvalue="Python.main1" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests in main.py" />
-        <item itemvalue="Python tests.Python tests for WebAutoTests.tests.test_runs.test_login" />
+        <item itemvalue="Python.db_connection (1)" />
+        <item itemvalue="Python.db_connection" />
+        <item itemvalue="Python.initializer" />
+        <item itemvalue="Python.second_request (1)" />
+        <item itemvalue="Python.first_request (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -285,6 +293,8 @@
       <workItem from="1726042298599" duration="148000" />
       <workItem from="1726062541814" duration="5940000" />
       <workItem from="1726111223439" duration="68000" />
+      <workItem from="1726136931473" duration="8042000" />
+      <workItem from="1726196883056" duration="13916000" />
     </task>
     <servers />
   </component>
@@ -309,12 +319,21 @@
     <SUITE FILE_PATH="coverage/projects$test.coverage" NAME="test Coverage Results" MODIFIED="1720681762749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/project_kicb$web_prod_tests.coverage" NAME="web_prod_tests Coverage Results" MODIFIED="1725949546287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
     <SUITE FILE_PATH="coverage/project_kicb$web_prod_tests__1_.coverage" NAME="web_prod_tests (1) Coverage Results" MODIFIED="1725949664489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest/Web_test_page_object" />
+    <SUITE FILE_PATH="coverage/project_kicb$first_request__1_.coverage" NAME="first_request (1) Coverage Results" MODIFIED="1726144270467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
+    <SUITE FILE_PATH="coverage/project_kicb$db_connection.coverage" NAME="db_connection Coverage Results" MODIFIED="1726224576441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
+    <SUITE FILE_PATH="coverage/project_kicb$first_request.coverage" NAME="first_request Coverage Results" MODIFIED="1726142625124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
+    <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1726063539445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
+    <SUITE FILE_PATH="coverage/project_kicb$second_request.coverage" NAME="second_request Coverage Results" MODIFIED="1726142692154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
+    <SUITE FILE_PATH="coverage/projects$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1720774570992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
+    <SUITE FILE_PATH="coverage/project_kicb$webTransferApi_pb2.coverage" NAME="webTransferApi_pb2 Coverage Results" MODIFIED="1726138791186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
+    <SUITE FILE_PATH="coverage/project_kicb$initializer.coverage" NAME="initializer Coverage Results" MODIFIED="1726205887290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
     <SUITE FILE_PATH="coverage/auto_kicb_v1$.coverage" NAME=" Coverage Results" MODIFIED="1724302055604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AndroidTests/tests" />
     <SUITE FILE_PATH="coverage/projects$.coverage" NAME=" Coverage Results" MODIFIED="1723631531442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/androidTest" />
-    <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1726063539445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
     <SUITE FILE_PATH="coverage/project_kicb$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1726066558666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
     <SUITE FILE_PATH="coverage/project_kicb$main.coverage" NAME="main Coverage Results" MODIFIED="1726064469106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
-    <SUITE FILE_PATH="coverage/projects$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1720774570992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
     <SUITE FILE_PATH="coverage/project_kicb$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1726108812691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
+    <SUITE FILE_PATH="coverage/project_kicb$confirmTransfer.coverage" NAME="confirmTransfer Coverage Results" MODIFIED="1726140928459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
+    <SUITE FILE_PATH="coverage/project_kicb$second_request__1_.coverage" NAME="second_request (1) Coverage Results" MODIFIED="1726144277290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
+    <SUITE FILE_PATH="coverage/project_kicb$db_connection__1_.coverage" NAME="db_connection (1) Coverage Results" MODIFIED="1726224889759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
   </component>
 </project>
