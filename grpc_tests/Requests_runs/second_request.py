@@ -37,4 +37,4 @@ def make_request(uuid, operation_data):
     except grpc.RpcError as e:
         # Handle RPC errors
         print(f'Ошибка от Query service: {e.code()}, {e.details()}')
-        return {'error': {'code': e.code(), 'details': e.details()}}
+        return {'error': {'code': e.code(), 'details': e.details(), 'requestBody': request()}}
