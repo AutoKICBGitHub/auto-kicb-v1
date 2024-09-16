@@ -23,7 +23,7 @@ def make_request(uuid, operation_data):
         "accountCreditPropValue": '255',
         "accountCreditPropType": 'ACCOUNT_NO',
         "paymentPurpose": 'Payment for services',
-        "amountDebit": '100',
+        "amountDebit": '10.30',
         "valueDate": None,
         "knp": None,
         "theirRefNo": None,
