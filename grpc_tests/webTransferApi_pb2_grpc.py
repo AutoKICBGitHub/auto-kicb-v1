@@ -17,10 +17,10 @@ except ImportError:
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc_tests package installed is at version {GRPC_VERSION},'
+        f'The grpc package installed is at version {GRPC_VERSION},'
         + f' but the generated code in webTransferApi_pb2_grpc.py depends on'
         + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc_tests module to grpcio>={GRPC_GENERATED_VERSION}'
+        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
         + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
     )
 
@@ -32,7 +32,7 @@ class WebTransferApiStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.makeWebTransfer = channel.unary_unary(
                 '/web_transfer_api.WebTransferApi/makeWebTransfer',

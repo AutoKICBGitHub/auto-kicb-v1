@@ -1,6 +1,6 @@
 import psycopg2
+import json
 import grpc_tests.Arrays.positive_customers_data
-
 
 def get_operations_from_db():
     connection = None
@@ -55,22 +55,25 @@ def get_operations_from_db():
             cursor.close()
             connection.close()
 
-
 def update_positive_customers(customers):
     """Очищает файл positive_customers_data.py и записывает новые результаты"""
     with open("../Arrays/positive_customers_data.py", "w") as file:
-        # Записываем массив в Python-совместимый формат
-        file.write(f"positive_customers = {customers}\n")
+        # Форматируем массив в JSON-совместимый формат с двойными кавычками
+        json_data = json.dumps(customers, indent=4)
+        # Записываем данные в файл
+        file.write(f"positive_customers = {json_data}\n")
         print("Файл positive_customers_data.py обновлен.")
-
 
 # Пример использования функции
 data = get_operations_from_db()
 
 # Если запрос вернул данные, обновляем файл
 if data:
-    # Создаем массив, содержащий как user_id, так и session_key (первое и второе значения из записи)
-    positive_customers = [(record[1], record[4]) for record in data]  # Берем id пользователя и session_key
+    # Создаем массив словарей с ключами sessionkey и accountIdDebit
+    positive_customers = [
+        {"sessionkey": str(record[1]), "accountIdDebit": int(record[4])}
+        for record in data
+    ]
 
     # Обновляем файл positive_customers_data.py
     update_positive_customers(positive_customers)

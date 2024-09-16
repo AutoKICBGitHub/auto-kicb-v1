@@ -1,8 +1,8 @@
 import grpc
 import json
 from google.protobuf.json_format import MessageToDict
-from grpc_tests.Protofiles.protofile_pb2_grpc import WebTransferApiStub
-from grpc_tests.Protofiles.webTransferApi_pb2 import IncomingWebTransfer
+from grpc_tests.protofile_pb2_grpc import WebTransferApiStub
+from grpc_tests.webTransferApi_pb2 import IncomingWebTransfer
 
 # gRPC client setup (без сертификата для тестирования)
 cert_file = 'path/to/ca_certificate.pem'  # Замените на путь к вашему сертификату

@@ -17,10 +17,10 @@ except ImportError:
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc_tests package installed is at version {GRPC_VERSION},'
+        f'The grpc package installed is at version {GRPC_VERSION},'
         + f' but the generated code in protofile_pb2_grpc.py depends on'
         + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc_tests module to grpcio>={GRPC_GENERATED_VERSION}'
+        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
         + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
     )
 
@@ -32,7 +32,7 @@ class WebAuthApiStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.authenticate = channel.unary_unary(
                 '/dmz_api.WebAuthApi/authenticate',
@@ -793,7 +793,7 @@ class StreamServiceStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.beginStream = channel.unary_stream(
                 '/dmz_api.StreamService/beginStream',
@@ -868,7 +868,7 @@ class LogServiceStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.insertLog = channel.unary_unary(
                 '/dmz_api.LogService/insertLog',
@@ -944,7 +944,7 @@ class WebTransferApiStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.makeWebTransfer = channel.unary_unary(
                 '/dmz_api.WebTransferApi/makeWebTransfer',
@@ -1021,7 +1021,7 @@ class WebPaymentApiStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.makeWebPayment = channel.unary_unary(
                 '/dmz_api.WebPaymentApi/makeWebPayment',
@@ -1097,7 +1097,7 @@ class WebDirectoryApiStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.makeWebDirectory = channel.unary_unary(
                 '/dmz_api.WebDirectoryApi/makeWebDirectory',
@@ -1174,7 +1174,7 @@ class WebUtilityApiStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.makeWebUtility = channel.unary_unary(
                 '/dmz_api.WebUtilityApi/makeWebUtility',
@@ -1249,7 +1249,7 @@ class WebAccountApiStub(object):
         """Constructor.
 
         Args:
-            channel: A grpc_tests.Channel.
+            channel: A grpc.Channel.
         """
         self.makeWebAccount = channel.unary_unary(
                 '/dmz_api.WebAccountApi/makeWebAccount',

@@ -43,24 +43,47 @@ class Generatives:
         print(f"Response 2: {self.response2}")
 
     def get_results(self):
-        """Возвращает результаты теста."""
+        """Возвращает результаты теста, включая успешные operationId."""
+        response1_success = self.response1.get('success', False)
+        response2_success = self.response2.get('success', False)
+
+        successful_operation_ids = []
+
+        if response1_success:
+            data = self.response1.get('data', '{}')
+            parsed_data = json.loads(data)
+            operation_id = parsed_data.get('operationId')
+            if operation_id:
+                successful_operation_ids.append(operation_id)
+
+        if response2_success:
+            data = self.response2.get('data', '{}')
+            parsed_data = json.loads(data)
+            operation_id = parsed_data.get('operationId')
+            if operation_id:
+                successful_operation_ids.append(operation_id)
+
         return {
             'accountIdDebit': self.operation.get('accountIdDebit', 'N/A'),
             'response1': str(self.response1),  # Ensure responses are strings
             'response2': str(self.response2),  # Ensure responses are strings
-            'request_time': self.request_time
+            'request_time': self.request_time,
+            'successful_operation_ids': ', '.join(successful_operation_ids)  # Join IDs into a string
         }
 
 if __name__ == "__main__":
     # Список для хранения результатов
     results = []
+    operation_ids = []
 
     # Итерируемся по каждой операции в массиве и запускаем тесты
     for operation in positive_customers:
         print(f"Запуск теста для операции: {operation.get('accountIdDebit', 'N/A')}")
         gen = Generatives(operation)
         gen.run_requests()
-        results.append(gen.get_results())  # Добавляем результаты в список
+        result = gen.get_results()
+        results.append(result)  # Добавляем результаты в список
+        operation_ids.extend(result['successful_operation_ids'].split(', '))  # Добавляем успешные operationId в список
         print("Тест завершен.\n")
         print("Запущенно ожидание между запросами.\n")
         time.sleep(0)  # Установите интервал, если нужно
@@ -76,4 +99,11 @@ if __name__ == "__main__":
     # Записываем данные в Excel
     df.to_excel('test_results.xlsx', index=False)
 
-    print("Данные сохранены в файл test_results.xlsx")
+    # Сохраняем успешные operationId в файл
+    with open('successful_operation_ids.txt', 'w') as f:
+        if operation_ids:
+            f.write('\n'.join(operation_ids))
+        else:
+            f.write("No successful operationIds found.")
+
+    print("Данные сохранены в файл test_results.xlsx и успешные operationId в successful_operation_ids.txt")
