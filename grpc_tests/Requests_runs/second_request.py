@@ -32,7 +32,7 @@ def make_request(uuid, operation_data):
         response = client.makeWebTransfer(request, metadata=metadata)
         response_dict = MessageToDict(response)  # Convert response to a dictionary
         print('Получен ответ от Query service:', response_dict)
-        return response_dict  # Return the response for further use
+        return response_dict, request  # Return the response for further use
 
     except grpc.RpcError as e:
         # Handle RPC errors

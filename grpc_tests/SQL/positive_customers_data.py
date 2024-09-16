@@ -1,18 +1,18 @@
 positive_customers = [
     {
-        "sessionkey": "5lDRJ5nrb1FGYcGDKK2pab",
+        "sessionkey": "26vU1XUb9TEAFu1AG6GIDC",
         "accountIdDebit": 10996
     },
     {
-        "sessionkey": "5lDRJ5nrb1FGYcGDKK2pab",
+        "sessionkey": "26vU1XUb9TEAFu1AG6GIDC",
         "accountIdDebit": 10995
     },
     {
-        "sessionkey": "3FCPbjvSGUPEM9TO1nmrez",
+        "sessionkey": "0x3S5h36L77ZnudwOnGwOe",
         "accountIdDebit": 10996
     },
     {
-        "sessionkey": "3FCPbjvSGUPEM9TO1nmrez",
+        "sessionkey": "0x3S5h36L77ZnudwOnGwOe",
         "accountIdDebit": 10995
     },
     {
@@ -36,139 +36,139 @@ positive_customers = [
         "accountIdDebit": 8727
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 223
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 3587
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 3517
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 186
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 10954
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 175
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 250
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 172
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 8641
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 3509
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 2769
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 185
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 231
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 237
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 11049
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 3586
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 238504
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 247805
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 2791
     },
     {
-        "sessionkey": "5CwrCHCNSiyGJ6fvt1IOyz",
+        "sessionkey": "59q8G6ehoOlq87InWXmNRd",
         "accountIdDebit": 209
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8714
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 10707
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8716
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 10696
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8710
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 10295
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8724
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8718
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8717
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8723
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8720
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8715
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8722
     },
     {
-        "sessionkey": "0GmXmqJO9DNyv6ClyRSVWd",
+        "sessionkey": "6KjvrjkoiNyMLp4e2HwMTd",
         "accountIdDebit": 8711
     },
     {

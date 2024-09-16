@@ -56,8 +56,8 @@ def make_request(uuid, operation_data):
         response = client.makeWebTransfer(request, metadata=metadata)
         response_dict = MessageToDict(response)
         print('Получен ответ от Query service:', response_dict)
-        return response_dict  # Return the response dictionary
+        return response_dict, request  # Return the response dictionary
 
     except grpc.RpcError as e:
         print(f'Ошибка от Query service: {e.code()}, {e.details()}')
-        return {'error': {'code': e.code(), 'details': e.details()}}
+        return {'error': {'code': e.code(), 'details': e.details(), 'requestBody': request()}}

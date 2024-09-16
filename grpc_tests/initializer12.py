@@ -1,8 +1,10 @@
 import uuid
 import time
+import json
 import pandas as pd
 from grpc_tests.Arrays.operations_data import operations
 from grpc_tests.Arrays.positive_customers_data import positive_customers
+from grpc_tests.Arrays import successful_operation_ids
 
 class Generatives:
     """Класс для генерации UUID и работы с массивом данных."""
@@ -43,47 +45,35 @@ class Generatives:
         print(f"Response 2: {self.response2}")
 
     def get_results(self):
-        """Возвращает результаты теста, включая успешные operationId."""
-        response1_success = self.response1.get('success', False)
-        response2_success = self.response2.get('success', False)
-
-        successful_operation_ids = []
-
-        if response1_success:
-            data = self.response1.get('data', '{}')
-            parsed_data = json.loads(data)
-            operation_id = parsed_data.get('operationId')
-            if operation_id:
-                successful_operation_ids.append(operation_id)
-
-        if response2_success:
-            data = self.response2.get('data', '{}')
-            parsed_data = json.loads(data)
-            operation_id = parsed_data.get('operationId')
-            if operation_id:
-                successful_operation_ids.append(operation_id)
-
+        """Возвращает результаты теста."""
         return {
             'accountIdDebit': self.operation.get('accountIdDebit', 'N/A'),
             'response1': str(self.response1),  # Ensure responses are strings
             'response2': str(self.response2),  # Ensure responses are strings
-            'request_time': self.request_time,
-            'successful_operation_ids': ', '.join(successful_operation_ids)  # Join IDs into a string
+            'request_time': self.request_time
         }
 
 if __name__ == "__main__":
     # Список для хранения результатов
     results = []
-    operation_ids = []
+    successful_operation_ids = []  # List to store successful operation IDs
 
     # Итерируемся по каждой операции в массиве и запускаем тесты
     for operation in positive_customers:
         print(f"Запуск теста для операции: {operation.get('accountIdDebit', 'N/A')}")
         gen = Generatives(operation)
         gen.run_requests()
-        result = gen.get_results()
-        results.append(result)  # Добавляем результаты в список
-        operation_ids.extend(result['successful_operation_ids'].split(', '))  # Добавляем успешные operationId в список
+        results.append(gen.get_results())  # Добавляем результаты в список
+
+        # Check if response1 contains a successful operationId
+        response1 = gen.response1
+        if response1.get('success') and 'data' in response1:
+            data = json.loads(response1['data'])
+            operation_id = data.get('operationId')
+            if operation_id:
+                # Append the operation ID as a dictionary
+                successful_operation_ids.append({"operation_id": operation_id})
+
         print("Тест завершен.\n")
         print("Запущенно ожидание между запросами.\n")
         time.sleep(0)  # Установите интервал, если нужно
@@ -99,11 +89,12 @@ if __name__ == "__main__":
     # Записываем данные в Excel
     df.to_excel('test_results.xlsx', index=False)
 
-    # Сохраняем успешные operationId в файл
-    with open('successful_operation_ids.txt', 'w') as f:
-        if operation_ids:
-            f.write('\n'.join(operation_ids))
-        else:
-            f.write("No successful operationIds found.")
+    print("Данные сохранены в файл test_results.xlsx")
 
-    print("Данные сохранены в файл test_results.xlsx и успешные operationId в successful_operation_ids.txt")
+    # Write successful operation IDs to a Python file in the specified format
+    with open('Arrays/successful_operation_ids.py', 'w') as f:
+        # Convert list to a JSON string with double quotes
+        formatted_ids = json.dumps(successful_operation_ids, indent=4)
+        f.write(f"successful_operation_ids = {formatted_ids}\n")
+
+    print("Успешные operationId сохранены в файл successful_operation_ids.py")
