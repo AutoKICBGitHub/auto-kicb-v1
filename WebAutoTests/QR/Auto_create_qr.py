@@ -13,7 +13,7 @@ def load_times():
 
 def run(playwright: Playwright, run_number: int, load_times: list) -> None:
     fake = Faker()  # Инициализация Faker
-    browser = playwright.chromium.launch(headless=True)
+    browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
 
@@ -27,7 +27,7 @@ def run(playwright: Playwright, run_number: int, load_times: list) -> None:
     page.wait_for_selector("input[type=\"text\"]")
     load_times.append((datetime.now() - test_start_time).total_seconds())
 
-    page.locator("input[type=\"text\"]").fill("00375174_1")
+    page.locator("input[type=\"text\"]").fill("00885_14")
     page.locator("input[type=\"text\"]").press("Tab")
 
     page.wait_for_selector("input[type=\"password\"]")
