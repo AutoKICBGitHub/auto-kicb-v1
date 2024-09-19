@@ -2,9 +2,8 @@ import uuid
 import time
 import json
 import pandas as pd
-from grpc_tests.Arrays.operations_data import operations
 from grpc_tests.Arrays.positive_customers_data import positive_customers
-from grpc_tests.Arrays import successful_operation_ids
+
 
 class Generatives:
     """Класс для генерации UUID и работы с массивом данных."""
@@ -24,8 +23,8 @@ class Generatives:
 
     def run_requests(self):
         """Запускает оба файла с запросами."""
-        from grpc_tests.Requests_runs import first_request
-        from grpc_tests.Requests_runs import second_request
+        from grpc_tests.Backup import backup_first_request
+        from grpc_tests.Backup import backup_second_request
 
         # Получаем данные операции
         operation_data = self.get_operation_data()
@@ -33,10 +32,10 @@ class Generatives:
         start_time = time.time()
 
         # Передаем один и тот же UUID и данные операции в оба запроса
-        self.response1, self.request1 = first_request.make_request(self.get_uuid(), operation_data)
+        self.response1, self.request1 = backup_first_request.make_request(self.get_uuid(), operation_data)
 
 
-        self.response2, self.request2 = second_request.make_request(self.get_uuid(), operation_data)
+        self.response2, self.request2 = backup_second_request.make_request(self.get_uuid(), operation_data)
 
 
         # Конец времени запроса

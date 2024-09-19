@@ -89,3 +89,8 @@ def test_average_load_time(load_times):
         for i, load_time in enumerate(load_times, start=1):
             assert load_time < 120, f"Время загрузки страницы на запуске {i} слишком велико"
 
+
+# cd C:\project_kicb\webTest\
+# pytest --alluredir=allure-results .\test_auth_with_accounts_allure.py
+# allure serve allure-results
+

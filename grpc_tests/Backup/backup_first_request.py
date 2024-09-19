@@ -18,32 +18,32 @@ def make_request(uuid, operation_data):
 
     # Используем данные из operation_data
     data = {
-        "operationId": uuid,
-        "accountIdDebit": operation_data['accountIdDebit'],
-        "accountCreditPropValue": '255',
+        "operationId": uuid,  # assuming uuid is defined elsewhere in the code
+        "accountIdDebit": operation_data['accountIdDebit'],  # referencing 'operation_data'
+        "accountCreditPropValue": '01012661',
         "accountCreditPropType": 'ACCOUNT_NO',
-        "paymentPurpose": 'Payment for services',
-        "amountDebit": '10.30',
-        "valueDate": None,
+        "paymentPurpose": 'Test QR',
+        "amountDebit": '112',
+        "valueDate": None,  # Using None instead of null in Python
         "knp": None,
         "theirRefNo": None,
         "valueTime": None,
         "txnId": None,
-        "qrPayment": True,
-        "qrAccountChangeable": False,
-        "qrComment": 'Payment for services',
+        "qrPayment": True,  # Python uses True instead of true
+        "qrAccountChangeable": False,  # Python uses False instead of false
+        "qrComment": 'Test QR',
         "qrServiceName": 'KICB',
-        "qrServiceId": '04',
+        "qrServiceId": '03',
         "clientType": '1',
         "qrVersion": '01',
-        "qrType": 'STATIC',
-        "qrMerchantProviderId": 'p2p.kicb.net',
+        "qrType": 'DYNAMIC',
+        "qrMerchantProviderId": 'corp.kicb.net',
         "qrMerchantId": None,
-        "qrAccount": '255',
+        "qrAccount": '01012661',
         "qrMcc": '9999',
         "qrCcy": '417',
-        "qrTransactionId": 'Test 1',
-        "qrControlSum": 'c560'
+        "qrTransactionId": '01012661242630942194',
+        "qrControlSum": 'd549'
     }
 
     request = IncomingWebTransfer(
