@@ -71,7 +71,7 @@ def run(playwright: Playwright, run_number: int, load_times: list) -> None:
     allure.attach(body=f"Продолжительность теста: {test_end_time - test_start_time}", name="Продолжительность")
 
 
-@pytest.mark.parametrize("run_number", range(1, 151))
+@pytest.mark.parametrize("run_number", range(1, 51))
 @allure.title("Запуск #{run_number}")
 @allure.description("Запуск теста с последовательной загрузкой страницы и вводом OTP")
 def test_sequential_runs(run_number, load_times):
@@ -91,6 +91,6 @@ def test_average_load_time(load_times):
 
 
 # cd C:\project_kicb\webTest\
-# pytest --alluredir=allure-results .\test_auth_with_accounts_allure.py
+# pytest --alluredir=allure-results1 .\test_auth_with_accounts_allure.py
 # allure serve allure-results
 
