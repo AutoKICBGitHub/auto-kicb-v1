@@ -15,7 +15,7 @@ class Generatives:
     def __init__(self, result):
         """Генерация UUID при инициализации класса и сохранение операции."""
         self.uuID = str(uuid.uuid4())  # Генерация UUID
-        self.operation = positive_customer  # Сохранение операции
+        self.operation = result  # Сохранение операции
 
     def get_uuid(self):
         """Возвращает ранее сгенерированный UUID."""
@@ -27,18 +27,18 @@ class Generatives:
 
     async def run_requests(self):
         """Запускает оба файла с запросами асинхронно."""
-        operation_data = self.get_operation_data()
+        result = self.get_operation_data()
 
         start_time = time.time()
 
         # Выполняем первый запрос
-        self.response1, self.request1 = await mass_first_request.make_request(self.get_uuid(), operation_data)
+        self.response1, self.request1 = await mass_first_request.make_request(self.get_uuid(), result)
 
         # Ждем 4 секунды перед вторым запросом
         await asyncio.sleep(4)
 
         # Выполняем второй запрос
-        self.response2, self.request2 = await mass_second_request.make_request(self.get_uuid(), operation_data)
+        self.response2, self.request2 = await mass_second_request.make_request(self.get_uuid(), result)
 
         # Конец времени запроса
         end_time = time.time()
@@ -74,7 +74,7 @@ async def main():
             return gen  # Возвращаем экземпляр для дальнейшей обработки
 
     tasks = []
-    for operation in positive_customers:
+    for operation in result:
         print(f"Запуск теста для операции: {operation.get('accountIdDebit', 'N/A')}")
         tasks.append(limited_run_requests(operation))
 
