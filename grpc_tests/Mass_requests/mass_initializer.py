@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import asyncio
 
-from grpc_tests.Mass_requests.sql import result
+from grpc_tests.Mass_requests.sql.result import result
 from grpc_tests.Arrays import successful_operation_ids
 from grpc_tests.Mass_requests.requests import mass_first_request
 from grpc_tests.Mass_requests.requests import mass_second_request
