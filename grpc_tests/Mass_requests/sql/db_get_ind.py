@@ -17,7 +17,7 @@ query = """
 SELECT a.account_no, c.full_name_lat, a.account_class
 FROM customers c
 INNER JOIN accounts a ON a.customer_no = c.customer_no
-WHERE a.acy_withdrawable_bal > 0
+WHERE a.acy_withdrawable_bal > 0 and c.customer_no in ('06668','01232','00101770','00885')
 """
 
 cursor.execute(query)

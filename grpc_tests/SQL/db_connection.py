@@ -79,3 +79,4 @@ if data:
     update_positive_customers(positive_customers)
 else:
     print("Нет данных для обновления positive_customers_data.py.")
+

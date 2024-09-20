@@ -1,324 +1,98 @@
-operations = [
+successful_operation_ids = [
     {
-        "sessionkey": "6YIHfpr7TImsHSBDCT2rWm",
-        "accountIdDebit": 10996
+        "operation_id": "5e0ae4c1-cfdf-473d-8b43-1240367534a5"
     },
     {
-        "sessionkey": "6YIHfpr7TImsHSBDCT2rWm",
-        "accountIdDebit": 10995
+        "operation_id": "47e32c0f-d4c5-45b9-b345-ddc8cb5d8a73"
     },
     {
-        "sessionkey": "0x3S5h36L77ZnudwOnGwOe",
-        "accountIdDebit": 10996
+        "operation_id": "9da2d454-2912-46f6-a1da-eeebf56e6a4d"
     },
     {
-        "sessionkey": "0x3S5h36L77ZnudwOnGwOe",
-        "accountIdDebit": 10995
+        "operation_id": "0d84cc6c-a499-4e2d-9937-abde41767b6d"
     },
     {
-        "sessionkey": "1tPMQPl2KZrrWUyV0oVcIA",
-        "accountIdDebit": 10656
+        "operation_id": "9fb72c5b-296f-4c7d-8556-49895164ef05"
     },
     {
-        "sessionkey": "1tPMQPl2KZrrWUyV0oVcIA",
-        "accountIdDebit": 10655
+        "operation_id": "5dd8686d-7ad4-4bcd-ae88-d663fa9a02eb"
     },
     {
-        "sessionkey": "1tPMQPl2KZrrWUyV0oVcIA",
-        "accountIdDebit": 10658
+        "operation_id": "028222da-f078-4418-a24d-b996b05536ed"
     },
     {
-        "sessionkey": "1tPMQPl2KZrrWUyV0oVcIA",
-        "accountIdDebit": 10615
+        "operation_id": "02f308aa-c94c-42d5-ad37-6b2fa12f74af"
     },
     {
-        "sessionkey": "1tPMQPl2KZrrWUyV0oVcIA",
-        "accountIdDebit": 10390
+        "operation_id": "9d3b39da-5a84-47ed-935a-e0d5c618fef7"
     },
     {
-        "sessionkey": "1tPMQPl2KZrrWUyV0oVcIA",
-        "accountIdDebit": 10653
+        "operation_id": "aef62c3c-4e27-442a-99c9-80d641a555c4"
     },
     {
-        "sessionkey": "1tPMQPl2KZrrWUyV0oVcIA",
-        "accountIdDebit": 10654
+        "operation_id": "85f44873-c8d5-48c9-8b2a-c9007aed3adc"
     },
     {
-        "sessionkey": "0s5KqonNSA2cvM2pwEeUgm",
-        "accountIdDebit": 8731
+        "operation_id": "df2c3ebe-3ab6-45d1-abef-9e03fc910157"
     },
     {
-        "sessionkey": "0s5KqonNSA2cvM2pwEeUgm",
-        "accountIdDebit": 8729
+        "operation_id": "cf11ebb9-e3c5-45d5-a64f-6eb79522137d"
     },
     {
-        "sessionkey": "0s5KqonNSA2cvM2pwEeUgm",
-        "accountIdDebit": 8730
+        "operation_id": "d336d4dc-6b1d-47da-b94e-a0a147533a1a"
     },
     {
-        "sessionkey": "0s5KqonNSA2cvM2pwEeUgm",
-        "accountIdDebit": 8728
+        "operation_id": "521938fe-8d9e-4df0-b926-2808d9daad60"
     },
     {
-        "sessionkey": "0s5KqonNSA2cvM2pwEeUgm",
-        "accountIdDebit": 8727
+        "operation_id": "0de6f242-e51b-4049-8a18-d98fbce1313b"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 223
+        "operation_id": "31ede53c-3f47-4f8c-8dbd-b4242e9ed583"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 3587
+        "operation_id": "8531061a-d7ce-4453-bf96-9674845a5130"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 3517
+        "operation_id": "6961f578-cffd-48f0-b05d-29b8181c70eb"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 186
+        "operation_id": "585d65dc-a5f1-44d2-b7bd-2dd81d637212"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 10954
+        "operation_id": "22a2cc35-57fb-4e8d-9700-3c68562d65a9"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 175
+        "operation_id": "f65316ab-0787-4550-a2ad-bc639885e24c"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 250
+        "operation_id": "75a0e5bd-89d5-45d4-acad-5cad146472b8"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 172
+        "operation_id": "d02d0f36-26bf-427a-9281-77715528ad58"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 8641
+        "operation_id": "2763e85c-e1a6-449a-8614-8cafb260759c"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 3509
+        "operation_id": "360c5c0a-b1c8-469b-8025-6fc9acdc87e0"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 2769
+        "operation_id": "5cc85f75-c2bb-4d01-8134-71e66c640f1e"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 185
+        "operation_id": "70a594de-ac32-4f97-be8b-ead141692c28"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 231
+        "operation_id": "718e114c-fd11-4e7b-9e9e-c8d05b735cd2"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 237
+        "operation_id": "811f6cea-8125-4f4e-bdf1-49a3388e16f7"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 11049
+        "operation_id": "9d9a9456-9289-423c-8868-7f52778163c6"
     },
     {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 3586
-    },
-    {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 238504
-    },
-    {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 247805
-    },
-    {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 2791
-    },
-    {
-        "sessionkey": "2r0uk3OkQE6mSQDcvHqVlI",
-        "accountIdDebit": 209
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8714
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 10707
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8716
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 10696
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8710
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 10295
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8724
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8718
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8717
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8723
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8720
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8715
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8722
-    },
-    {
-        "sessionkey": "7EDNWRSZpy11SRRtMrpccY",
-        "accountIdDebit": 8711
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 8070
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 3103
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 2820
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 2897
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 11106
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 3299
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 3506
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 8071
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 2896
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 2973
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 3178
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 3179
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 8069
-    },
-    {
-        "sessionkey": "5kvlc6Zt5jvIjySGbVORMc",
-        "accountIdDebit": 8072
-    },
-    {
-        "sessionkey": "6N9nWuW87xwzXbjuzkbZw8",
-        "accountIdDebit": 11136
-    },
-    {
-        "sessionkey": "6N9nWuW87xwzXbjuzkbZw8",
-        "accountIdDebit": 11137
-    },
-    {
-        "sessionkey": "6N9nWuW87xwzXbjuzkbZw8",
-        "accountIdDebit": 11131
-    },
-    {
-        "sessionkey": "0ZlWh6Z6C8HiwshCQ10s8z",
-        "accountIdDebit": 3007
-    },
-    {
-        "sessionkey": "0ZlWh6Z6C8HiwshCQ10s8z",
-        "accountIdDebit": 3201
-    },
-    {
-        "sessionkey": "0ZlWh6Z6C8HiwshCQ10s8z",
-        "accountIdDebit": 2847
-    },
-    {
-        "sessionkey": "0ZlWh6Z6C8HiwshCQ10s8z",
-        "accountIdDebit": 3200
-    },
-    {
-        "sessionkey": "0ZlWh6Z6C8HiwshCQ10s8z",
-        "accountIdDebit": 3078
-    },
-    {
-        "sessionkey": "0ZlWh6Z6C8HiwshCQ10s8z",
-        "accountIdDebit": 3133
-    },
-    {
-        "sessionkey": "0ZlWh6Z6C8HiwshCQ10s8z",
-        "accountIdDebit": 3006
+        "operation_id": "a1ba7425-9c91-460c-ba1d-1b3a60353fd9"
     }
 ]
-#     {
-#         "refid": "johnDoeRefId1234",
-#         "sessionkey": "1iJoU2nsFChCY3IhGsEw9A",
-#         "accountIdDebit": 2820,
-#         "accountCreditPropValue": '255',
-#         "accountCreditPropType": 'ACCOUNT_NO',
-#         "paymentPurpose": 'Payment for products',
-#         "amountDebit": '10',
-#         "qrPayment": True,
-#         "qrAccountChangeable": False,
-#         "qrComment": 'Payment for products',
-#         "qrServiceName": 'KICB',
-#         "qrServiceId": '04',
-#         "clientType": '1',
-#         "qrVersion": '01',
-#         "qrType": 'STATIC',
-#         "qrMerchantProviderId": 'corp.kicb.net',
-#         "qrMerchantId": None,
-#         "qrAccount": '255',
-#         "qrMcc": '9999',
-#         "qrCcy": '417',
-#         "qrTransactionId": 'Test 2',
-#         "qrControlSum": '8cec'
-#     }
-# ]
-

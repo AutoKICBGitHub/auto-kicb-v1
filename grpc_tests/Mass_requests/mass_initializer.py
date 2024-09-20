@@ -3,11 +3,12 @@ import time
 import json
 import pandas as pd
 import asyncio
-from grpc_tests.Arrays.operations_data import operations
-from grpc_tests.Mass_requests.sql.result import result
+
+from grpc_tests.Mass_requests.sql import result
 from grpc_tests.Arrays import successful_operation_ids
 from grpc_tests.Mass_requests.requests import mass_first_request
 from grpc_tests.Mass_requests.requests import mass_second_request
+
 
 class Generatives:
     """Класс для генерации UUID и работы с массивом данных."""
@@ -98,7 +99,7 @@ async def main():
     print("Данные сохранены в файл test_results.xlsx")
 
     # Сохраняем успешные operation IDs в файл Python в указанном формате
-    with open('Arrays/successful_operation_ids.py', 'w') as f:
+    with open('C:/project_kicb/grpc_tests/Arrays/operations_data.py', 'w') as f:
         formatted_ids = json.dumps(successful_operation_ids, indent=4)
         f.write(f"successful_operation_ids = {formatted_ids}\n")
     print("Успешные operation IDs сохранены в файл successful_operation_ids.py")
