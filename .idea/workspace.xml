@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Arrays/operations_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Arrays/operations_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Arrays/positive_customers_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Arrays/positive_customers_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/mass_initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/mass_initializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/result.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/result.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/test_results.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/test_results.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/SQL/transaction_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/SQL/transaction_data.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +304,7 @@
       <workItem from="1726731193882" duration="124000" />
       <workItem from="1726731373587" duration="6494000" />
       <workItem from="1726747158094" duration="7728000" />
-      <workItem from="1726809368152" duration="4649000" />
+      <workItem from="1726809368152" duration="4966000" />
     </task>
     <servers />
   </component>
