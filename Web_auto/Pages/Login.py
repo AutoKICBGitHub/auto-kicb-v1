@@ -1,4 +1,4 @@
-from Web_auto_selfmadedontknowhowitwillwork.Other.Users import users
+from Web_auto.Other.Users import users
 
 import time
 

@@ -2,9 +2,9 @@ import pytest
 import time
 import logging
 from playwright.sync_api import Playwright
-from Web_auto_selfmadedontknowhowitwillwork.Pages.Login import LoginPage
-from Web_auto_selfmadedontknowhowitwillwork.Pages.OTP import OTPPage
-from Web_auto_selfmadedontknowhowitwillwork.Pages.Payment import PaymentsPage
+from Web_auto.Pages.Login import LoginPage
+from Web_auto.Pages.OTP import OTPPage
+from Web_auto.Pages.Payment import PaymentsPage
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

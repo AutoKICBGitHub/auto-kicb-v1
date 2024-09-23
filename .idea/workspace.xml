@@ -5,20 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Other/Links.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Other/Users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Other/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/Account.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/Login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/OTP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/Payment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners/test_runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/payments_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebAutoTests/pages/payments_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webtests/example.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/QR/Auto_create_IND_users.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/QR/Auto_create_IND_users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/QR/Auto_create_qr.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/QR/Auto_create_qr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/QR/image-with-layout (2).png" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/QR/image-with-layout (2).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Other/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Pages/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/account_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/history_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/login_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/messages_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/otp_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/payments_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/pages/profile_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/QR/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/tests/login_automation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/tests/test_runs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Runners/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/utils/otp_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutoTests/utils/users.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Other/Links.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Other/Links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Other/Users.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Other/Users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Other/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/Account.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Pages/Account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Pages/Login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/OTP.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Pages/OTP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/Payment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Pages/Payment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Pages/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto/Runners/test_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,14 +129,74 @@
       <recent name="C:\project_kicb\grpc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project_kicb\Web_auto_selfmadedontknowhowitwillwork" />
       <recent name="C:\project_kicb\grpc_tests\Backup" />
       <recent name="C:\project_kicb\grpc_tests" />
       <recent name="C:\project_kicb\grpc_tests\Requests_runs" />
       <recent name="C:\project_kicb\grpc_tests\Arrays" />
-      <recent name="C:\project_kicb\grpc_tests\Protofiles" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_runner.test_browser_close">
+  <component name="RunManager" selected="Python tests.Python tests in test_runner.py">
+    <configuration name="Python tests for Web_auto.Runners.test_runner" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto/Runners" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Web_auto.Runners.test_runner&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Web_auto.Runners.test_runner" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto/Runners" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Web_auto.Runners.test_runner&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Web_auto.Runners.test_runner" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto/Runners" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Web_auto.Runners.test_runner&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Web_auto.Runners.test_runner" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto/Runners" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Web_auto.Runners.test_runner&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_runner.test_auth_with_accounts" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,73 +212,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_runner.test_browser_close" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_runner.test_browser_close&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_runner.test_otp" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_runner.test_otp&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_runner.test_run" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_runner.test_run&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests in test_runner.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto/Runners" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners/test_runner.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Web_auto/Runners/test_runner.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_runner.test_browser_close" />
         <item itemvalue="Python tests.Python tests in test_runner.py" />
-        <item itemvalue="Python tests.Python tests for test_runner.test_otp" />
-        <item itemvalue="Python tests.Python tests for test_runner.test_run" />
-        <item itemvalue="Python tests.Python tests for test_runner.test_auth_with_accounts" />
+        <item itemvalue="Python tests.Python tests for Web_auto.Runners.test_runner" />
+        <item itemvalue="Python tests.Python tests for Web_auto.Runners.test_runner" />
+        <item itemvalue="Python tests.Python tests for Web_auto.Runners.test_runner" />
+        <item itemvalue="Python tests.Python tests for Web_auto.Runners.test_runner" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +315,7 @@
       <workItem from="1726731373587" duration="6494000" />
       <workItem from="1726747158094" duration="7728000" />
       <workItem from="1726809368152" duration="4966000" />
-      <workItem from="1727057938499" duration="13482000" />
+      <workItem from="1727057938499" duration="13938000" />
     </task>
     <servers />
   </component>
@@ -320,7 +352,7 @@
     <SUITE FILE_PATH="coverage/project_kicb$second_request__1_.coverage" NAME="second_request (1) Coverage Results" MODIFIED="1726461673643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Requests_runs" />
     <SUITE FILE_PATH="coverage/projects$test.coverage" NAME="test Coverage Results" MODIFIED="1720681762749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/project_kicb$first_request.coverage" NAME="first_request Coverage Results" MODIFIED="1726480091536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Requests_runs" />
-    <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1727069326627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web_auto_selfmadedontknowhowitwillwork/Runners" />
+    <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1727074786898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web_auto/Runners" />
     <SUITE FILE_PATH="coverage/project_kicb$second_request.coverage" NAME="second_request Coverage Results" MODIFIED="1726142692154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
     <SUITE FILE_PATH="coverage/project_kicb$initializer12.coverage" NAME="initializer12 Coverage Results" MODIFIED="1726474577812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
     <SUITE FILE_PATH="coverage/project_kicb$payments_page.coverage" NAME="payments_page Coverage Results" MODIFIED="1727059299223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebAutoTests/pages" />
