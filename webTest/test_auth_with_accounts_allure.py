@@ -92,5 +92,5 @@ def test_average_load_time(load_times):
 
 # cd C:\project_kicb\webTest\
 # pytest --alluredir=allure-results1 .\test_auth_with_accounts_allure.py
-# allure serve allure-results
+# allure serve allure-results11
 
