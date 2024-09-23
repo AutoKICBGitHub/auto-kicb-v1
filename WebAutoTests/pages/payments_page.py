@@ -4,8 +4,8 @@ class PaymentsPage:
     def __init__(self, page):
         self.page = page
     def open_payments(self):
-        self.page.locator("//nav[@class='header-nav']//a").nth(1).wait_for(timeout=60000)
-        self.page.locator("//nav[@class='header-nav']//a").nth(1).click()
+        self.page.locator("//a [@href='/payment']").wait_for(timeout=60000)
+        self.page.locator("//a [@href='/payment']").click()
 
     def open_exchange(self):
         self.page.locator("p.operation-card__text:has-text('Обмен валют')").wait_for(timeout=60000)
