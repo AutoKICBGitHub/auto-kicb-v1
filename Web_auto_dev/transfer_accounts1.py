@@ -1,1 +1,3 @@
-successful_accounts = []
+successful_accounts = [
+
+]

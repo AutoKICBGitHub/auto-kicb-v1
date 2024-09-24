@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Other/Links.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Other/Users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Other/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Other/transfer_accounts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Other/transfer_accounts1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Pages/Account.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Pages/Login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Pages/OTP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Pages/Payment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/QR/Auto_create_IND_users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/QR/Auto_create_qr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/QR/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/QR/image-with-layout (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Runners/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Runners/test_runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_auto_dev/transfer_accounts1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_dev/Other/transfer_accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/Other/transfer_accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_dev/Runners/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/Runners/test_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_dev/transfer_accounts1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/transfer_accounts1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +307,7 @@
       <workItem from="1727057938499" duration="13938000" />
       <workItem from="1727088941517" duration="3965000" />
       <workItem from="1727145767886" duration="1499000" />
-      <workItem from="1727172553624" duration="9406000" />
+      <workItem from="1727172553624" duration="11435000" />
     </task>
     <servers />
   </component>

@@ -65,7 +65,7 @@ def test_transaction_between_accounts(browser_context, account):
     # except:
     #     logger.error("Карты не удалось загрузить после нескольких попыток.")
     #     page.reload()
-    time.sleep(10)
+    time.sleep(6)
     # Открываем раздел Платежи
     payments_page.open_payments()
     page.locator("//p[contains(@class, 'operation-card__text') and contains(text(), 'Клиенту KICB')]").wait_for(timeout=30000)
@@ -90,7 +90,7 @@ def test_transaction_between_accounts(browser_context, account):
     # Проверка на ошибку счета
     try:
         # Явное ожидание появления ошибки на странице с таймаутом
-        if page.wait_for_selector("//span[contains(text(), 'Счет')]", timeout=3000):
+        if page.wait_for_selector("//span[contains(text(), 'Счет')]", timeout=10000):
             logger.warning(f"Проблема с аккаунтом {target_account}.")
         else:
             logger.info("Ошибки не обнаружено, добавляем аккаунт в успешные.")
@@ -112,7 +112,7 @@ def test_transaction_between_accounts(browser_context, account):
 
             # Вводим OTP для подтверждения
             otp_page.login_in_system('aigerimk')
-
+            time.sleep(3)
             # Переходим на следующую страницу
             page.locator("//a[@class='header-nav__link']").nth(1).wait_for(timeout=30000)
             page.locator("//a[@class='header-nav__link']").nth(1).click()
