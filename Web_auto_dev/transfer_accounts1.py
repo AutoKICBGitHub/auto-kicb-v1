@@ -1,3 +1,2 @@
 successful_accounts = [
-
 ]

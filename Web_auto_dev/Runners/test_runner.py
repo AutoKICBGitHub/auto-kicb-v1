@@ -42,10 +42,10 @@ def test_transaction_between_accounts(browser_context, account):
     payments_page = PaymentsPage(page)
 
     # Выполняем вход
-    login_page.login_in_system('aigerimk')
+    login_page.login_in_system('1')
 
     try:
-        otp_page.login_in_system('aigerimk')
+        otp_page.login_in_system('1')
     except Exception as e:
         logger.error(f"Ошибка при вводе OTP: {e}")
 
@@ -55,7 +55,7 @@ def test_transaction_between_accounts(browser_context, account):
             logger.warning("Обнаружена 'Неизвестная ошибка!'. Повторный ввод OTP.")
             otp_field = page.locator("//input[@type='password']")
             otp_field.fill('')  # Очищаем поле перед повторным вводом
-            otp_page.login_in_system('aigerimk')  # Повторяем ввод OTP
+            otp_page.login_in_system('1')  # Повторяем ввод OTP
     except Exception as e:
         logger.error(f"Ошибка при повторном вводе OTP: {e}")
 
@@ -65,7 +65,7 @@ def test_transaction_between_accounts(browser_context, account):
     # except:
     #     logger.error("Карты не удалось загрузить после нескольких попыток.")
     #     page.reload()
-    time.sleep(6)
+    time.sleep(12)
     # Открываем раздел Платежи
     payments_page.open_payments()
     page.locator("//p[contains(@class, 'operation-card__text') and contains(text(), 'Клиенту KICB')]").wait_for(timeout=30000)
@@ -77,8 +77,8 @@ def test_transaction_between_accounts(browser_context, account):
 
     # Используем текущий аккаунт из параметризации
     target_account = account['account_no']  # Выбираем аккаунт для перевода
-    page.locator("//p[contains(text(), '1285000000301116')]").wait_for(timeout=30000)
-    page.locator("//p[contains(text(), '1285000000301116')]").click()
+    page.locator("//p[contains(text(), '1280166042796464')]").wait_for(timeout=30000)
+    page.locator("//p[contains(text(), '1280166042796464')]").click()
 
     # Заполняем сумму и аккаунт
     page.locator("//input[@class='custom-input__field custom-input__text']").wait_for(timeout=30000)
@@ -86,44 +86,35 @@ def test_transaction_between_accounts(browser_context, account):
     page.locator("//input[@class='q-field__native q-placeholder custom-input__text']").nth(1).fill('5.03')
     page.locator("//button[@class='custom-button custom-button--active']").wait_for(timeout=30000)
     page.locator("//button[@class='custom-button custom-button--active']").click()
-
+    time.sleep(10)
     # Проверка на ошибку счета
-    try:
         # Явное ожидание появления ошибки на странице с таймаутом
-        if page.wait_for_selector("//span[contains(text(), 'Счет')]", timeout=10000):
-            logger.warning(f"Проблема с аккаунтом {target_account}.")
+    try:
+        if page.locator("//span[contains(text(), 'Счет')]").is_visible():
+            successful_accounts.append({"account_problema_s_schetom": target_account})
+            browser_context.close()
+        elif page.locator("//span[contains(text(), 'Внутренняя')]").is_visible():
+            successful_accounts.append({"account_internal": target_account})
+            browser_context.close()
         else:
-            logger.info("Ошибки не обнаружено, добавляем аккаунт в успешные.")
-
-
-    except Exception as e:
-        logger.error(f"Ошибка при проверке наличия ошибки счета: {e}")
-        try:
-            # Явное ожидание появления ошибки на странице с таймаутом
-            if page.wait_for_selector("//span[contains(text(), 'Внутренняя')]", timeout=3000):
-                successful_accounts.append({"account_internal": target_account})
-            else:
-                logger.info("Ошибки не обнаружено, добавляем аккаунт в успешные.")
-
-        except Exception as e:
+            # Если не найдены вышеуказанные ошибки, продолжаем выполнение сценария
             page.locator("//button[@class='custom-button custom-button--accept custom-button--active']").wait_for(
                 timeout=30000)
             page.locator("//button[@class='custom-button custom-button--accept custom-button--active']").click()
-
-            # Вводим OTP для подтверждения
-            otp_page.login_in_system('aigerimk')
+            otp_page.login_in_system('1')
             time.sleep(3)
-            # Переходим на следующую страницу
             page.locator("//a[@class='header-nav__link']").nth(1).wait_for(timeout=30000)
             page.locator("//a[@class='header-nav__link']").nth(1).click()
             successful_accounts.append({"account_no": target_account})  # Добавляем аккаунт в массив успешных записей
             time.sleep(1)  # Задержка для проверки результатов вручную
+            browser_context.close()
+    except Exception as e:
+        logger.error(f"Ошибка при обработке счета: {e}")
 
-            # Сохраняем успешные аккаунты в файл
-            with open(SUCCESSFUL_ACCOUNTS_FILE, 'w', encoding='utf-8') as f:
-                f.write('successful_accounts = [\n')
-                for account in successful_accounts:
-                    f.write(f'    {account},\n')
-                f.write(']\n')
-    # Закрываем браузер
-    browser_context.close()
+
+    with open(SUCCESSFUL_ACCOUNTS_FILE, 'w', encoding='utf-8') as f:
+        f.write('successful_accounts = [\n')
+        for account in successful_accounts:
+            f.write(f'    {account},\n')
+        f.write(']\n')
+
