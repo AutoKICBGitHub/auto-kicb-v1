@@ -1,6 +1,8 @@
 import pytest
 import time
 import logging
+import random
+from datetime import datetime, timedelta
 from playwright.sync_api import Playwright
 from Web_auto_dev.Pages.Login import LoginPage
 from Web_auto_dev.Pages.OTP import OTPPage
@@ -24,7 +26,7 @@ logger = logging.getLogger(__name__)
 @pytest.fixture(scope="function")
 def browser_context(playwright: Playwright):
     # Создаем браузерный контекст для теста
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     yield context
     context.close()
@@ -65,10 +67,10 @@ def test_transaction_between_accounts(browser_context, account):
     # except:
     #     logger.error("Карты не удалось загрузить после нескольких попыток.")
     #     page.reload()
-    time.sleep(12)
+    time.sleep(20)
     # Открываем раздел Платежи
     payments_page.open_payments()
-    page.locator("//p[contains(@class, 'operation-card__text') and contains(text(), 'Клиенту KICB')]").wait_for(timeout=30000)
+    page.locator("//a [@href='/payment/other-accounts']").wait_for(timeout=30000)
     page.locator("//p[contains(@class, 'operation-card__text') and contains(text(), 'Клиенту KICB')]").click()
 
     # Переходим к карте
@@ -77,16 +79,31 @@ def test_transaction_between_accounts(browser_context, account):
 
     # Используем текущий аккаунт из параметризации
     target_account = account['account_no']  # Выбираем аккаунт для перевода
-    page.locator("//p[contains(text(), '1280166042796464')]").wait_for(timeout=30000)
-    page.locator("//p[contains(text(), '1280166042796464')]").click()
-
+    page.locator("//p[contains(text(), '4446 **** **** 6359')]").nth(0).wait_for(timeout=30000)
+    page.locator("//p[contains(text(), '4446 **** **** 6359')]").nth(0).click()
+    if page.locator("//p [contains(text(), 'Документа')]").is_visible():
+        random_value = str(random.randint(1000, 9999))
+        page.locator("//p [contains(text(), 'Документа')] //..//label").wait_for(timeout=30000)
+        page.locator("//p [contains(text(), 'Документа')] //..//label").fill(random_value)
+        page.locator("//p [contains(text(), 'Код платежа')] //..//label").wait_for(timeout=30000)
+        page.locator("//p [contains(text(), 'Код платежа')] //..//label").fill("55609000")
+        tomorrow_date = (datetime.now() + timedelta(days=1)).strftime('%d.%m.%Y')
+        page.locator("//p [contains(text(), 'Дата валютирования')] //..//input").wait_for(timeout=30000)
+        page.locator("//p [contains(text(), 'Дата валютирования')] //..//input").fill(tomorrow_date)
+        page.locator("//p [contains(text(), 'Счет получателя')] //..//input").wait_for(timeout=30000)
+        page.locator("//p [contains(text(), 'Счет получателя')] //..//input").fill(target_account)
+        page.locator("//p [contains(text(), 'Сумма перевода')] //..//label").fill('5.03')
+        page.locator("//button[@class='custom-button custom-button--active']").wait_for(timeout=30000)
+        page.locator("//button[@class='custom-button custom-button--active']").click()
+        time.sleep(20)
+    else:
     # Заполняем сумму и аккаунт
-    page.locator("//input[@class='custom-input__field custom-input__text']").wait_for(timeout=30000)
-    page.locator("//input[@class='custom-input__field custom-input__text']").fill(target_account)
-    page.locator("//input[@class='q-field__native q-placeholder custom-input__text']").nth(1).fill('5.03')
-    page.locator("//button[@class='custom-button custom-button--active']").wait_for(timeout=30000)
-    page.locator("//button[@class='custom-button custom-button--active']").click()
-    time.sleep(10)
+        page.locator("//p [contains(text(), 'Счет получателя')] //..//input").wait_for(timeout=30000)
+        page.locator("//p [contains(text(), 'Счет получателя')] //..//input").fill(target_account)
+        page.locator("//p [contains(text(), 'Сумма перевода')] //..//label").fill('5.03')
+        page.locator("//button[@class='custom-button custom-button--active']").wait_for(timeout=30000)
+        page.locator("//button[@class='custom-button custom-button--active']").click()
+        time.sleep(20)
     # Проверка на ошибку счета
         # Явное ожидание появления ошибки на странице с таймаутом
     try:
@@ -95,6 +112,12 @@ def test_transaction_between_accounts(browser_context, account):
             browser_context.close()
         elif page.locator("//span[contains(text(), 'Внутренняя')]").is_visible():
             successful_accounts.append({"account_internal": target_account})
+            browser_context.close()
+        elif page.locator("//span[contains(text(), 'Оба счета должны быть в одной валюте')]").is_visible():
+            successful_accounts.append({"account_CCY_problem": target_account})
+            browser_context.close()
+        elif page.locator("//span[contains(text(), 'Операция')]").is_visible():
+            successful_accounts.append({"account_operaciya_nevozmojna": target_account})
             browser_context.close()
         else:
             # Если не найдены вышеуказанные ошибки, продолжаем выполнение сценария
