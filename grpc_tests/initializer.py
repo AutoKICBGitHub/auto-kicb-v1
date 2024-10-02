@@ -3,7 +3,7 @@ import time
 import json
 import pandas as pd
 import asyncio
-from grpc_tests.Arrays.operations_data import operations
+from grpc_tests.Arrays.operations_data import successful_operation_ids
 from grpc_tests.Arrays.positive_customers_data import positive_customers
 from grpc_tests.Arrays import successful_operation_ids
 from grpc_tests.Requests_runs import first_request

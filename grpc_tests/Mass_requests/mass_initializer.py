@@ -36,7 +36,7 @@ class Generatives:
         self.response1, self.request1 = await mass_first_request.make_request(self.get_uuid(), result)
 
         # Ждем 4 секунды перед вторым запросом
-        await asyncio.sleep(4)
+        await asyncio.sleep(2)
 
         # Выполняем второй запрос
         self.response2, self.request2 = await mass_second_request.make_request(self.get_uuid(), result)
