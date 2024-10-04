@@ -7,6 +7,7 @@ class User:
 users = {
     '1': User(username="aigerimk", password="password1", otp="111111"),
     '3': User(username="aigerimk", password="password1", otp="111111"),
+
 }
 
 def get_user(name):
