@@ -5,142 +5,227 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/QR_screenshots.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/get_ref_abs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/cookies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/storage_state.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/test_cookies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/test_with_storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280013109816103_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054933774_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidTests/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidTests/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/QR_screenshots.rar" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/QR_screenshots.rar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010001232043_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010001232043_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010011090172_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010011090172_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010101232070_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010101232070_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280010111090102_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280010111090102_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280013109816103_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176053049146_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176053049146_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280176054888005_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054888005_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280176054933774_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1280186053756321_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1280186053756321_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285010000478831_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285010000478831_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots/screenshot_success_1285090000630562_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/screenshot_success_1285090000630562_9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotest_QR_andr/auto_test_QR_android.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/auto_test_QR_android.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/users.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +327,7 @@
       <recent name="C:\project_kicb\grpc_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.initializer">
+  <component name="RunManager" selected="Python.test_cookies">
     <configuration name="db_connection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -331,7 +416,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mass_summ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_cookies" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,12 +424,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests/Mass_requests/sql" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/mass_summ.py" />
+      <option name="SCRIPT_NAME" value="C:\project_kicb\Web_auto_dev\Web_loadspeedtest_with_cookies\test_cookies.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -383,28 +468,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Web_auto.Runners.test_runner" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web_auto/Runners" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Web_auto.Runners.test_runner&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_cookies" />
         <item itemvalue="Python.initializer" />
         <item itemvalue="Python.db_connection" />
         <item itemvalue="Python.db_operation_status" />
         <item itemvalue="Python.mass_initializer" />
-        <item itemvalue="Python.mass_summ" />
       </list>
     </recent_temporary>
   </component>
@@ -496,7 +566,11 @@
       <workItem from="1727877806779" duration="2177000" />
       <workItem from="1727936685611" duration="17440000" />
       <workItem from="1728011540492" duration="5121000" />
-      <workItem from="1728023443467" duration="6234000" />
+      <workItem from="1728023443467" duration="6887000" />
+      <workItem from="1728109078046" duration="1348000" />
+      <workItem from="1728189258262" duration="723000" />
+      <workItem from="1728362331968" duration="6723000" />
+      <workItem from="1728373084393" duration="3598000" />
     </task>
     <servers />
   </component>
@@ -535,6 +609,7 @@
     <SUITE FILE_PATH="coverage/project_kicb$first_request.coverage" NAME="first_request Coverage Results" MODIFIED="1726480091536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Requests_runs" />
     <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1727313056333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_kicb$second_request.coverage" NAME="second_request Coverage Results" MODIFIED="1726142692154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
+    <SUITE FILE_PATH="coverage/project_kicb$cookies.coverage" NAME="cookies Coverage Results" MODIFIED="1728362592033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies" />
     <SUITE FILE_PATH="coverage/project_kicb$initializer12.coverage" NAME="initializer12 Coverage Results" MODIFIED="1726474577812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
     <SUITE FILE_PATH="coverage/project_kicb$payments_page.coverage" NAME="payments_page Coverage Results" MODIFIED="1727059299223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebAutoTests/pages" />
     <SUITE FILE_PATH="coverage/project_kicb$webTransferApi_pb2.coverage" NAME="webTransferApi_pb2 Coverage Results" MODIFIED="1726138791186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />

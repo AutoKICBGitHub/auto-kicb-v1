@@ -29,7 +29,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-@pytest.mark.parametrize("picture_number, user_id", [(i, str(j)) for j in range(1, 9) for i in range(12)])
+@pytest.mark.parametrize("picture_number, user_id", [(i, str(j)) for j in range(1, 11) for i in range(12)])
 def test_full_run(picture_number, user_id):
     # Запуск Appium-драйвера
     appium_server_url = 'http://localhost:4723'

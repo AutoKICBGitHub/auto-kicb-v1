@@ -1,0 +1,1 @@
+{"cookies": [], "origins": [{"origin": "https://newibanktest.kicb.net", "localStorage": [{"name": "_localforage_sys/_localforage_observable_sys", "value": "{\"name\":\"APP_DB\",\"storeName\":\"app_db\",\"key\":\"state\",\"methodName\":\"setItem\",\"valueChange\":false,\"success\":true,\"ticks\":1728377016228}"}, {"name": "appVersion", "value": "0.0.155"}]}]}
