@@ -1,55 +1,54 @@
 import http.client
 import json
-from Grps_test_internet_equiring.new_data import data
-from Grps_test_internet_equiring.tokens import tokens
+from Grps_test_internet_equiring.tokens import tokens  # импортируем массив токенов
+from Grps_test_internet_equiring.new_data import data  # импортируем словарь с данными
 
-def load_data_from_file(new_data):
-    """Загружает данные из файла и возвращает их как словарь."""
-    try:
-        with open(new_data, "r", encoding='utf-8') as f:
-            content = f.read()
-            exec(content)  # Выполняем код, чтобы создать переменную data
-        return data  # Возвращаем весь словарь data
-    except Exception as e:
-        print(f"Ошибка при загрузке данных из файла {new_data}: {e}")
-        return {}
+# Убедитесь, что у вас есть хотя бы один токен
+if not tokens:
+    print("Нет доступных токенов")
+    exit(1)
 
-def load_tokens(tokens1):
-    try:
-        with open(tokens1, "r", encoding='utf-8') as f:
-            content = f.read()
-            exec(content)  # Выполняем код, чтобы создать переменную data
-        return tokens  # Возвращаем весь словарь data
-    except Exception as e:
-        print(f"Ошибка при загрузке данных из файла {tokens1}: {e}")
-        return {}
+# Создаем соединение с HTTPS
+conn = http.client.HTTPSConnection("newibanktest.kicb.net")
 
-def make_request(transaction_id, otp):
-    """Выполняет HTTP-запрос с заданными transactionId и otp."""
-    conn = http.client.HTTPSConnection("127.0.0.1", 3036)
+# Словарь для хранения ответов
+responses = {}
+
+# Итерируемся по всем элементам data
+for transaction_id, transaction_data in data.items():
     payload = json.dumps({
-        "transactionId": transaction_id,
-        "otp": otp
+        "transactionId": transaction_data['transactionId'],
+        "otp": transaction_data['otp']
     })
+
+    # Используем первый токен из массива (можно адаптировать, если нужно использовать несколько токенов)
     headers = {
-        'Authorization': tokens,
+        'Authorization': f'Bearer {tokens[0]}',  # подставляем токен
         'Content-Type': 'application/json'
     }
 
-    conn.request("POST", "/internet-acquiring/create-transaction", payload, headers)
-    res = conn.getresponse()
-    data = res.read()
-    print(data.decode("utf-8"))
+    # Выполняем POST-запрос
+    try:
+        conn.request("POST", "/internet-acquiring/create-transaction", payload, headers)
+        # Получаем ответ
+        res = conn.getresponse()
+        response_data = res.read()
 
+        # Сохраняем ответ в словарь
+        responses[transaction_id] = response_data.decode('utf-8')
+        print(f"Response for transactionId {transaction_id}: {responses[transaction_id]}")
 
-# Загружаем данные из файла
-data = load_data_from_file("new_data.py")
+    except Exception as e:
+        print(f"Error occurred for transactionId {transaction_id}: {str(e)}")
+        responses[transaction_id] = f"Error: {str(e)}"
 
-# Выполняем запрос для каждой записи
-if data:
-    for key, value in data.items():
-        transaction_id = value['transactionId']
-        otp = value['otp']
-        make_request(transaction_id, otp)
-else:
-    print("Нет данных для обработки.")
+# Закрываем соединение
+conn.close()
+
+# Сохраняем все данные в файл otp_input_status.py
+with open('C:/project_kicb/Grps_test_internet_equiring/otp_input_status.py', 'w', encoding='utf-8') as f:
+    f.write('# Сохраненные ответы\n')
+    f.write('responses = ')
+    f.write(json.dumps(responses, ensure_ascii=False, indent=4))
+
+print("Ответы сохранены в файл otp_input_status.py")

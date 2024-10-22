@@ -5,29 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/protofile_pb2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/protofile_pb2_grpc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/webTransferApi.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/webTransferApi_pb2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/webTransferApi_pb2_grpc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/1_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/3_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/4_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/5_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/6_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/SQL_Requests/2collector_of_phone_numbers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/SQL_Requests/3collector_of_txnIds_otps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/new_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/phone_numbers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/tokens.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/txnIds.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/3_asinq_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/6_asinq_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/7_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/otp_input_status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/server_answer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_auto_dev/QR/Auto_create_IND_users.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/QR/Auto_create_IND_users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_auto_dev/QR/image-with-layout (2).png" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/QR/image-with-layout(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/test_cookies.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/QR_screenshots_IPC/QR_screenshots.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotest_QR_andr/auto_test_QR_android.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotest_QR_andr/auto_test_QR_android.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/6_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/6_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/new_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/new_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/tokens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/txnIds.py" beforeDir="false" afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/txnIds.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +91,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/project_kicb",
+    "last_opened_file_path": "C:/project_kicb/Grps_test_internet_equiring",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,8 +103,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\project_kicb" />
       <recent name="C:\project_kicb\Grps_test_internet_equiring" />
+      <recent name="C:\project_kicb" />
       <recent name="C:\project_kicb\Web_auto_dev\Runners" />
       <recent name="C:\project_kicb\Web_auto_dev\Other" />
       <recent name="C:\project_kicb\grpc_tests\Mass_requests" />
@@ -129,8 +117,8 @@
       <recent name="C:\project_kicb\autotest_QR_andr\QR_screenshots" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.6_request">
-    <configuration name="1_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.7_request">
+    <configuration name="3_asinq_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -143,73 +131,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\project_kicb\Grps_test_internet_equiring\Requests\1_request.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="2collector_of_phone_numbers (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Grps_test_internet_equiring/SQL_Requests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/SQL_Requests/2collector_of_phone_numbers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="3_request (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/3_request.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Grps_test_internet_equiring" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\project_kicb\Grps_test_internet_equiring\Requests\4_request.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/3_asinq_request.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -231,7 +153,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\project_kicb\Grps_test_internet_equiring\Requests\4_request.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/4_request.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -262,7 +184,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="6_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="6_asinq_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,7 +197,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/6_request.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/6_asinq_request.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="7_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/7_request.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -286,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.6_request" />
+        <item itemvalue="Python.7_request" />
+        <item itemvalue="Python.6_asinq_request" />
         <item itemvalue="Python.5_request" />
         <item itemvalue="Python.4_request" />
-        <item itemvalue="Python.3_request (1)" />
-        <item itemvalue="Python.2collector_of_phone_numbers (1)" />
+        <item itemvalue="Python.3_asinq_request" />
       </list>
     </recent_temporary>
   </component>
@@ -393,7 +337,7 @@
       <workItem from="1728984373727" duration="888000" />
       <workItem from="1729505473343" duration="5000" />
       <workItem from="1729505488785" duration="1089000" />
-      <workItem from="1729595327593" duration="8366000" />
+      <workItem from="1729595327593" duration="12607000" />
     </task>
     <servers />
   </component>
@@ -417,6 +361,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/project_kicb$web_prod_tests.coverage" NAME="web_prod_tests Coverage Results" MODIFIED="1725949546287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
     <SUITE FILE_PATH="coverage/project_kicb$web_prod_tests__1_.coverage" NAME="web_prod_tests (1) Coverage Results" MODIFIED="1725949664489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest/Web_test_page_object" />
+    <SUITE FILE_PATH="coverage/project_kicb$6_asinq_request.coverage" NAME="6_asinq_request Coverage Results" MODIFIED="1729609205336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$db_connection.coverage" NAME="db_connection Coverage Results" MODIFIED="1727839194900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
     <SUITE FILE_PATH="coverage/project_kicb$first_request__1_.coverage" NAME="first_request (1) Coverage Results" MODIFIED="1729603624410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/projects$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1720774570992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
@@ -425,9 +370,11 @@
     <SUITE FILE_PATH="coverage/project_kicb$backup_main_initializer__1_.coverage" NAME="backup_main_initializer (1) Coverage Results" MODIFIED="1726721662751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Backup" />
     <SUITE FILE_PATH="coverage/auto_kicb_v1$.coverage" NAME=" Coverage Results" MODIFIED="1724302055604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AndroidTests/tests" />
     <SUITE FILE_PATH="coverage/project_kicb$third_request.coverage" NAME="third_request Coverage Results" MODIFIED="1729603473045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring" />
-    <SUITE FILE_PATH="coverage/project_kicb$3_request__1_.coverage" NAME="3_request (1) Coverage Results" MODIFIED="1729603689634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
+    <SUITE FILE_PATH="coverage/project_kicb$3_request__1_.coverage" NAME="3_request (1) Coverage Results" MODIFIED="1729607303980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$login_automation.coverage" NAME="login_automation Coverage Results" MODIFIED="1727058002877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebAutoTests/tests" />
+    <SUITE FILE_PATH="coverage/project_kicb$6_request.coverage" NAME="6_request Coverage Results" MODIFIED="1729608291950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$2collector_of_phone_numbers__1_.coverage" NAME="2collector_of_phone_numbers (1) Coverage Results" MODIFIED="1729603681242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/SQL_Requests" />
+    <SUITE FILE_PATH="coverage/project_kicb$7_request.coverage" NAME="7_request Coverage Results" MODIFIED="1729609220335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1726108812691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
     <SUITE FILE_PATH="coverage/project_kicb$confirmTransfer.coverage" NAME="confirmTransfer Coverage Results" MODIFIED="1726140928459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
     <SUITE FILE_PATH="coverage/project_kicb$second_request__1_.coverage" NAME="second_request (1) Coverage Results" MODIFIED="1726461673643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Requests_runs" />
@@ -436,17 +383,21 @@
     <SUITE FILE_PATH="coverage/project_kicb$first_request.coverage" NAME="first_request Coverage Results" MODIFIED="1729599746127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring" />
     <SUITE FILE_PATH="coverage/project_kicb$.coverage" NAME=" Coverage Results" MODIFIED="1727313056333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_kicb$second_request.coverage" NAME="second_request Coverage Results" MODIFIED="1729602652796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring" />
-    <SUITE FILE_PATH="coverage/project_kicb$5_request.coverage" NAME="5_request Coverage Results" MODIFIED="1729604351538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
+    <SUITE FILE_PATH="coverage/project_kicb$5_request.coverage" NAME="5_request Coverage Results" MODIFIED="1729609201819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$cookies.coverage" NAME="cookies Coverage Results" MODIFIED="1728362592033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies" />
+    <SUITE FILE_PATH="coverage/project_kicb$1_request.coverage" NAME="1_request Coverage Results" MODIFIED="1729609170648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$initializer12.coverage" NAME="initializer12 Coverage Results" MODIFIED="1726474577812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
     <SUITE FILE_PATH="coverage/project_kicb$payments_page.coverage" NAME="payments_page Coverage Results" MODIFIED="1727059299223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebAutoTests/pages" />
     <SUITE FILE_PATH="coverage/project_kicb$webTransferApi_pb2.coverage" NAME="webTransferApi_pb2 Coverage Results" MODIFIED="1726138791186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
+    <SUITE FILE_PATH="coverage/project_kicb$4_request.coverage" NAME="4_request Coverage Results" MODIFIED="1729609199167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/projects$.coverage" NAME=" Coverage Results" MODIFIED="1723631531442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/androidTest" />
+    <SUITE FILE_PATH="coverage/project_kicb$4_request__1_.coverage" NAME="4_request (1) Coverage Results" MODIFIED="1729608476703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1726066558666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
     <SUITE FILE_PATH="coverage/project_kicb$mass_initializer.coverage" NAME="mass_initializer Coverage Results" MODIFIED="1727767355387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Mass_requests" />
     <SUITE FILE_PATH="coverage/project_kicb$main.coverage" NAME="main Coverage Results" MODIFIED="1726064469106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
     <SUITE FILE_PATH="coverage/project_kicb$collector_of_phone_numbers.coverage" NAME="collector_of_phone_numbers Coverage Results" MODIFIED="1729601106083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring" />
     <SUITE FILE_PATH="coverage/project_kicb$db_operation_status.coverage" NAME="db_operation_status Coverage Results" MODIFIED="1727769742890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
+    <SUITE FILE_PATH="coverage/project_kicb$3_asinq_request.coverage" NAME="3_asinq_request Coverage Results" MODIFIED="1729609175454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$backup_first_request.coverage" NAME="backup_first_request Coverage Results" MODIFIED="1726717846362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Backup" />
     <SUITE FILE_PATH="coverage/project_kicb$mass_summ.coverage" NAME="mass_summ Coverage Results" MODIFIED="1727767064147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Mass_requests/sql" />
     <SUITE FILE_PATH="coverage/project_kicb$db_connection__1_.coverage" NAME="db_connection (1) Coverage Results" MODIFIED="1726827421045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
