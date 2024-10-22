@@ -93,21 +93,20 @@ def test_full_run(picture_number, user_id):
         )
         button_next.click()
 
-        time.sleep(5)
+        time.sleep(6)
 
         button_ok = WebDriverWait(driver, 30).until(
             EC.visibility_of_element_located((AppiumBy.ID, 'net.kicb.ibankprod.dev:id/positive_tv'))
         )
         button_ok.click()
 
-        time.sleep(40)
-        # WebDriverWait(driver, 60).until(
-        #     EC.presence_of_element_located((AppiumBy.XPATH,
-        #                                     '//android.widget.RelativeLayout[@resource-id="net.kicb.ibankprod.dev:id/bank_account_view"]'))
-        # )
-        time.sleep(5)
+        time.sleep(30)
         # Клик на элемент "KICB QR"
-        driver.find_element(AppiumBy.XPATH, '//android.widget.FrameLayout[@content-desc="KICB QR"]').click()
+        button_KICB_QR = WebDriverWait(driver, 30).until(
+            EC.visibility_of_element_located((AppiumBy.ID, 'net.kicb.ibankprod.dev:id/navigation_qr'))
+        )
+        button_KICB_QR.click()
+
         time.sleep(4)
         # Вызов ADB команды для нажатия на разрешение (если нужно)
         allow_button = WebDriverWait(driver, 30).until(
@@ -175,7 +174,7 @@ def test_full_run(picture_number, user_id):
                 (AppiumBy.XPATH, '//android.widget.EditText[@resource-id="net.kicb.ibankprod.dev:id/amount_et"]'))
         )
         input_field_value.send_keys(
-            "59.13")
+            "11.13")
         time.sleep(3)
 
         driver.find_element(AppiumBy.XPATH,

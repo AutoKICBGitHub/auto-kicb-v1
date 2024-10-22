@@ -46,14 +46,14 @@ def run(playwright: Playwright) -> None:
 
     # Поиск клиента
     page.get_by_placeholder("Поиск").click()
-    page.get_by_placeholder("Поиск").fill("00375174")
+    page.get_by_placeholder("Поиск").fill("11090")
     page.get_by_placeholder("Поиск").press("Enter")
-    page.get_by_role("cell", name="00375174").click()
+    page.get_by_role("cell", name="11090").click()
 
     # Добавление данных
     page.get_by_text("Добавить").click()
     time.sleep(1)
-    page.get_by_label("Сотрудник ИП").click()
+    page.get_by_label("Сотрудник для просмотра QR").click()
 
     # Генерация случайного имени на кириллице
     full_name_cyrillic = fake.name()
@@ -103,10 +103,10 @@ def run(playwright: Playwright) -> None:
                 page.get_by_role("button", name="Распечатать заявку на подключение").click()
                 page.evaluate("""window.print = () => { console.log('Попытка печати заблокирована'); };""")
                 page.get_by_role("button", name="Распечатать").click()
-
+                time.sleep(2)
                 # Загрузка файла
                 uploader = page.wait_for_selector("//input[@type='file']")
-                uploader.set_input_files(r"C:\project_kicb\WebAutoTests\QR\image-with-layout (2).png")
+                uploader.set_input_files(r"C:\project_kicb\Web_auto_dev\QR\image-with-layout(2).png")
                 page.get_by_role("button", name="Установить статус заявки").click()
                 time.sleep(1)
                 # Выбор статуса заявки
@@ -128,10 +128,10 @@ def run(playwright: Playwright) -> None:
                 break  # Если уведомление не появилось, выходим из цикла
         except:
             break  # Если не удалось обнаружить уведомление, продолжаем выполнение
-
+    time.sleep(2)
     # Загрузка файла
     uploader = page.wait_for_selector("//input[@type='file']")
-    uploader.set_input_files(r"C:\project_kicb\WebAutoTests\QR\image-with-layout (2).png")
+    uploader.set_input_files(r"C:\project_kicb\Web_auto_dev\QR\image-with-layout(2).png")
     page.get_by_role("button", name="Установить статус заявки").click()
     time.sleep(1)
     # Выбор статуса заявки
