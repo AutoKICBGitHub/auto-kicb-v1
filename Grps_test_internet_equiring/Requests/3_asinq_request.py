@@ -21,7 +21,8 @@ async def send_request(session, token, phone_number):
     # Создаем полезную нагрузку для запроса
     payload = json.dumps({
         "phoneNumber": phone_number,
-        "amount": amount
+        # "amount": amount
+        "amount": 1
     })
 
     # Указываем заголовки
