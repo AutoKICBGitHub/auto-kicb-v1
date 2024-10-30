@@ -60,7 +60,7 @@ async def main():
                 tasks.append(task)
 
                 # Если 6 задач уже добавлены, ждем 3 секунды перед добавлением новых
-                if len(tasks) >= 100:
+                if len(tasks) >= 15:
                     await asyncio.gather(*tasks)  # Выполняем 6 запросов
                     tasks.clear()  # Очищаем список задач
                     await asyncio.sleep(1)  # Ждем 3 секунды
