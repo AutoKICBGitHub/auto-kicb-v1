@@ -1,3 +1,3 @@
 tokens = [
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJNYXNoaW5hLWtnIiwiaWF0IjoxNzMwMTczNDE0LCJleHAiOjE3MzAyMDk0MTR9.aC7X_dI8exNpheMg5ZCYJkCu5NOu0w44uwdds27_HqY',
+    '',
 ]
