@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/Converter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/comparatior.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/en-us.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/kg-kg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/localization.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/localization_multilingual.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/missing_keys.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Localization_to_excel/ru-ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database_scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database_scripts/autostarter_coca_cola.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database_scripts/flexcube_connector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database_scripts/password.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/corp_ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/corp_ids.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/counterparty_ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/counterparty_ids.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/warn-тест.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/xref-тест.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/тест.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/dist/тест.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/тест.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/тест.spec" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,40 +69,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python tests.Python tests for test.test_find_battery.executor": "Run",
-    "Python tests.Python tests for test.test_login.executor": "Run",
-    "Python tests.Python tests for test.test_open_accounts.executor": "Run",
-    "Python tests.Python tests in test.py.executor": "Run",
-    "Python.test (1).executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/project_kicb/Localization_to_excel",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test.test_find_battery.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test.test_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test.test_open_accounts.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/project_kicb/Localization_to_excel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\project_kicb\Localization_to_excel" />
@@ -352,6 +348,7 @@
       <workItem from="1733212771732" duration="669000" />
       <workItem from="1733396910878" duration="3155000" />
       <workItem from="1733462594422" duration="7468000" />
+      <workItem from="1733804909332" duration="1400000" />
     </task>
     <servers />
   </component>
