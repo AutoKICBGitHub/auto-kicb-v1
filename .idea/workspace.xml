@@ -5,29 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/Analysis-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/EXE-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/PKG-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/PYZ-00.pyz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/PYZ-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/base_library.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/warn-тест.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/xref-тест.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/build/тест/тест.pkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/dist/тест.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/тест.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/тест.spec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/DejaVuSans-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/DejaVuSans-BoldOblique.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/DejaVuSans-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/DejaVuSans-Oblique.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/DejaVuSans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/freesans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/receipt_output.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/service1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/service2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parser_xml_to_pdf/servise3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/Converter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/comparatior.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/en-us.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/kg-kg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/localization.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/localization_multilingual.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/missing_keys.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Localization_to_excel/ru-ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_scripts/autostarter_coca_cola.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_scripts/flexcube_connector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_scripts/password.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/corp_ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/corp_ids.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/counterparty_ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/counterparty_ids.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/coca_cola_admin_panel/runner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +97,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/While_doubt",
+    "last_opened_file_path": "C:/project_kicb/Localization_to_excel",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,11 +109,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project_kicb\Localization_to_excel" />
       <recent name="C:\project_kicb\Grps_test_internet_equiring" />
       <recent name="C:\project_kicb" />
       <recent name="C:\project_kicb\Web_auto_dev\Runners" />
       <recent name="C:\project_kicb\Web_auto_dev\Other" />
-      <recent name="C:\project_kicb\grpc_tests\Mass_requests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\project_kicb\Grps_test_internet_equiring\Proto" />
@@ -129,8 +123,8 @@
       <recent name="C:\project_kicb\autotest_QR_andr\QR_screenshots" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.service2">
-    <configuration name="тест" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.flexcube_connector">
+    <configuration name="Converter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,12 +132,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Grps_test_internet_equiring/Proto" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Localization_to_excel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Proto/тест.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Localization_to_excel/Converter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,7 +146,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="1_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="autostarter_coca_cola" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -160,12 +154,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database_scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grps_test_internet_equiring/Requests/1_request.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database_scripts/autostarter_coca_cola.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,7 +168,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="service1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="comparatior" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -182,12 +176,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/parser_xml_to_pdf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Localization_to_excel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parser_xml_to_pdf/service1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Localization_to_excel/comparatior.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -196,7 +190,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="service2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="flexcube_connector" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -204,12 +198,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/parser_xml_to_pdf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database_scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parser_xml_to_pdf/service2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database_scripts/flexcube_connector.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -218,7 +212,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="servise3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="password" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -226,12 +220,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/parser_xml_to_pdf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database_scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parser_xml_to_pdf/servise3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database_scripts/password.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -242,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.service2" />
-        <item itemvalue="Python.service1" />
-        <item itemvalue="Python.servise3" />
-        <item itemvalue="Python.тест" />
-        <item itemvalue="Python.1_request" />
+        <item itemvalue="Python.flexcube_connector" />
+        <item itemvalue="Python.autostarter_coca_cola" />
+        <item itemvalue="Python.comparatior" />
+        <item itemvalue="Python.Converter" />
+        <item itemvalue="Python.password" />
       </list>
     </recent_temporary>
   </component>
@@ -355,6 +349,9 @@
       <workItem from="1731293404915" duration="656000" />
       <workItem from="1731326200063" duration="478000" />
       <workItem from="1731470568652" duration="68000" />
+      <workItem from="1733212771732" duration="669000" />
+      <workItem from="1733396910878" duration="3155000" />
+      <workItem from="1733462594422" duration="7468000" />
     </task>
     <servers />
   </component>
@@ -384,6 +381,7 @@
     <SUITE FILE_PATH="coverage/project_kicb$login_automation.coverage" NAME="login_automation Coverage Results" MODIFIED="1727058002877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebAutoTests/tests" />
     <SUITE FILE_PATH="coverage/project_kicb$2collector_of_phone_numbers__1_.coverage" NAME="2collector_of_phone_numbers (1) Coverage Results" MODIFIED="1729603681242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/SQL_Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$service2.coverage" NAME="service2 Coverage Results" MODIFIED="1730896991187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parser_xml_to_pdf" />
+    <SUITE FILE_PATH="coverage/project_kicb$autostarter_coca_cola.coverage" NAME="autostarter_coca_cola Coverage Results" MODIFIED="1733480130497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_scripts" />
     <SUITE FILE_PATH="coverage/project_kicb$second_request__1_.coverage" NAME="second_request (1) Coverage Results" MODIFIED="1726461673643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Requests_runs" />
     <SUITE FILE_PATH="coverage/projects$test.coverage" NAME="test Coverage Results" MODIFIED="1720681762749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/project_kicb$first_request.coverage" NAME="first_request Coverage Results" MODIFIED="1729599746127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring" />
@@ -402,13 +400,17 @@
     <SUITE FILE_PATH="coverage/project_kicb$web_prod_tests__1_.coverage" NAME="web_prod_tests (1) Coverage Results" MODIFIED="1725949664489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest/Web_test_page_object" />
     <SUITE FILE_PATH="coverage/project_kicb$6_asinq_request.coverage" NAME="6_asinq_request Coverage Results" MODIFIED="1730173702004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$first_request__1_.coverage" NAME="first_request (1) Coverage Results" MODIFIED="1729603624410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
+    <SUITE FILE_PATH="coverage/project_kicb$flexcube_connector.coverage" NAME="flexcube_connector Coverage Results" MODIFIED="1733482272939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_scripts" />
+    <SUITE FILE_PATH="coverage/project_kicb$password.coverage" NAME="password Coverage Results" MODIFIED="1733398778131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_scripts" />
     <SUITE FILE_PATH="coverage/project_kicb$backup_main_initializer.coverage" NAME="backup_main_initializer Coverage Results" MODIFIED="1726718223567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
     <SUITE FILE_PATH="coverage/project_kicb$initializer.coverage" NAME="initializer Coverage Results" MODIFIED="1727840858384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
     <SUITE FILE_PATH="coverage/auto_kicb_v1$.coverage" NAME=" Coverage Results" MODIFIED="1724302055604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AndroidTests/tests" />
+    <SUITE FILE_PATH="coverage/project_kicb$comparatior.coverage" NAME="comparatior Coverage Results" MODIFIED="1733464589913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Localization_to_excel" />
     <SUITE FILE_PATH="coverage/project_kicb$3_request__1_.coverage" NAME="3_request (1) Coverage Results" MODIFIED="1729607303980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$6_request.coverage" NAME="6_request Coverage Results" MODIFIED="1729608291950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$7_request.coverage" NAME="7_request Coverage Results" MODIFIED="1730432498797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1726108812691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QR" />
+    <SUITE FILE_PATH="coverage/project_kicb$Converter.coverage" NAME="Converter Coverage Results" MODIFIED="1733464423934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Localization_to_excel" />
     <SUITE FILE_PATH="coverage/project_kicb$confirmTransfer.coverage" NAME="confirmTransfer Coverage Results" MODIFIED="1726140928459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
     <SUITE FILE_PATH="coverage/project_kicb$4third_request__1_.coverage" NAME="4third_request (1) Coverage Results" MODIFIED="1729603937856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$Example.coverage" NAME="Example Coverage Results" MODIFIED="1730178963406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Self_Edu" />
