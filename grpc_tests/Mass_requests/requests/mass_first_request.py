@@ -23,7 +23,7 @@ async def make_request(uuid, result):
             "accountCreditPropValue": result['account_no'],
             "accountCreditPropType": 'ACCOUNT_NO',
             "paymentPurpose": result['full_name_lat'],
-            "amountDebit": '1000.30',
+            "amountDebit": '1.30',
             "valueDate": None,
             "knp": None,
             "theirRefNo": None,

@@ -66,7 +66,7 @@ async def main():
     results = []
     successful_operation_ids = []  # Создаем новый список для успешных ID
 
-    semaphore = asyncio.Semaphore(9)  # Ограничение на 5 одновременных задач
+    semaphore = asyncio.Semaphore(10)  # Ограничение на 5 одновременных задач
 
     async def limited_run_requests(operation):
         async with semaphore:  # Ждем, пока можно будет запустить новую задачу
