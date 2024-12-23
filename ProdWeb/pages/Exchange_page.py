@@ -14,6 +14,7 @@ class ExchangePage1(BasePage):
         self.amount_debit = "//p [contains(text(), 'Сумма к списанию')]//..//div"
         self.exchange_button_accept = "//button [contains(text(), 'Обменять')]"
         self.exchange_button_confirm = "//button [contains(text(), 'Подтвердить')]"
+        self.goto_main_page = "//a [@href='/']"
 
 
 
@@ -28,11 +29,38 @@ class ExchangePage1(BasePage):
         self.page.locator(self.account_locator_2).nth(1).click()
         self.page.locator(self.account_locator_dollar).click()
         self.page.locator(self.amount_debit).nth(1).fill("10")
-        self.page.locator(self.exchange_button_accept).click()
-        self.page.locator(self.exchange_button_confirm).click()
+        self.page.locator(self.exchange_button_accept).wait_for(timeout=5000)
+        if self.page.locator(self.exchange_button_accept).is_visible(timeout=5000):
+            self.page.locator(self.exchange_button_accept).click()
+        else: 
+            print("Ошибка кнопка Принять не найдена")     
+        self.page.locator(self.exchange_button_confirm).wait_for(timeout=5000)
+        if self.page.locator(self.exchange_button_confirm).is_visible(timeout=5000):
+            self.page.locator(self.exchange_button_confirm).click()
+        else: 
+            print("Ошибка кнопка подтвердить не найдена")    
+        self.page.locator(self.goto_main_page).nth(0).click()
 
-
-
+    def exchange_2 (self):
+        """Выполняет запрос на обмен валюты"""
+        self.page.click(self.payment_button)
+        self.page.locator(self.exchange_button).nth(0).click()
+        self.page.locator(self.account_locator).nth(1).click()
+        self.page.locator(self.account_locator_dollar).click()
+        self.page.locator(self.account_locator_2).nth(1).click()
+        self.page.locator(self.account_locator_som).click()
+        self.page.locator(self.amount_debit).nth(1).fill("0.11")
+        self.page.locator(self.exchange_button_accept).wait_for(timeout=5000)
+        if self.page.locator(self.exchange_button_accept).is_visible(timeout=5000):
+            self.page.locator(self.exchange_button_accept).click()
+        else: 
+            print("Ошибка кнопка Принять не найдена")     
+        self.page.locator(self.exchange_button_confirm).wait_for(timeout=5000)
+        if self.page.locator(self.exchange_button_confirm).is_visible(timeout=5000):
+            self.page.locator(self.exchange_button_confirm).click()
+        else: 
+            print("Ошибка кнопка подтвердить не найдена")    
+        self.page.locator(self.goto_main_page).nth(0).click()
 
  
 

@@ -16,6 +16,7 @@ class OtpPage:
         self.error_message_locator2 = "//span[contains(text(), 'Неизвестная ошибка')]"  # Локатор для сообщения об ошибке
         self.listener_exchange_course = "//div[contains(text(), 'EUR')]"
         self.listener_card_status = "//span[contains(text(), 'ELCARD')]"
+        self.cards_status = "//div [@class='expand-data']"
 
     def enter_otp(self, otp_key: str):
         totp = pyotp.TOTP(otp_key)  # Генерация OTP
@@ -33,7 +34,9 @@ class OtpPage:
             
 
  
-            
+    def accounts_status(self):
+        self.page.locator(self.cards_status).nth(1).wait_for(timeout=30000)
+
         
 
 
@@ -65,7 +68,7 @@ class OtpPage:
                 raise Loading_errors("Ошибка: Статус карты не подгружен", 403)
                 reloads += 1
                 self.page.reload()
-
+    
                
 
 
