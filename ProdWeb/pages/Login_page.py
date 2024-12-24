@@ -18,15 +18,12 @@ class LoginPage(BasePage):
         self.page.goto(url)
 
     def login(self, credentials_file='C:/project_kicb/ProdWeb/user_data/users.json'):
-        # if self.page.locator(self.username_input).is_hidden() and self.page.locator(self.password_input).is_hidden():
-        #     print("Вход в систему уже выполнен")
-        #     raise Login_errors("Ошибка: Вход в систему уже выполнен.", 202)
-        """Выполняет вход в систему с фиксированными учетными данными."""
+
         with open(credentials_file, 'r') as file:
             self.credentials = json.load(file)
         
 
-
+        self.otp_key_google = self.credentials['otp_key_google']
         # username = "ataiy"
         # password = "Wdarkempiremate666"
 
@@ -44,7 +41,10 @@ class LoginPage(BasePage):
             self.page.locator(self.login_button).click()
             print("Успешный Вход в систему")
         else:
-            raise Login_errors("Ошибка: Неверный код подтверждения. Повторный ввод OTP.", 400)   
+            raise Login_errors("Ошибка: Неверный код подтверждения. Повторный ввод OTP.", 400)  
+
+
+
          
 
          

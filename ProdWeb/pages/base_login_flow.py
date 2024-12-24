@@ -17,7 +17,7 @@ class Login_flow():
             print("Находимся на странице входа.")
             login_page.login()
 
-            otp_key = "WTCSZCDIZXNQBX6FGWXUQ36EGU6ICVEI"
+            otp_key = login_page.otp_key_google
             try:
                 otp_page.enter_otp(otp_key)
             except OTP_errors as e:
