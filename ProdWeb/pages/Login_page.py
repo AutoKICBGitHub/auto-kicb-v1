@@ -1,3 +1,4 @@
+import json
 from playwright.sync_api import Page
 from pages.Base_page import BasePage
 from Exceptions.Login_errors import Login_errors
@@ -16,23 +17,28 @@ class LoginPage(BasePage):
         """Переходит по указанному URL."""
         self.page.goto(url)
 
-    def login(self):
+    def login(self, credentials_file='C:/project_kicb/ProdWeb/user_data/users.json'):
         # if self.page.locator(self.username_input).is_hidden() and self.page.locator(self.password_input).is_hidden():
         #     print("Вход в систему уже выполнен")
         #     raise Login_errors("Ошибка: Вход в систему уже выполнен.", 202)
         """Выполняет вход в систему с фиксированными учетными данными."""
-        username = "ataiy"
-        password = "Wdarkempiremate666"
+        with open(credentials_file, 'r') as file:
+            self.credentials = json.load(file)
+        
+
+
+        # username = "ataiy"
+        # password = "Wdarkempiremate666"
 
          
-
+        self.page.wait_for_selector(self.username_input)
         # Кликаем на поле логина и вводим имя пользователя
         self.page.click(self.username_input)
-        self.page.keyboard.type(username)
+        self.page.keyboard.type(self.credentials['username'])
 
         # Кликаем на поле пароля и вводим пароль
         self.page.click(self.password_input)
-        self.page.keyboard.type(password)
+        self.page.keyboard.type(self.credentials['password'])
         sleep(3)
         if self.page.locator(self.login_button).is_visible():
             self.page.locator(self.login_button).click()
