@@ -1,0 +1,3 @@
+Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+waiting for locator("//button [contains(text(), 'Отправить на подтверждение')]") to be visible

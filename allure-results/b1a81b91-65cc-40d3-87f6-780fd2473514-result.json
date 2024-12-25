@@ -1,0 +1,1 @@
+{"name": "Тест обмена валют", "status": "skipped", "description": "Проверка процесса обмена валют", "start": 1735103360702, "stop": 1735103360702, "uuid": "cf803fe6-8eef-4191-895d-d1da0a8d4651", "testCaseId": "12a491f4c48eb36af623236ccd200168", "fullName": "tests.test_exchange#test_exchange_flow"}
