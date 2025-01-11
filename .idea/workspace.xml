@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/back_grpc_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_by_inn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_country_side.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_rayons.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_tax_types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/grpc_fixture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/payment_confirm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/payment_make_other_tax_salyk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/protofile.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/protofile_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/protofile_pb2_grpc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpc_tests/Arrays/positive_customers_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Arrays/positive_customers_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/mass_initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/mass_initializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/requests/mass_first_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/requests/mass_first_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/requests/mass_second_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/requests/mass_second_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/ind_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/ind_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/result.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/result.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/SQL/transaction_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/SQL/transaction_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +126,7 @@
       <recent name="C:\project_kicb\autotest_QR_andr\QR_screenshots" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mass_initializer">
+  <component name="RunManager" selected="Python tests.Python tests for back_grpc_test.test_GET_TAX_PAYER_DETAILS">
     <configuration name="db_connection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="db_get_ind" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="first_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,12 +157,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests/Mass_requests/sql" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests/Requests_runs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/db_get_ind.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/Requests_runs/first_request.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,7 +171,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="db_operation_status" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="get_tax_payer_details" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,12 +179,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests/SQL" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Backend_grpc_requests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/SQL/db_operation_status.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_details.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,7 +193,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mass_initializer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="initializer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,12 +201,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests/Mass_requests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/Mass_requests/mass_initializer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/initializer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,35 +215,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mass_summ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for back_grpc_test.test_GET_TAX_PAYER_DETAILS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grpc_tests/Mass_requests/sql" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Backend_grpc_requests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grpc_tests/Mass_requests/sql/mass_summ.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;back_grpc_test.test_GET_TAX_PAYER_DETAILS&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mass_initializer" />
-        <item itemvalue="Python.mass_summ" />
-        <item itemvalue="Python.db_operation_status" />
+        <item itemvalue="Python tests.Python tests for back_grpc_test.test_GET_TAX_PAYER_DETAILS" />
+        <item itemvalue="Python.get_tax_payer_details" />
+        <item itemvalue="Python.initializer" />
+        <item itemvalue="Python.first_request" />
         <item itemvalue="Python.db_connection" />
-        <item itemvalue="Python.db_get_ind" />
       </list>
     </recent_temporary>
   </component>
@@ -344,6 +349,7 @@
       <workItem from="1733396910878" duration="3155000" />
       <workItem from="1733462594422" duration="7468000" />
       <workItem from="1733804909332" duration="4484000" />
+      <workItem from="1736327372337" duration="4635000" />
     </task>
     <servers />
   </component>
@@ -365,7 +371,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/project_kicb$db_connection.coverage" NAME="db_connection Coverage Results" MODIFIED="1733818206160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
+    <SUITE FILE_PATH="coverage/project_kicb$db_connection.coverage" NAME="db_connection Coverage Results" MODIFIED="1736328540498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
     <SUITE FILE_PATH="coverage/projects$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1720774570992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webTest" />
     <SUITE FILE_PATH="coverage/project_kicb$2collector_of_phone_numbers.coverage" NAME="2collector_of_phone_numbers Coverage Results" MODIFIED="1730173415661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/SQL_Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$backup_main_initializer__1_.coverage" NAME="backup_main_initializer (1) Coverage Results" MODIFIED="1726721662751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Backup" />
@@ -376,7 +382,7 @@
     <SUITE FILE_PATH="coverage/project_kicb$autostarter_coca_cola.coverage" NAME="autostarter_coca_cola Coverage Results" MODIFIED="1733480130497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_scripts" />
     <SUITE FILE_PATH="coverage/project_kicb$second_request__1_.coverage" NAME="second_request (1) Coverage Results" MODIFIED="1726461673643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Requests_runs" />
     <SUITE FILE_PATH="coverage/projects$test.coverage" NAME="test Coverage Results" MODIFIED="1720681762749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/project_kicb$first_request.coverage" NAME="first_request Coverage Results" MODIFIED="1729599746127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring" />
+    <SUITE FILE_PATH="coverage/project_kicb$first_request.coverage" NAME="first_request Coverage Results" MODIFIED="1736328998144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Requests_runs" />
     <SUITE FILE_PATH="coverage/project_kicb$cookies.coverage" NAME="cookies Coverage Results" MODIFIED="1728362592033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies" />
     <SUITE FILE_PATH="coverage/project_kicb$1_request.coverage" NAME="1_request Coverage Results" MODIFIED="1730432660502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$webTransferApi_pb2.coverage" NAME="webTransferApi_pb2 Coverage Results" MODIFIED="1726138791186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc" />
@@ -395,7 +401,7 @@
     <SUITE FILE_PATH="coverage/project_kicb$flexcube_connector.coverage" NAME="flexcube_connector Coverage Results" MODIFIED="1733482272939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_scripts" />
     <SUITE FILE_PATH="coverage/project_kicb$password.coverage" NAME="password Coverage Results" MODIFIED="1733398778131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_scripts" />
     <SUITE FILE_PATH="coverage/project_kicb$backup_main_initializer.coverage" NAME="backup_main_initializer Coverage Results" MODIFIED="1726718223567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
-    <SUITE FILE_PATH="coverage/project_kicb$initializer.coverage" NAME="initializer Coverage Results" MODIFIED="1727840858384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
+    <SUITE FILE_PATH="coverage/project_kicb$initializer.coverage" NAME="initializer Coverage Results" MODIFIED="1736329007392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests" />
     <SUITE FILE_PATH="coverage/auto_kicb_v1$.coverage" NAME=" Coverage Results" MODIFIED="1724302055604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AndroidTests/tests" />
     <SUITE FILE_PATH="coverage/project_kicb$comparatior.coverage" NAME="comparatior Coverage Results" MODIFIED="1733464589913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Localization_to_excel" />
     <SUITE FILE_PATH="coverage/project_kicb$3_request__1_.coverage" NAME="3_request (1) Coverage Results" MODIFIED="1729607303980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
@@ -415,6 +421,7 @@
     <SUITE FILE_PATH="coverage/project_kicb$4_request__1_.coverage" NAME="4_request (1) Coverage Results" MODIFIED="1729608476703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Grps_test_internet_equiring/Requests" />
     <SUITE FILE_PATH="coverage/project_kicb$service1.coverage" NAME="service1 Coverage Results" MODIFIED="1730896928024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parser_xml_to_pdf" />
     <SUITE FILE_PATH="coverage/project_kicb$mass_initializer.coverage" NAME="mass_initializer Coverage Results" MODIFIED="1733819924863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Mass_requests" />
+    <SUITE FILE_PATH="coverage/project_kicb$get_tax_payer_details.coverage" NAME="get_tax_payer_details Coverage Results" MODIFIED="1736332374760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backend_grpc_requests" />
     <SUITE FILE_PATH="coverage/project_kicb$db_operation_status.coverage" NAME="db_operation_status Coverage Results" MODIFIED="1733818209698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
     <SUITE FILE_PATH="coverage/project_kicb$mass_summ.coverage" NAME="mass_summ Coverage Results" MODIFIED="1733818229397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/Mass_requests/sql" />
     <SUITE FILE_PATH="coverage/project_kicb$db_connection__1_.coverage" NAME="db_connection (1) Coverage Results" MODIFIED="1726827421045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grpc_tests/SQL" />
