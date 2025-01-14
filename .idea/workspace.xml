@@ -129,6 +129,7 @@
   <component name="RunManager" selected="Python tests.Python tests for back_grpc_test.test_GET_TAX_PAYER_DETAILS">
     <configuration name="db_connection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -151,6 +152,7 @@
     </configuration>
     <configuration name="first_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -173,6 +175,7 @@
     </configuration>
     <configuration name="get_tax_payer_details" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -195,6 +198,7 @@
     </configuration>
     <configuration name="initializer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projects" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -217,6 +221,7 @@
     </configuration>
     <configuration name="Python tests for back_grpc_test.test_GET_TAX_PAYER_DETAILS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="projects" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
