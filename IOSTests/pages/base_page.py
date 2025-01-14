@@ -26,3 +26,38 @@ class BasePage:
             return True
         except:
             return False
+
+    def handle_alerts(self):
+        """Обработка системных алертов iOS"""
+        try:
+            # Список возможных текстов кнопок разрешения
+            allow_buttons = [
+                "Allow",
+                "OK",
+                "Разрешить",
+                "Allow Once",
+                "While Using the App"
+            ]
+            
+            for button_text in allow_buttons:
+                try:
+                    alert = self.wait.until(EC.presence_of_element_located(
+                        (AppiumBy.ACCESSIBILITY_ID, button_text)
+                    ))
+                    alert.click()
+                    print(f"✅ Нажата кнопка: {button_text}")
+                    return True
+                except:
+                    continue
+                
+            # Также проверяем по XPath для случаев, когда accessibility id не работает
+            xpath_alert = self.wait.until(EC.presence_of_element_located(
+                (AppiumBy.XPATH, "//XCUIElementTypeButton[@name='Allow']")
+            ))
+            xpath_alert.click()
+            print("✅ Разрешение предоставлено через XPath")
+            return True
+            
+        except:
+            print("ℹ️ Алерты не найдены или уже обработаны")
+            return False

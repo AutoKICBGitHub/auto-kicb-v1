@@ -5,26 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/back_grpc_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_by_inn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_country_side.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_details.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_rayons.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/get_tax_payer_tax_types.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/grpc_fixture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/payment_confirm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/payment_make_other_tax_salyk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/protofile.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/protofile_pb2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend_grpc_requests/protofile_pb2_grpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IOSTests/utils/setup_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc_tests/Arrays/positive_customers_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/grpc_tests/Arrays/positive_customers_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/pages/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/pages/login_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/utils/capabilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/utils/capabilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get-pip.py" beforeDir="false" afterPath="$PROJECT_DIR$/get-pip.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,40 +67,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for test.test_find_battery.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.test_login.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.test_open_accounts.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/project_kicb/Localization_to_excel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python tests.Python tests for test.test_find_battery.executor": "Run",
+    "Python tests.Python tests for test.test_login.executor": "Run",
+    "Python tests.Python tests for test.test_open_accounts.executor": "Run",
+    "Python tests.Python tests in test.py.executor": "Run",
+    "Python.test (1).executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/test/Documents/GitHub/auto-kicb-v1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\project_kicb\Localization_to_excel" />
@@ -355,6 +346,7 @@
       <workItem from="1733462594422" duration="7468000" />
       <workItem from="1733804909332" duration="4484000" />
       <workItem from="1736327372337" duration="4635000" />
+      <workItem from="1736833836024" duration="3886000" />
     </task>
     <servers />
   </component>

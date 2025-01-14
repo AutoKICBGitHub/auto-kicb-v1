@@ -1,22 +1,22 @@
 from .base_page import BasePage
-from appium.webdriver.common.appiumby import AppiumBy
 
 
 class LoginPage(BasePage):
-    # Локаторы
-    username_field = (AppiumBy.ACCESSIBILITY_ID, "username_input")
-    password_field = (AppiumBy.ACCESSIBILITY_ID, "password_input")
-    login_button = (AppiumBy.ACCESSIBILITY_ID, "login_button")
-    error_message = (AppiumBy.ACCESSIBILITY_ID, "error_message")
-
+    def __init__(self, driver):
+        super().__init__(driver)
+        self.username_field = "username_input"
+        self.password_field = "password_input"
+        self.login_button = "login_button"
+        self.success_message = "success_message"
+    
     def enter_username(self, username):
-        self.send_keys(self.username_field, username)
-
+        self.find_element_by_accessibility_id(self.username_field).send_keys(username)
+    
     def enter_password(self, password):
-        self.send_keys(self.password_field, password)
-
+        self.find_element_by_accessibility_id(self.password_field).send_keys(password)
+    
     def tap_login_button(self):
-        self.click(self.login_button)
-
-    def is_error_visible(self):
-        return self.is_element_visible(self.error_message)
+        self.find_element_by_accessibility_id(self.login_button).click()
+    
+    def is_success_message_displayed(self):
+        return self.find_element_by_accessibility_id(self.success_message).is_displayed()

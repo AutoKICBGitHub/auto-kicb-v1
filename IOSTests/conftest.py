@@ -1,30 +1,32 @@
 import pytest
 from appium import webdriver
-from utils.capabilities import get_ios_simulator_capabilities, get_ios_real_device_capabilities
-
-
-def pytest_addoption(parser):
-    parser.addoption("--device", action="store", default="simulator",
-                    help="Choose device: real or simulator")
+from appium.options.ios import XCUITestOptions
+from utils.capabilities import get_ios_simulator_capabilities
+from pages.base_page import BasePage
 
 
 @pytest.fixture(scope="session")
-def driver(request):
-    device = request.config.getoption("--device")
+def driver():
+    # Инициализация драйвера
+    caps = get_ios_simulator_capabilities()
+    options = XCUITestOptions()
+    for key, value in caps.items():
+        options.set_capability(key, value)
     
-    if device == "real":
-        capabilities = get_ios_real_device_capabilities()
-    else:
-        capabilities = get_ios_simulator_capabilities()
-    
-    driver = webdriver.Remote(
-        command_executor='http://localhost:4723',
-        desired_capabilities=capabilities
-    )
-    
-    yield driver
-    
-    driver.quit()
+    try:
+        driver = webdriver.Remote(
+            command_executor='http://localhost:4724/wd/hub',
+            options=options
+        )
+        
+        # Обработка начальных алертов
+        base_page = BasePage(driver)
+        base_page.handle_alerts()
+        
+        yield driver
+    finally:
+        if driver:
+            driver.quit()
 
 
 @pytest.fixture(scope="function")
