@@ -1,0 +1,21 @@
+Запустить тесты:
+Для симулятора:
+pytest IOSTests/tests/
+Для реального устройства:
+pytest IOSTests/tests/ --device=real
+
+
+
+{
+  "platformName": "iOS",
+  "appium:automationName": "XCUITest",
+  "appium:deviceName": "iPhone 15 Pro",
+  "appium:platformVersion": "17.5",
+  "appium:bundleId": "newibankprod.kicb.net",
+  "noReset": true,
+  "fullReset": false,
+  "appium:udid": "A5220878-4496-471F-A7F8-A2295497EC35"
+}
+
+
+

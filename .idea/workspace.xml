@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IOSTests/utils/setup_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IOSTests/pages/otp_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IOSTests/test_data/test_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IOSTests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/help.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/help.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IOSTests/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/pages/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IOSTests/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/pages/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IOSTests/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IOSTests/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/tests/test_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IOSTests/utils/capabilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/IOSTests/utils/capabilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get-pip.py" beforeDir="false" afterPath="$PROJECT_DIR$/get-pip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOSTests/utils/setup_helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProdWeb/user_data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProdWeb/user_data/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +347,7 @@
       <workItem from="1733462594422" duration="7468000" />
       <workItem from="1733804909332" duration="4484000" />
       <workItem from="1736327372337" duration="4635000" />
-      <workItem from="1736833836024" duration="3886000" />
+      <workItem from="1736833836024" duration="6428000" />
     </task>
     <servers />
   </component>
