@@ -1,12 +1,35 @@
-import asyncio
+import sys
+import os
 import json
+import asyncio
 from aiohttp import ClientSession
-from Grps_test_internet_equiring.tokens import tokens  # Импортируем массив токенов
-from Grps_test_internet_equiring.new_data import data  # Импортируем словарь с данными
+
+# Получаем абсолютный путь к файлам
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+
+# Загружаем токен из JSON файла
+with open(os.path.join(parent_dir, 'tokens.json'), 'r') as f:
+    token_data = json.load(f)
+    access_token = token_data['access_token']
+
+# Загружаем данные из new_data.py
+def load_data():
+    try:
+        with open(os.path.join(parent_dir, 'new_data.py'), 'r') as f:
+            content = f.read()
+            local_dict = {}
+            exec(content, {}, local_dict)
+            return local_dict.get('data', {})
+    except Exception as e:
+        print(f"Ошибка при загрузке данных: {e}")
+        return {}
+
+data = load_data()
 
 # Убедитесь, что у вас есть хотя бы один токен
-if not tokens:
-    print("Нет доступных токенов")
+if not access_token:
+    print("Нет доступного токена")
     exit(1)
 
 # Словарь для хранения ответов
@@ -19,9 +42,9 @@ async def send_request(session, transaction_id, transaction_data):
         "otp": transaction_data['otp']
     })
 
-    # Используем первый токен из массива
+    # Используем токен
     headers = {
-        'Authorization': f'Bearer {tokens[0]}',  # Подставляем токен
+        'Authorization': f'Bearer {access_token}',  # Подставляем токен
         'Content-Type': 'application/json'
     }
 

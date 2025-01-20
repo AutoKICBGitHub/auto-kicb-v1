@@ -3,7 +3,7 @@ import json  # Импортируем модуль для работы с JSON
 
 # Массив с данными для логина (логин и пароль)
 credentials = [
-    {"login": "mashina.kg", "password": "password1"}  # Используем тот же логин повторно для примера
+    {"login": "amazon12", "password": "12345678"}  # Используем тот же логин повторно для примера
 ]
 
 # Массив для хранения токенов
@@ -37,10 +37,10 @@ def get_token(login, password):
 
     # Преобразуем данные из JSON-строки в словарь
     response_json = json.loads(data.decode("utf-8"))
-
-    # Извлекаем токен из 'accessToken', если он есть
-    if 'accessToken' in response_json:
-        return response_json['accessToken']
+    
+    # Проверяем наличие access и refresh токенов
+    if 'access' in response_json and 'refresh' in response_json:
+        return response_json  # Возвращаем весь ответ
     else:
         print(f"Токен не найден для {login}: {response_json}")
         return None
@@ -60,11 +60,19 @@ for cred in credentials:
 
 # Записываем токены в файл tokens.py
 
-with open('../tokens.py', 'w') as f:
-    f.write("tokens = [\n")  # Начинаем с объявления массива
-    for token in tokens:
-        f.write(f"    '{token}',\n")  # Записываем каждый токен с отступом
-    f.write("]\n")  # Заканчиваем массив
+# Изменим путь к файлу на абсолютный и используем .json вместо .py
+token_file_path = 'C:\\project_kicb\\Grps_test_internet_equiring\\tokens.json'
+
+# Сохраняем токен
+try:
+    with open(token_file_path, 'w') as f:
+        json.dump({
+            'access_token': token['access']['token'],
+            'refresh_token': token['refresh']['token']
+        }, f, indent=4)
+    print(f"Токен успешно сохранен в {token_file_path}")
+except Exception as e:
+    print(f"Ошибка при сохранении токена: {e}")
 
 
 # Выводим собранные токены

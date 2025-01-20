@@ -1,15 +1,20 @@
+import sys
+import os
 import psycopg2
 import json
 
-from Grps_test_internet_equiring.txnIds import txnIds  # Предполагается, что вы импортируете txnIds
+# Получаем абсолютный путь к файлу txnIds.py
+txnids_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'txnIds.py')
 
 def load_txn_ids(filename):
     """Загружает ID транзакций из файла txnIds.py."""
     try:
         with open(filename, "r") as f:
             content = f.read()
-        exec(content)  # Выполняем код, чтобы создать переменную txnIds
-        return txnIds  # Возвращаем весь словарь txnIds
+            # Создаем локальное пространство имен для выполнения
+            local_dict = {}
+            exec(content, {}, local_dict)
+            return local_dict.get('txnIds', {})
     except Exception as e:
         print(f"Ошибка при загрузке транзакций из файла {filename}: {e}")
         return {}
@@ -76,23 +81,24 @@ def get_additional_data_from_db(txn_ids):
 
 def save_data_to_file(records, filename):
     """Сохраняет все данные в файл в формате Python."""
+    output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), filename)
     try:
-        with open(filename, "w", encoding='utf-8') as f:
+        with open(output_path, "w", encoding='utf-8') as f:
             f.write("data = {\n")
             for txn_id, otp in records.items():
                 f.write(f"    '{txn_id}': '{otp}',\n")
             f.write("}\n")
-        print(f"Файл {filename} обновлён с добавлением данных.")
+        print(f"Файл {output_path} обновлён с добавлением данных.")
     except Exception as e:
-        print(f"Ошибка при сохранении данных в файл {filename}: {e}")
+        print(f"Ошибка при сохранении данных в файл {output_path}: {e}")
 
 # Загружаем ID транзакций из файла txnIds.py
-txn_ids = load_txn_ids("../txnIds.py")
+txn_ids = load_txn_ids(txnids_path)
 
 # Получаем дополнительные данные из базы данных, используя загруженные ID
 if txn_ids:
     additional_data = get_additional_data_from_db(txn_ids)
-
     # Сохраняем все данные в файл data.py
-    save_data_to_file(additional_data, "../data.py")
-el
+    save_data_to_file(additional_data, 'data.py')
+else:
+    print("Не найдены ID транзакций для обработки")

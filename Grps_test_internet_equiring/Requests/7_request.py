@@ -1,6 +1,37 @@
-import asyncio
+import sys
+import os
 import json
+import http.client
+import asyncio
 import aiohttp
+
+# Получаем абсолютный путь к файлам
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+
+# Загружаем токен из JSON файла
+with open(os.path.join(parent_dir, 'tokens.json'), 'r') as f:
+    token_data = json.load(f)
+    access_token = token_data['access_token']
+
+# Проверяем наличие токена
+if not access_token:
+    print("Нет доступных токенов.")
+    exit(1)
+
+# Загружаем данные из otp_input_status.py
+def load_responses():
+    try:
+        with open(os.path.join(parent_dir, 'otp_input_status.py'), 'r') as f:
+            content = f.read()
+            local_dict = {}
+            exec(content, {}, local_dict)
+            return local_dict.get('responses', {})
+    except Exception as e:
+        print(f"Ошибка при загрузке ответов: {e}")
+        return {}
+
+responses = load_responses()
 
 # Загрузка txnIds из файла
 txn_ids = {}
@@ -18,23 +49,13 @@ if not txn_ids:
     print("Нет доступных txnIds.")
     exit(1)
 
-# Загрузка токенов из файла
-tokens = []
-with open('C:/project_kicb/Grps_test_internet_equiring/tokens.py', 'r', encoding='utf-8') as f:
-    exec(f.read())  # Выполняем содержимое файла, чтобы получить список tokens
-
-# Убедитесь, что у вас есть хотя бы один токен
-if not tokens:
-    print("Нет доступных токенов.")
-    exit(1)
-
 # Словарь для хранения ответов сервера
 server_responses = {}
 
 # Функция для отправки GET-запроса
 async def check_transaction(session, transaction_id):
     headers = {
-        'Authorization': f'Bearer {tokens[0]}',  # Используем первый токен
+        'Authorization': f'Bearer {access_token}',  # Используем токен
     }
 
     # Выполняем GET-запрос
