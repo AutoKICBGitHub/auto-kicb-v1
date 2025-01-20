@@ -1,6 +1,8 @@
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time
+from selenium.common.exceptions import NoSuchElementException
 
 
 class BasePage:
@@ -68,4 +70,27 @@ class BasePage:
             
         except:
             print("ℹ️ Алерты не найдены или уже обработаны")
+            return False
+
+    def wait_for_notification_to_disappear(self):
+        """Ожидание исчезновения уведомления"""
+        try:
+            notification_now = '//XCUIElementTypeStaticText[@name="сейчас"]'
+            max_attempts = 10
+            attempt = 0
+            
+            while attempt < max_attempts:
+                try:
+                    self.driver.find_element(AppiumBy.XPATH, notification_now)
+                    print("ℹ️ Ожидание исчезновения уведомления...")
+                    time.sleep(1)
+                    attempt += 1
+                except NoSuchElementException:
+                    print("✅ Уведомление исчезло")
+                    return True
+            
+            print("⚠️ Уведомление не исчезло после таймаута")
+            return False
+        except Exception as e:
+            print(f"❌ Ошибка при ожидании уведомления: {e}")
             return False
