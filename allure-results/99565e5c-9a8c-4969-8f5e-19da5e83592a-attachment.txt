@@ -1,0 +1,7 @@
+<Page url='https://ibank.kicb.net/'>
+Не удалось перейти на страницу входа.
+Транзакция подтверждена для банка demir на сумму 20 сом
+Неожиданная ошибка при переводе в банк demir: Locator.click: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("//button [contains(text(), 'Подтвердить')]")
+

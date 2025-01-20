@@ -1,0 +1,1 @@
+{"name": "test_bakai_transfer", "status": "skipped", "description": "Тест перевода в Бакай Банк", "start": 1737373761992, "stop": 1737373761992, "uuid": "127f9b74-3d5f-42f2-bc54-3aeb16e33498", "testCaseId": "c45e77a5fe74fad82a46b73ac594ede9", "fullName": "tests.test_banks_transfers.TestBankTransfers#test_bakai_transfer"}

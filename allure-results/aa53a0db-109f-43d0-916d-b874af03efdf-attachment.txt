@@ -1,0 +1,8 @@
+Находимся на странице входа.
+Успешный Вход в систему
+Курс обмена валюты подгружен
+Статус карты подгружен
+Неожиданная ошибка при переводе в банк optima: Locator.wait_for: Timeout 5000ms exceeded.
+Call log:
+waiting for locator("//button [contains(text(), 'Отправить на подтверждение')]") to be visible
+
