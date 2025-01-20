@@ -7,3 +7,4 @@ node_modules/
 venv/
 .venv/
 .idea/workspace.xml
+/.idea

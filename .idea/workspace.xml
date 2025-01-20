@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IOSTests/pages/transfer_kicb_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IOSTests/tests/test_transfers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -339,6 +335,7 @@
       <workItem from="1733804909332" duration="4484000" />
       <workItem from="1736327372337" duration="4635000" />
       <workItem from="1736833836024" duration="8721000" />
+      <workItem from="1737339986648" duration="735000" />
     </task>
     <servers />
   </component>
