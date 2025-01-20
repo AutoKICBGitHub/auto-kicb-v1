@@ -1,7 +1,6 @@
 import sys
 import os
 import json
-import http.client
 import asyncio
 import aiohttp
 
