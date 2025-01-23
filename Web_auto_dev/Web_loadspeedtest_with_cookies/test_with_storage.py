@@ -131,5 +131,5 @@ def test_50_times(page):
         loading_time = measure_loading_time(page)
         total_time += loading_time
 
-    average_time = total_time / 50
+    average_time = total_time / 1
     print(f"Среднее время загрузки за 50 тестов: {average_time:.2f} секунд")
