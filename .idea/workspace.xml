@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e98da78-a72f-4c16-b283-0df1ccd2f21a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Web_loading_time/Run_in_pages_with_context/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_loading_time/Run_in_pages_with_context/test_runner_pages_with.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_loading_time/Run_in_pages_without_context/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web_loading_time/Run_in_pages_without_context/test_runner_pages_without" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/directory_config copy.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/directory_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/memory_stresser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/protofile.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/protofile_pb2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/protofile_pb2_grpc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/swift_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stress_tests/memory_leak/swift_stresser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/test_with_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web_auto_dev/Web_loadspeedtest_with_cookies/test_with_storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests-examples/demo-todo-app.spec.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +313,7 @@
       <workItem from="1736833836024" duration="8721000" />
       <workItem from="1737349193215" duration="4759000" />
       <workItem from="1737434090585" duration="1006000" />
-      <workItem from="1737601205872" duration="2405000" />
+      <workItem from="1737601205872" duration="4220000" />
     </task>
     <servers />
   </component>
