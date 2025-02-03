@@ -1,1 +1,0 @@
-{"name": "test_ayil_transfer", "status": "skipped", "description": "Тест перевода в Айыл Банк", "start": 1737373582155, "stop": 1737373582155, "uuid": "634805ea-3ad7-4ffa-a622-3f92c84c5ac3", "testCaseId": "23ffa37e6eb772dad0526779a237b2a1", "fullName": "tests.test_banks_transfers.TestBankTransfers#test_ayil_transfer"}

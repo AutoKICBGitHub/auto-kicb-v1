@@ -1,1 +1,0 @@
-{"name": "test_demir_transfer", "status": "skipped", "description": "Тест перевода в Демир Банк", "start": 1737374213692, "stop": 1737374213692, "uuid": "5a616e3d-8e1b-44e7-bab3-1749cac24a07", "testCaseId": "e358bc6a1a9e2f3016c5a4b1088c2842", "fullName": "tests.test_banks_transfers.TestBankTransfers#test_demir_transfer"}

@@ -1,1 +1,0 @@
-{"name": "test_simbank_transfer", "status": "skipped", "description": "Тест перевода в SimBank", "start": 1737374094182, "stop": 1737374094182, "uuid": "00c46e66-e499-47b8-bc5a-b4fd8ecd85b7", "testCaseId": "49c75522253b0df2039daa84d433b93c", "fullName": "tests.test_banks_transfers.TestBankTransfers#test_simbank_transfer"}

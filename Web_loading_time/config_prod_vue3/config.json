@@ -1,0 +1,12 @@
+{
+  "url": "https://newibanktest.kicb.net/",
+  "credentials": {
+    "username": "00853948",
+    "password": "kicb2024",
+    "otp-key": "W3CUY46FNFBSBGYGMUAA5M226G2XJ2ZI"
+  },
+  "timeouts": {
+    "default_timeout": 300000,
+    "auth_timeout": 5000
+  }
+} 

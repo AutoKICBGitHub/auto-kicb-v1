@@ -1,0 +1,3 @@
+
+Начата запись видео: ./videos/test_internal_transfer.webm
+Видео сохранено: ./videos/test_internal_transfer.webm

@@ -1,6 +1,0 @@
-<Page url='https://ibank.kicb.net/'>
-Не удалось перейти на страницу входа.
-Неожиданная ошибка при переводе в банк mbank: Locator.wait_for: Timeout 5000ms exceeded.
-Call log:
-waiting for locator("//button [contains(text(), 'Отправить на подтверждение')]") to be visible
-

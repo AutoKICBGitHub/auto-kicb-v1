@@ -1,1 +1,0 @@
-{"name": "test_mbank_transfer", "status": "skipped", "description": "Тест перевода в MBank", "start": 1737374325435, "stop": 1737374325435, "uuid": "7628cfdc-1da8-455b-8512-7ea4327d2587", "testCaseId": "74d11917e6ecdaca3217af18e572bb2f", "fullName": "tests.test_banks_transfers.TestBankTransfers#test_mbank_transfer"}
