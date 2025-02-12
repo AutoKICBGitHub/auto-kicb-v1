@@ -1,3 +1,0 @@
-
-Начата запись видео: ./videos/test_exchange.webm
-Видео сохранено: ./videos/test_exchange.webm

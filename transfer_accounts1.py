@@ -1,2 +1,0 @@
-successful_accounts = [
-]
