@@ -85,7 +85,7 @@ def execute_umai_payment():
     
     # Ждем 5 секунд
     print("\nОжидание 5 секунд...")
-    time.sleep(5)
+    time.sleep(3)
     
     # Подтверждаем платеж
     confirm_response = confirm_umai_payment(payment_data["operationId"])

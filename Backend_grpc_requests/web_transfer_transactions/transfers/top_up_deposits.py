@@ -12,7 +12,7 @@ def get_session_data():
         session_data = json.load(file)
     return session_data
 
-def make_umai_payment(request, metadata):
+def make_deposit(request, metadata):
     print(f"Отправка запроса: {request.code}")
     print(f"Данные запроса: {request.data}")
     print(f"Метаданные: {metadata}")
@@ -28,33 +28,44 @@ def make_umai_payment(request, metadata):
         print(f"Получен ответ: {response}")
         return response
 
-def create_umai_payment():
+def create_deposit():
     metadata = (
-        ('refid', str(uuid.uuid1())),  # Фиксированный refId из примера
+        ('refid', str(uuid.uuid1())),
         ('sessionkey', get_session_data()['session_key']),
         ('device-type', 'ios'),
         ('user-agent-c', '12; iPhone12MaxProDan'),
     )
     
-    payment_data = {
-        "operationId": str(uuid.uuid1()),
-        "propValue": "996555515516",
-        "accountIdDebit": 10954,  # ID счета списания
-        "amountCredit": "100",  # Сумма платежа
-        "serviceId": "UMAI_SERVICE",  # ID сервиса UMAI
-        "serviceProviderId": 883
+    deposit_data = {
+        "depositType": "Savings deposit",
+        "depositId": 1531,
+        "mainIntType": "B",
+        "amount": "5000",
+        "ccy": "KGS",
+        "rate": "4.5",
+        "accountDebitId": 10954,
+        "termOfDeposit": "3",
+        "childName": "",
+        "childBirthdate": "",
+        "files": [],
+        "productType": "makeDepositApplication",
+        "requestId": f"IB{int(time.time() * 1000)}",
+        "accountIdDebit": 10954,
+        "amountDebit": "5000",
+        "operationId": str(uuid.uuid4()),
+        "txnId": None
     }
 
     request = webTransferApi_pb2.IncomingWebTransfer(
-        code="MAKE_GENERIC_PAYMENT_V2",  # Код операции для UMAI
-        data=json.dumps(payment_data)
+        code="MAKE_DEPOSIT",
+        data=json.dumps(deposit_data)
     )
     
-    response = make_umai_payment(request, metadata)
-    print("Создание платежа UMAI завершено")
-    return response, payment_data
+    response = make_deposit(request, metadata)
+    print("Создание депозита завершено")
+    return response, deposit_data
 
-def confirm_umai_payment(operation_id: str):
+def confirm_deposit(operation_id: str):
     metadata = (
         ('refid', str(uuid.uuid1())),
         ('sessionkey', get_session_data()['session_key']),
@@ -68,37 +79,37 @@ def confirm_umai_payment(operation_id: str):
     }
 
     request = webTransferApi_pb2.IncomingWebTransfer(
-        code="CONFIRM_TRANSFER",  # Код операции для подтверждения
+        code="CONFIRM_TRANSFER",
         data=json.dumps(confirm_data)
     )
 
-    response = make_umai_payment(request, metadata)
-    print("Подтверждение платежа UMAI завершено")
+    response = make_deposit(request, metadata)
+    print("Подтверждение депозита завершено")
     return response
 
-def execute_umai_payment():
-    print("\n=== Начало выполнения платежа UMAI ===")
+def execute_deposit():
+    print("\n=== Начало создания депозита ===")
     
-    # Создаем платеж
-    payment_response, payment_data = create_umai_payment()
-    print(f"\nРезультат создания платежа: {payment_response}")
+    # Создаем депозит
+    deposit_response, deposit_data = create_deposit()
+    print(f"\nРезультат создания депозита: {deposit_response}")
     
-    # Ждем 5 секунд
-    print("\nОжидание 5 секунд...")
+    # Ждем 3 секунды
+    print("\nОжидание 3 секунд...")
     time.sleep(3)
     
-    # Подтверждаем платеж
-    confirm_response = confirm_umai_payment(payment_data["operationId"])
+    # Подтверждаем депозит
+    confirm_response = confirm_deposit(deposit_data["operationId"])
     print(f"\nРезультат подтверждения: {confirm_response}")
     
     return {
-        "payment_response": payment_response,
+        "deposit_response": deposit_response,
         "confirm_response": confirm_response
     }
 
 if __name__ == "__main__":
     try:
-        result = execute_umai_payment()
+        result = execute_deposit()
         print("\n=== Результат выполнения ===")
         print(result)
     except Exception as e:

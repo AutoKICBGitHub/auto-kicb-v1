@@ -12,7 +12,7 @@ def get_session_data():
         session_data = json.load(file)
     return session_data
 
-def make_umai_payment(request, metadata):
+def make_account_opening_request(request, metadata):
     print(f"Отправка запроса: {request.code}")
     print(f"Данные запроса: {request.data}")
     print(f"Метаданные: {metadata}")
@@ -28,33 +28,40 @@ def make_umai_payment(request, metadata):
         print(f"Получен ответ: {response}")
         return response
 
-def create_umai_payment():
+def create_account_opening_request():
     metadata = (
-        ('refid', str(uuid.uuid1())),  # Фиксированный refId из примера
+        ('refid', str(uuid.uuid1())),
         ('sessionkey', get_session_data()['session_key']),
         ('device-type', 'ios'),
         ('user-agent-c', '12; iPhone12MaxProDan'),
     )
     
-    payment_data = {
-        "operationId": str(uuid.uuid1()),
-        "propValue": "996555515516",
-        "accountIdDebit": 10954,  # ID счета списания
-        "amountCredit": "100",  # Сумма платежа
-        "serviceId": "UMAI_SERVICE",  # ID сервиса UMAI
-        "serviceProviderId": 883
+    operation_id = str(uuid.uuid4())
+    account_opening_data = {
+        "operationId": operation_id,
+        "productType": "makeAccountOpeningApplication",
+        "data": {
+            "accountDebitId": 10954,
+            "openAccountCcy": "TRY",
+            "productType": "makeAccountOpeningApplication",
+            "requestId": f"IB{int(time.time() * 1000)}",
+            "accountIdDebit": 10954,
+            "operationId": operation_id,
+            "txnId": None
+        },
+        "txnId": None
     }
 
     request = webTransferApi_pb2.IncomingWebTransfer(
-        code="MAKE_GENERIC_PAYMENT_V2",  # Код операции для UMAI
-        data=json.dumps(payment_data)
+        code="MAKE_TXN_SHOP_OPERATION",
+        data=json.dumps(account_opening_data)
     )
     
-    response = make_umai_payment(request, metadata)
-    print("Создание платежа UMAI завершено")
-    return response, payment_data
+    response = make_account_opening_request(request, metadata)
+    print("Создание запроса на открытие счета завершено")
+    return response, account_opening_data
 
-def confirm_umai_payment(operation_id: str):
+def confirm_account_opening_request(operation_id: str):
     metadata = (
         ('refid', str(uuid.uuid1())),
         ('sessionkey', get_session_data()['session_key']),
@@ -68,38 +75,38 @@ def confirm_umai_payment(operation_id: str):
     }
 
     request = webTransferApi_pb2.IncomingWebTransfer(
-        code="CONFIRM_TRANSFER",  # Код операции для подтверждения
+        code="CONFIRM_TRANSFER",
         data=json.dumps(confirm_data)
     )
 
-    response = make_umai_payment(request, metadata)
-    print("Подтверждение платежа UMAI завершено")
+    response = make_account_opening_request(request, metadata)
+    print("Подтверждение запроса на открытие счета завершено")
     return response
 
-def execute_umai_payment():
-    print("\n=== Начало выполнения платежа UMAI ===")
+def execute_account_opening_request():
+    print("\n=== Начало создания запроса на открытие счета ===")
     
-    # Создаем платеж
-    payment_response, payment_data = create_umai_payment()
-    print(f"\nРезультат создания платежа: {payment_response}")
+    # Создаем запрос на открытие счета
+    account_opening_response, account_opening_data = create_account_opening_request()
+    print(f"\nРезультат создания запроса: {account_opening_response}")
     
-    # Ждем 5 секунд
-    print("\nОжидание 5 секунд...")
+    # Ждем 3 секунды
+    print("\nОжидание 3 секунд...")
     time.sleep(3)
     
-    # Подтверждаем платеж
-    confirm_response = confirm_umai_payment(payment_data["operationId"])
+    # Подтверждаем запрос
+    confirm_response = confirm_account_opening_request(account_opening_data["operationId"])
     print(f"\nРезультат подтверждения: {confirm_response}")
     
     return {
-        "payment_response": payment_response,
+        "account_opening_response": account_opening_response,
         "confirm_response": confirm_response
     }
 
 if __name__ == "__main__":
     try:
-        result = execute_umai_payment()
+        result = execute_account_opening_request()
         print("\n=== Результат выполнения ===")
         print(result)
     except Exception as e:
-        print(f"\nОшибка: {str(e)}")
+        print(f"\nОшибка: {str(e)}") 
