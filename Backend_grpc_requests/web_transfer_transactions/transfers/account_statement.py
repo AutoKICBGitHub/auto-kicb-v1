@@ -100,7 +100,7 @@ def execute_statement_request():
     
     # Ждем 3 секунды
     print("\nОжидание 3 секунд...")
-    time.sleep(3)
+    time.sleep(2)
     
     # Подтверждаем запрос
     confirm_response = confirm_statement_request(statement_data["operationId"])

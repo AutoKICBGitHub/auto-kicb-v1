@@ -92,7 +92,7 @@ def execute_account_opening_request():
     
     # Ждем 3 секунды
     print("\nОжидание 3 секунд...")
-    time.sleep(3)
+    time.sleep(2)
     
     # Подтверждаем запрос
     confirm_response = confirm_account_opening_request(account_opening_data["operationId"])

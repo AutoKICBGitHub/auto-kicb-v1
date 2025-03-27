@@ -1,0 +1,151 @@
+syntax = "proto3";
+
+package astrasend_internal_api;
+
+service AstrasendInternalApi {
+  rpc searchReceiveMoney (SearchReceiveMoneyRequest) returns (SearchReceiveMoneyResponse);
+  rpc receiveMoneyPay(ReceiveMoneyPayRequest) returns (ReceiveMoneyPayResponse);
+  rpc payStatus(PayStatusRequest) returns (PayStatusResponse);
+}
+
+message SearchReceiveMoneyRequest {
+  string mtcn = 1;
+  string kicbRefNo = 2;
+}
+
+message ReceiveMoneyPayRequest {
+  Name receiverName = 1;
+  Passport receiverPassport = 2;
+  Address receiverAddress = 3;
+  string receiverBirthDate = 4;
+  string receiverBirthPlace = 5;
+  string marketingFlag = 6;
+  string receiverEmail = 7;
+  string receiverPhoneNumber = 8;
+  string receiverAccountNo = 9;
+  IsoCode originatingCountryCurrency = 10;
+  string originatingCity = 11;
+  string fixOnSend = 12;
+  double exchangeRate = 13;
+  IsoCode destinationCountryCurrency = 14;
+  IsoCode originalDestinationCountryCurrency = 15;
+  Financials financials = 16;
+  string mtcn = 17; 
+  string newMtcn = 18; 
+  string kicbRefNo = 19;
+  bool isPersonalDataConfirmed = 20;
+}
+
+message PayStatusRequest {
+  string mtcn = 1; 
+  string newMtcn = 2; 
+  string kicbRefNo = 3;
+}
+
+message SearchReceiveMoneyResponse {
+  bool success = 1;
+  PaymentTransactionData data = 2;
+  Error error = 3; // Error if success is false
+}
+
+message ReceiveMoneyPayResponse {
+  bool success = 1;
+  ReceiveMoneyPayData data = 2;
+  Error error = 3; // Error if success is false
+}
+
+message PayStatusResponse {
+  bool success = 1;
+  PaymentTransactionData data = 2;
+  Error error = 3; // Error if success is false
+}
+
+message PaymentTransactionData {
+  Sender sender = 1;
+  Receiver receiver = 2;
+  Financials financials = 3;
+  PaymentDetails paymentDetails = 4;
+  string filingDate = 5;
+  string filingTime = 6;
+  string payStatusDescription = 7;
+  string mtcn = 8;
+  string newMtcn = 9;
+  string paidDate = 10;
+  string paidTime = 11;
+}
+
+message ReceiveMoneyPayData {
+  Financials financials = 1;
+  string mtcn = 2;
+  string newMtcn = 3;
+  string paidDate = 4;
+  string paidTime = 5;
+  string settlementDate = 6;
+}
+
+message Sender {
+  Name name = 1;
+  ComplianceDetails complianceDetails = 2;
+  string contactPhone = 3;
+}
+
+message Receiver {
+  Name name = 1;
+}
+
+message Name {
+  string firstName = 1;
+  string middleName = 2;
+  string lastName = 3;
+}
+
+message ComplianceDetails {
+  Address currentAddress = 1;
+}
+
+message Address {
+  string addrLine1 = 1;
+  string city = 2;
+  string postalCode = 3;
+  string country = 4;
+  string addrLine2 = 5;
+}
+
+message Financials {
+  double originatorsPrincipalAmount = 1;
+  double destinationPrincipalAmount = 2;
+  double payAmount = 3;
+  double agentFee = 4;
+}
+
+message PaymentDetails {
+  CountryCurrency originatingCountryCurrency = 1;
+  CountryCurrency destinationCountryCurrency = 2;
+  string originatingCity = 3;
+  double exchangeRate = 4;
+  string fixOnSend = 5;
+  CountryCurrency originalDestinationCountryCurrency = 6;
+}
+
+message CountryCurrency {
+  IsoCode isoCode = 1;
+}
+
+message IsoCode {
+  string countryCode = 1;
+  string currencyCode = 2;
+}
+
+message Passport {
+  string type = 1;
+  string number = 2;
+  string issueDate = 3;
+  string countryOfIssue = 4;
+  string expiredDate = 5;
+  bool isExpired = 6;
+}
+
+message Error {
+  string code = 1;
+  string data = 2;
+}

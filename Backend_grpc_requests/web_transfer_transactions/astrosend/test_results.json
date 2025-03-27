@@ -1,0 +1,240 @@
+{
+  "timestamp": "2025-03-24 17:39:07",
+  "total": 33,
+  "passed": 32,
+  "failed": 0,
+  "errors": 1,
+  "results": [
+    {
+      "test_name": "Базовый успешный запрос",
+      "result": "ПРОЙДЕН",
+      "expected": true,
+      "actual": true,
+      "details": "MTCN: 3142256907"
+    },
+    {
+      "test_name": "Пустое поле Фамилия",
+      "result": "ОШИБКА",
+      "expected": false,
+      "actual": "Exception",
+      "details": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNAVAILABLE\n\tdetails = \"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:5434: connection attempt timed out before receiving SETTINGS frame\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:5434: connection attempt timed out before receiving SETTINGS frame\", grpc_status:14, created_time:\"2025-03-24T11:38:29.2412805+00:00\"}\"\n>"
+    },
+    {
+      "test_name": "Пустое поле Имя",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverName\"}]"
+    },
+    {
+      "test_name": "Пустое поле Дата Рождения + null",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\",\"isString\":\"receiverBirthDate must be a string\",\"isNotEmpty\":\"receiverBirthDate should not be empty\"}}]"
+    },
+    {
+      "test_name": "Пустое поле Дата Рождения",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\",\"isString\":\"receiverBirthDate must be a string\",\"isNotEmpty\":\"receiverBirthDate should not be empty\"}}]"
+    },
+    {
+      "test_name": "Пустое поле номер ДУЛ",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"}]"
+    },
+    {
+      "test_name": "Пустое поле страна выдачи ДУЛ",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"}]"
+    },
+    {
+      "test_name": "Пустое поле дата окончания срока действия ДУЛ",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"}]"
+    },
+    {
+      "test_name": "Пустое поле страна",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverAddress\"}]"
+    },
+    {
+      "test_name": "Пустое поле населенный пункт",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverAddress\"}]"
+    },
+    {
+      "test_name": "Пустое поле улица",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverAddress\"}]"
+    },
+    {
+      "test_name": "Пустое поле номер телефона",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPhoneNumber\",\"constraints\":{\"isString\":\"receiverPhoneNumber must be a string\",\"isNotEmpty\":\"receiverPhoneNumber should not be empty\"}}]"
+    },
+    {
+      "test_name": "Пустое поле подтверждение правильности данных",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"isPersonalDataConfirmed\",\"constraints\":{\"isBoolean\":\"isPersonalDataConfirmed must be a boolean value\",\"isNotEmpty\":\"isPersonalDataConfirmed should not be empty\"}}]"
+    },
+    {
+      "test_name": "проверка корректности заполнения полей фио",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverName\"}]"
+    },
+    {
+      "test_name": "фио 2",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverName\"}]"
+    },
+    {
+      "test_name": "фио3",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverName\"}]"
+    },
+    {
+      "test_name": "wrong birthdate 1",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "wrong birthdate 2",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "wrong birthdate 3",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "wrong birthdate 4",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "dulnumber 1",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "dulnumber 2",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "dulnumber 3",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "vida4a 1",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "vida4a 2",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "vida4a 3",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "vida4a 4",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "expired date 1",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "vida4a 2",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "vida4a 3",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "vida4a 4",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    },
+    {
+      "test_name": "2 simvola v поле улица",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverAddress\"}]"
+    },
+    {
+      "test_name": "addr line 2",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverPassport\"},{\"property\":\"receiverAddress\"},{\"property\":\"receiverBirthDate\",\"constraints\":{\"IsValidDate\":\"Date must be between 01.01.1900 and today.\"}}]"
+    }
+  ]
+}

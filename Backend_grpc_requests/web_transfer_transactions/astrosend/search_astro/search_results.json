@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-03-26 15:49:52",
+  "total": 5,
+  "passed": 2,
+  "failed": 3,
+  "errors": 0,
+  "results": [
+    {
+      "test_name": "Поиск по полному ФИО",
+      "result": "НЕ ПРОЙДЕН",
+      "expected": true,
+      "actual": false,
+      "details": "Ошибка: INVALID_REQUEST, Данные: T00008: MTCN not found. If the error persists - contact help desk"
+    },
+    {
+      "test_name": "Поиск с пустым именем",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverName\"}]"
+    },
+    {
+      "test_name": "Поиск с пустым отчеством",
+      "result": "НЕ ПРОЙДЕН",
+      "expected": true,
+      "actual": false,
+      "details": "Ошибка: INVALID_REQUEST, Данные: T00008: MTCN not found. If the error persists - contact help desk"
+    },
+    {
+      "test_name": "Поиск с пустой фамилией",
+      "result": "НЕ ПРОЙДЕН",
+      "expected": true,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverName\"}]"
+    },
+    {
+      "test_name": "Поиск с полностью пустым ФИО",
+      "result": "ПРОЙДЕН",
+      "expected": false,
+      "actual": false,
+      "details": "Ошибка: INVALID_DATA, Данные: [{\"property\":\"receiverName\"}]"
+    }
+  ]
+}

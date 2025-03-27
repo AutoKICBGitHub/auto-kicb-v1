@@ -1,0 +1,50 @@
+{
+  "receiverName": {
+    "firstName": "NURLAN",
+    "middleName": "BAKYNBEKOVIC",
+    "lastName": "AITBAEV"
+  },
+  "receiverPassport": {
+    "type": "A",
+    "number": "ID0045377",
+    "issueDate": "08062017",
+    "countryOfIssue": "KGZ",
+    "expiredDate": "08062027",
+    "isExpired": false
+  },
+  "receiverAddress": {
+    "addrLine1": "KG, BISHKEK 4 MKR. H.1, 43 AP.  -",
+    "city": "KYRGYZSTANBISHKEK",
+    "country": "KGZ"
+  },
+  "receiverBirthDate": "07031997",
+  "receiverBirthPlace": "KGZ",
+  "marketingFlag": "N",
+  "receiverEmail": "fgvrs@gmail.com",
+  "receiverPhoneNumber": "996708957977",
+  "receiverAccountNo": "1285330001722121",
+  "originatingCountryCurrency": {
+    "countryCode": "UZB",
+    "currencyCode": "USD"
+  },
+  "originatingCity": "Andizhan",
+  "fixOnSend": "Y",
+  "exchangeRate": 0.01027956,
+  "destinationCountryCurrency": {
+    "countryCode": "KGZ",
+    "currencyCode": "RUB"
+  },
+  "originalDestinationCountryCurrency": {
+    "countryCode": "KGZ",
+    "currencyCode": "RUB"
+  },
+  "financials": {
+    "originatorsPrincipalAmount": 1765,
+    "destinationPrincipalAmount": 171700,
+    "payAmount": 171700
+  },
+  "mtcn": "3142256907",
+  "newMtcn": "090120253142256907",
+  "kicbRefNo": "6Da0YoXZA3K6DpnDNy3oUW",
+  "isPersonalDataConfirmed": true
+} 

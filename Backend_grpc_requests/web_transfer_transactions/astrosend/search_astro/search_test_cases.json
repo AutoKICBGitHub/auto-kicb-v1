@@ -1,0 +1,74 @@
+{
+  "test_cases": [
+    {
+      "name": "Поиск по полному ФИО",
+      "description": "Поиск перевода по полному ФИО получателя",
+      "data": {
+        "mtcn": "0101001001",
+        "kicbRefNo": "3Tmqx1PBzqmfRJlPpfA11Z",
+        "receiverName": {
+          "firstName": "Гулжамал тест",
+          "middleName": "Муратбековна",
+          "lastName": "Усубакунова"
+        }
+      },
+      "expected_success": true
+    },
+    {
+      "name": "Поиск с пустым именем",
+      "description": "Поиск перевода с пустым именем получателя",
+      "data": {
+        "mtcn": "0101001001",
+        "kicbRefNo": "3Tmqx1PBzqmfRJlPpfA11Z",
+        "receiverName": {
+          "firstName": "",
+          "middleName": "Муратбековна",
+          "lastName": "Усубакунова"
+        }
+      },
+      "expected_success": false
+    },
+    {
+      "name": "Поиск с пустым отчеством",
+      "description": "Поиск перевода с пустым отчеством получателя",
+      "data": {
+        "mtcn": "0101001001",
+        "kicbRefNo": "3Tmqx1PBzqmfRJlPpfA11Z",
+        "receiverName": {
+          "firstName": "Гулжамал",
+          "middleName": "",
+          "lastName": "Усубакунова"
+        }
+      },
+      "expected_success": true
+    },
+    {
+        "name": "Поиск с пустой фамилией",
+        "description": "Поиск перевода с пустой фамилией получателя",
+        "data": {
+          "mtcn": "0101001001",
+          "kicbRefNo": "3Tmqx1PBzqmfRJlPpfA11Z",
+          "receiverName": {
+            "firstName": "Гулжамал",
+            "middleName": "Муратбековна",
+            "lastName": ""
+          }
+        },
+        "expected_success": true
+      },
+    {
+      "name": "Поиск с полностью пустым ФИО",
+      "description": "Поиск перевода с полностью пустым ФИО получателя",
+      "data": {
+        "mtcn": "0101001001",
+        "kicbRefNo": "3Tmqx1PBzqmfRJlPpfA11Z",
+        "receiverName": {
+          "firstName": "",
+          "middleName": "",
+          "lastName": ""
+        }
+      },
+      "expected_success": false
+    }
+  ]
+} 
