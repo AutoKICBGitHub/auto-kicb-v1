@@ -24,6 +24,9 @@ service WebAuthApi{
   rpc getQRcodeForSignIn (GetQRcodeForSignInRequest) returns (GetQRcodeForSignInResponse){}
   rpc getSessionByQRcode (GetSessionByQRcodeRequest) returns (GetSessionByQRcodeResponse){}
   rpc authenticationByQRcode (AuthenticationByQRcodeRequest) returns (AuthenticationByQRcodeResponse){}
+  rpc acceptOrRejectAuth (AcceptOrRejectAuthRequest) returns (AcceptOrRejectAuthResponse){}
+  rpc confirmSecondFactorByMaster (ConfirmSecondFactorByMasterRequest) returns (ConfirmSecondFactorByMasterResponse){}
+  rpc checkSessionStatus (CheckSessionStatusRequest) returns (CheckSessionStatusResponse){}
 }
 
 message Error {
@@ -419,7 +422,9 @@ service WebAccountApi{
   rpc makeWebAccount(WebAccountsRequest) returns (WebAccountsResponse){}
 }
 
-
+service WebAccountV2Api{
+  rpc makeWebAccountV2(WebAccountsRequest) returns (WebAccountsResponse){}
+}
 
 message WebAccountsRequest {
   string code = 1;
@@ -436,6 +441,7 @@ message WebAccountsResponse {
 service RemoteIdentificationApi {
 	rpc makeRemoteIdentification(RemoteIdentificationRequest) returns (RemoteIdentificationResponse){}
 }
+
 message RemoteIdentificationRequest {
 	string code = 1;
 	string data = 2;
@@ -447,22 +453,63 @@ message RemoteIdentificationResponse {
 	Error error = 3;
 }
 
+message AcceptOrRejectAuthRequest {
+	string sessionKey = 1;
+	bool accept = 2;
+}
+
+message AcceptOrRejectAuthResponseData {
+	string  sessionKey = 1;
+	string  sessionId = 2;
+}
+
+message AcceptOrRejectAuthResponse {
+	bool    success = 1;
+	AcceptOrRejectAuthResponseData data = 2;
+	Error   error = 3;
+}
+
+message ConfirmSecondFactorByMasterRequest {
+	string sessionKey = 1;
+	string otp = 2;
+
+}
+
+message ConfirmSecondFactorByMasterResponseData {
+	string  sessionKey = 1;
+	string  sessionId = 2;
+}
+
+message ConfirmSecondFactorByMasterResponse {
+	bool    success = 1;
+	ConfirmSecondFactorByMasterResponseData data = 2;
+	Error   error = 3;
+}
+
+message CheckSessionStatusRequest {}
+message CheckSessionStatusResponseData {
+	string sessionKey = 1;
+	string sessionId = 2;
+  string  sessionType = 3;
+}
+
+message CheckSessionStatusResponse {
+	bool    success = 1;
+	CheckSessionStatusResponseData data = 2;
+	Error   error = 3;
+}
+////////////////////// WEB INTEGRATION SERVICE
 service WebIntegrationApi{
-	rpc makeWebIntegration(WebIntegrationRequest) returns (WebIntegrationResponse){}
-  }
-  
-  message IntegrationError{
-	string code = 1;
-	string data = 2;
-  }
-  
-  message WebIntegrationRequest {
-	string code = 1;
-	string data = 2;
-  }
-  
-  message WebIntegrationResponse {
-	bool success = 1;
-	string data = 2;
-	IntegrationError error = 3;
-  }
+  rpc makeWebIntegration(WebIntegrationRequest) returns (WebIntegrationResponse){}
+}
+
+message WebIntegrationRequest {
+  string code = 1;
+  string data = 2;
+}
+
+message WebIntegrationResponse {
+  bool success = 1;
+  string data = 2;
+  Error error = 3;
+}

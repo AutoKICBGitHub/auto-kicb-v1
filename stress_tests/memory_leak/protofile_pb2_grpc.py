@@ -5,7 +5,7 @@ import warnings
 
 import protofile_pb2 as protofile__pb2
 
-GRPC_GENERATED_VERSION = '1.69.0'
+GRPC_GENERATED_VERSION = '1.73.0'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
@@ -134,6 +134,21 @@ class WebAuthApiStub(object):
                 request_serializer=protofile__pb2.AuthenticationByQRcodeRequest.SerializeToString,
                 response_deserializer=protofile__pb2.AuthenticationByQRcodeResponse.FromString,
                 _registered_method=True)
+        self.acceptOrRejectAuth = channel.unary_unary(
+                '/dmz_api.WebAuthApi/acceptOrRejectAuth',
+                request_serializer=protofile__pb2.AcceptOrRejectAuthRequest.SerializeToString,
+                response_deserializer=protofile__pb2.AcceptOrRejectAuthResponse.FromString,
+                _registered_method=True)
+        self.confirmSecondFactorByMaster = channel.unary_unary(
+                '/dmz_api.WebAuthApi/confirmSecondFactorByMaster',
+                request_serializer=protofile__pb2.ConfirmSecondFactorByMasterRequest.SerializeToString,
+                response_deserializer=protofile__pb2.ConfirmSecondFactorByMasterResponse.FromString,
+                _registered_method=True)
+        self.checkSessionStatus = channel.unary_unary(
+                '/dmz_api.WebAuthApi/checkSessionStatus',
+                request_serializer=protofile__pb2.CheckSessionStatusRequest.SerializeToString,
+                response_deserializer=protofile__pb2.CheckSessionStatusResponse.FromString,
+                _registered_method=True)
 
 
 class WebAuthApiServicer(object):
@@ -259,6 +274,24 @@ class WebAuthApiServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def acceptOrRejectAuth(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def confirmSecondFactorByMaster(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def checkSessionStatus(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_WebAuthApiServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -361,6 +394,21 @@ def add_WebAuthApiServicer_to_server(servicer, server):
                     servicer.authenticationByQRcode,
                     request_deserializer=protofile__pb2.AuthenticationByQRcodeRequest.FromString,
                     response_serializer=protofile__pb2.AuthenticationByQRcodeResponse.SerializeToString,
+            ),
+            'acceptOrRejectAuth': grpc.unary_unary_rpc_method_handler(
+                    servicer.acceptOrRejectAuth,
+                    request_deserializer=protofile__pb2.AcceptOrRejectAuthRequest.FromString,
+                    response_serializer=protofile__pb2.AcceptOrRejectAuthResponse.SerializeToString,
+            ),
+            'confirmSecondFactorByMaster': grpc.unary_unary_rpc_method_handler(
+                    servicer.confirmSecondFactorByMaster,
+                    request_deserializer=protofile__pb2.ConfirmSecondFactorByMasterRequest.FromString,
+                    response_serializer=protofile__pb2.ConfirmSecondFactorByMasterResponse.SerializeToString,
+            ),
+            'checkSessionStatus': grpc.unary_unary_rpc_method_handler(
+                    servicer.checkSessionStatus,
+                    request_deserializer=protofile__pb2.CheckSessionStatusRequest.FromString,
+                    response_serializer=protofile__pb2.CheckSessionStatusResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -913,6 +961,87 @@ class WebAuthApi(object):
             metadata,
             _registered_method=True)
 
+    @staticmethod
+    def acceptOrRejectAuth(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/dmz_api.WebAuthApi/acceptOrRejectAuth',
+            protofile__pb2.AcceptOrRejectAuthRequest.SerializeToString,
+            protofile__pb2.AcceptOrRejectAuthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def confirmSecondFactorByMaster(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/dmz_api.WebAuthApi/confirmSecondFactorByMaster',
+            protofile__pb2.ConfirmSecondFactorByMasterRequest.SerializeToString,
+            protofile__pb2.ConfirmSecondFactorByMasterResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def checkSessionStatus(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/dmz_api.WebAuthApi/checkSessionStatus',
+            protofile__pb2.CheckSessionStatusRequest.SerializeToString,
+            protofile__pb2.CheckSessionStatusResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
 
 class StreamServiceStub(object):
     """////////////////////   STREAM SERVICE
@@ -1445,6 +1574,78 @@ class WebAccountApi(object):
             _registered_method=True)
 
 
+class WebAccountV2ApiStub(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.makeWebAccountV2 = channel.unary_unary(
+                '/dmz_api.WebAccountV2Api/makeWebAccountV2',
+                request_serializer=protofile__pb2.WebAccountsRequest.SerializeToString,
+                response_deserializer=protofile__pb2.WebAccountsResponse.FromString,
+                _registered_method=True)
+
+
+class WebAccountV2ApiServicer(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def makeWebAccountV2(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_WebAccountV2ApiServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'makeWebAccountV2': grpc.unary_unary_rpc_method_handler(
+                    servicer.makeWebAccountV2,
+                    request_deserializer=protofile__pb2.WebAccountsRequest.FromString,
+                    response_serializer=protofile__pb2.WebAccountsResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'dmz_api.WebAccountV2Api', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('dmz_api.WebAccountV2Api', rpc_method_handlers)
+
+
+ # This class is part of an EXPERIMENTAL API.
+class WebAccountV2Api(object):
+    """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def makeWebAccountV2(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/dmz_api.WebAccountV2Api/makeWebAccountV2',
+            protofile__pb2.WebAccountsRequest.SerializeToString,
+            protofile__pb2.WebAccountsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+
 class RemoteIdentificationApiStub(object):
     """//////////////////// REMOTE IDENTIFICATION SERVICE
     """
@@ -1521,7 +1722,8 @@ class RemoteIdentificationApi(object):
 
 
 class WebIntegrationApiStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """//////////////////// WEB INTEGRATION SERVICE
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -1537,7 +1739,8 @@ class WebIntegrationApiStub(object):
 
 
 class WebIntegrationApiServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """//////////////////// WEB INTEGRATION SERVICE
+    """
 
     def makeWebIntegration(self, request, context):
         """Missing associated documentation comment in .proto file."""
@@ -1562,7 +1765,8 @@ def add_WebIntegrationApiServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class WebIntegrationApi(object):
-    """Missing associated documentation comment in .proto file."""
+    """//////////////////// WEB INTEGRATION SERVICE
+    """
 
     @staticmethod
     def makeWebIntegration(request,
