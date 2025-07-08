@@ -49,7 +49,7 @@ class CombinedClient:
             'device-type': 'ios',
             'x-real-ip': '138.199.55.230',
             'user-agent': '{"ua": {"device": "iPhone 15 Pro", "osVersion": "18.0.1"}, "imei": "9C2F553F-06EB-42C2-AF92-5D3BBF9304E1", "deviceName": "", "deviceType": "ios", "macAddress": "9C2F553F-06EB-42C2-AF92-5D3BBF9304E1"}',
-            'user-agent-c': '12; MACBOOKDANDAN',
+            'user-agent-c': '18.0.1; iPhone 15 Pro',
             'app-type': 'I'
         }
         
@@ -239,7 +239,7 @@ class CombinedClient:
             
         if filename is None:
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            filename = f'api_metrics_{timestamp}.xlsx'
+            filename = f'combined_metrics_{timestamp}.xlsx'
         
         try:
             # Создаем DataFrame
@@ -254,6 +254,14 @@ class CombinedClient:
             total_time = df['duration_seconds'].sum()
             success_rate = (df['status'] == 'SUCCESS').mean() * 100
             
+            # Статистика по endpoint'ам
+            endpoint_stats = df.groupby('endpoint').agg({
+                'duration_seconds': ['count', 'mean', 'std', 'min', 'max'],
+                'total_network_bytes': 'sum',
+                'backend_data_length': 'mean',
+                'status': lambda x: (x == 'SUCCESS').mean() * 100
+            }).round(3)
+            
             # Создаем summary
             summary_data = {
                 'metric': ['Total Network Usage (bytes)', 'Total Backend Data (chars)', 
@@ -263,10 +271,11 @@ class CombinedClient:
             }
             summary_df = pd.DataFrame(summary_data)
             
-            # Сохраняем в Excel с двумя листами
+            # Сохраняем в Excel с тремя листами
             with pd.ExcelWriter(filename, engine='openpyxl') as writer:
                 df.to_excel(writer, sheet_name='Detailed_Metrics', index=False)
                 summary_df.to_excel(writer, sheet_name='Summary', index=False)
+                endpoint_stats.to_excel(writer, sheet_name='Endpoint_Statistics')
             
             print(f"✅ Метрики экспортированы в: {filename}")
             print(f"📊 Общий network usage: {total_network:,} bytes")

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 WebAccountV2 API клиент с метриками и Excel экспортом
-Выполняет 4 endpoint'а WebAccountV2Api по 10 раз каждый для среднего времени
+Выполняет 4 endpoint'а WebAccountV2Api по 1 разу каждый для тестирования
 """
 
 import grpc
@@ -140,7 +140,7 @@ class WebAccountV2Client:
                 'duration': end_time - start_time
             }
 
-    def test_endpoints_multiple_times(self, iterations=10):
+    def test_endpoints_multiple_times(self, iterations=1):
         """Тестирует все endpoint'ы указанное количество раз"""
         endpoints = [
             ('GET_LIST_OF_STORIES', {}),
@@ -151,7 +151,7 @@ class WebAccountV2Client:
         
         results_summary = {}
         
-        print(f"=== WebAccountV2 API Тест ({iterations} итераций) ===\n")
+        print(f"=== WebAccountV2 API Тест ({iterations} итерация) ===\n")
         
         for endpoint, data in endpoints:
             print(f"\n🎯 Тестируем {endpoint} ({iterations} раз):")
@@ -257,8 +257,8 @@ class WebAccountV2Client:
 if __name__ == "__main__":
     client = WebAccountV2Client()
     try:
-        # Выполняем тесты с 10 итерациями
-        results = client.test_endpoints_multiple_times(iterations=10)
+        # Выполняем тесты с 1 итерацией
+        results = client.test_endpoints_multiple_times(iterations=1)
         
         # Выводим общую сводку
         print(f"\n=== ОБЩАЯ СВОДКА ===")
