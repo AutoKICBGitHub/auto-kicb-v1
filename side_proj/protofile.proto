@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package dmz_api;
+
+
+service WebAuthApi{
+  rpc authenticate (LoginRequest)returns(LoginResponse){}
+}
+
+message Error {
+  string code = 1;
+  string data = 2;
+}
+
+message   LoginRequest {
+  string  username = 1;
+  string  password = 2;
+}
+message LoginResponseData {
+  string  sessionKey = 1;
+  string  sessionId = 2;
+  string  otpDelivery = 3;
+  string  state = 4;
+  string  securityQuestionId = 5;
+  string  phoneNumber = 6;
+}
+message LoginResponse {
+  bool success = 1;
+  LoginResponseData data = 2;
+  Error error = 3;
+}
