@@ -1,0 +1,108 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <cs:CREATECUSTOMER_FSFS_REQ xmlns:as="http://fcubs.ofss.com/service/FCUBSAccService" xmlns:cor="http://fcubs.ofss.com/service/FCUBSCoreService" xmlns:cs="http://fcubs.ofss.com/service/FCUBSCustomerService" xmlns:de="http://fcubs.ofss.com/service/FCUBSDEService" xmlns:ft="http://fcubs.ofss.com/service/FCUBSFTService" xmlns:ld="http://fcubs.ofss.com/service/FCUBSLDService" xmlns:pc="http://fcubs.ofss.com/service/FCUBSExtPCService" xmlns:sig="http://fcubs.ofss.com/service/FCUBSSigService">
+         <cs:FCUBS_HEADER>
+            <cs:SOURCE>RBSA</cs:SOURCE>
+            <cs:UBSCOMP>FCUBS</cs:UBSCOMP>
+            <cs:MSGID>{messageId}</cs:MSGID>
+            <cs:USERID>I_BANK2</cs:USERID>
+            <cs:BRANCH>700</cs:BRANCH>
+            <cs:SERVICE>FCUBSCustomerService</cs:SERVICE>
+            <cs:OPERATION>CreateCustomer</cs:OPERATION>
+         </cs:FCUBS_HEADER>
+         <cs:FCUBS_BODY>
+            <cs:Customer-Full>
+               <cs:CTYPE>I</cs:CTYPE>
+               <cs:FULLNAME>{last_name} {first_name} {patronymic} / {last_name_en} {first_name_en} {patronymic_en}</cs:FULLNAME>
+               <cs:SNAME>{last_name_en} {first_name_en}</cs:SNAME>
+               <cs:CCATEG>REMOTE.RES</cs:CCATEG>
+               <cs:NAME>{last_name_en} {first_name_en} {patronymic_en}</cs:NAME>
+               <cs:ADDRLN1>Kyrgyzskaya Respublika,g. Bishkek,Sverdlovskiy r-n, ulitsa Lenina, dom {index}23</cs:ADDRLN1>
+               <cs:ADDRLN2>-</cs:ADDRLN2>
+               <cs:ADDRLN3>-</cs:ADDRLN3>
+               <cs:ADDRLN4>-</cs:ADDRLN4>
+               <cs:COUNTRY>KG</cs:COUNTRY>
+               <cs:NLTY>KG</cs:NLTY>
+               <cs:LOC>01</cs:LOC>
+               <cs:CHGGRP>INDNEW_1</cs:CHGGRP>
+               <cs:UDF1>{inn}</cs:UDF1>
+               <cs:CRMREFNO>{crm_ref}</cs:CRMREFNO>
+               <cs:ISELCMCUST>Y</cs:ISELCMCUST>
+               <cs:MEDIA>MAIL</cs:MEDIA>
+               <cs:TRACK_LIMITS>Y</cs:TRACK_LIMITS>
+               <cs:Custpersonal>
+                  <cs:FSTNAME>{first_name}</cs:FSTNAME>
+                  <cs:MIDNAME>{patronymic}</cs:MIDNAME>
+                  <cs:LSTNAME>{last_name}</cs:LSTNAME>
+                  <cs:DOB>1985-03-15</cs:DOB>
+                  <cs:GENDR>M</cs:GENDR>
+                  <cs:EMAILID>{email}</cs:EMAILID>
+                  <cs:MOBNUM>{phone}</cs:MOBNUM>
+                  <cs:LANG>RUS</cs:LANG>
+                  <cs:BIRTHCOUNTRY>KG</cs:BIRTHCOUNTRY>
+                  <cs:PPTNO>{passport_num}</cs:PPTNO>
+                  <cs:PPTISSDT>{passport_issue_date}</cs:PPTISSDT>
+                  <cs:PPTEXPDT>{passport_expiry_date}</cs:PPTEXPDT>
+                  <cs:ISSBY>МКК211011</cs:ISSBY>
+                  <cs:DADD1>Кыргызская Республика,г. Бишкек,Свердловский р-н, улица Ленина, дом {index}23</cs:DADD1>
+                  <cs:DADD2>-</cs:DADD2>
+                  <cs:DADD3>-</cs:DADD3>
+                  <cs:DADD4>-</cs:DADD4>
+                  <cs:DCNTRY>KG</cs:DCNTRY>
+                  <cs:BENEFADDR1>Кыргызская Республика,г. Бишкек,Свердловский р-н, улица Ленина, дом {index}23</cs:BENEFADDR1>
+                  <cs:BENEFADDR2>-</cs:BENEFADDR2>
+                  <cs:ADDRS3>-</cs:ADDRS3>
+                  <cs:ADDRS4>-</cs:ADDRS4>
+                  <cs:RESSTATUS>R</cs:RESSTATUS>
+                  <cs:DOCUMENT_TITLE>Паспорт</cs:DOCUMENT_TITLE>
+                  <cs:REGION>41711</cs:REGION>
+                  <cs:Custdomestic>
+                     <cs:MARITALSTAT></cs:MARITALSTAT>
+                  </cs:Custdomestic>
+                  <cs:Custprof>
+                     <cs:PREVEMP_RUS></cs:PREVEMP_RUS>
+                     <cs:CURRDESIG_RUS></cs:CURRDESIG_RUS>
+                  </cs:Custprof>
+               </cs:Custpersonal>
+               <cs:Customer-Rbo-Cu>
+                  <cs:REGION_LOCATION>41711201000000</cs:REGION_LOCATION>
+                  <cs:LAST_CUSTOMER_QUES_FILLED_ON>2025-07-18</cs:LAST_CUSTOMER_QUES_FILLED_ON>
+                  <cs:NEXT_CUSTOMER_QUES_FILLED_ON>2026-07-18</cs:NEXT_CUSTOMER_QUES_FILLED_ON>
+                  <cs:RISK_REASON>Удаленно зарегистрированный клиент</cs:RISK_REASON>
+                  <cs:PDL_NPDL>Другие лица (не входящие в вышеуказанные пункты)</cs:PDL_NPDL>
+               </cs:Customer-Rbo-Cu>
+               <cs:Custmis>
+                  <cs:Customermis>
+                     <cs:MISCLS>NBKR_SECT</cs:MISCLS>
+                     <cs:MISCD>090</cs:MISCD>
+                  </cs:Customermis>
+                  <cs:Compositemis>
+                     <cs:MISCLS>DEPT</cs:MISCLS>
+                     <cs:MISCD>700</cs:MISCD>
+                  </cs:Compositemis>
+               </cs:Custmis>
+               <cs:UDFDETAILS>
+                  <cs:FLDNAM>GKSE</cs:FLDNAM>
+                  <cs:FLDVAL>143</cs:FLDVAL>
+               </cs:UDFDETAILS>
+               <cs:UDFDETAILS>
+                  <cs:FLDNAM>RISK_RATING</cs:FLDNAM>
+                  <cs:FLDVAL>HIGH</cs:FLDVAL>
+               </cs:UDFDETAILS>
+               <cs:UDFDETAILS>
+                  <cs:FLDNAM>FATCA</cs:FLDNAM>
+                  <cs:FLDVAL>5</cs:FLDVAL>
+               </cs:UDFDETAILS>
+               <cs:UDFDETAILS>
+                  <cs:FLDNAM>RELATION_TO_BANK_IND</cs:FLDNAM>
+                  <cs:FLDVAL>7</cs:FLDVAL>
+               </cs:UDFDETAILS>
+               <cs:UDFDETAILS>
+                  <cs:FLDNAM>RELATION_TO_BANK_CORP</cs:FLDNAM>
+                  <cs:FLDVAL></cs:FLDVAL>
+               </cs:UDFDETAILS>
+            </cs:Customer-Full>
+         </cs:FCUBS_BODY>
+      </cs:CREATECUSTOMER_FSFS_REQ>
+   </soap:Body>
+</soap:Envelope>

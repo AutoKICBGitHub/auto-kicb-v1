@@ -1,0 +1,24 @@
+{
+    "cbs_settings": {
+        "endpoint": "http://localhost:7201/FCUBSCustomerService/FCUBSCustomerService",
+        "soap_action": "CreateCustomer",
+        "timeout": 30
+    },
+    "test_parameters": {
+        "thread_count": 5,
+        "attacks_per_test": 5,
+        "delay_between_requests": 5
+    },
+    "user_generation": {
+        "birth_date": "1985-03-15",
+        "passport_issue_date": "2020-05-10",
+        "passport_validity_days": 3650,
+        "gender_code": "2",
+        "domain_suffix": "@test.multi"
+    },
+    "xml_template_file": "new.xml",
+    "output": {
+        "results_prefix": "multi_thread_test_results_",
+        "encoding": "utf-8"
+    }
+} 

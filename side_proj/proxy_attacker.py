@@ -38,10 +38,11 @@ except ImportError:
 
 
 class GrpcStressTester:
-    def __init__(self, target: str, proto_file: str = "protofile.proto", insecure: bool = False, proxy_file: str = None):
+    def __init__(self, target: str, proto_file: str = "protofile.proto", insecure: bool = False, proxy_file: str = None, grpc_web: bool = False):
         self.target = target
         self.proto_file = proto_file
         self.insecure = insecure
+        self.grpc_web = grpc_web
         self.results = []
         self.lock = threading.Lock()
         self.proxies = []
@@ -85,6 +86,7 @@ class GrpcStressTester:
             ('grpc.http2.min_ping_interval_without_data_ms', 300000),
             ('grpc.max_receive_message_length', -1),
             ('grpc.max_send_message_length', -1),
+            ('grpc.primary_user_agent', 'grpc-python/1.71.2'),
         ]
         
         # Get proxy if available
@@ -137,7 +139,21 @@ class GrpcStressTester:
     
     def create_metadata(self, metadata_dict: Dict[str, str]) -> List[tuple]:
         """Convert metadata dictionary to gRPC metadata format"""
-        return [(key, value) for key, value in metadata_dict.items()]
+        metadata = [(key, value) for key, value in metadata_dict.items()]
+        
+        # Выбираем правильный content-type
+        if self.grpc_web:
+            content_type = 'application/grpc-web+proto'
+        else:
+            content_type = 'application/grpc+proto'
+        
+        # Добавляем стандартные gRPC заголовки
+        metadata.extend([
+            ('content-type', content_type),
+            ('te', 'trailers'),
+            ('grpc-accept-encoding', 'gzip')
+        ])
+        return metadata
     
     def single_request(self, data: Dict, metadata: Dict[str, str], timeout: float = 10.0) -> Dict:
         """Perform a single gRPC request"""
@@ -356,17 +372,18 @@ class GrpcStressTester:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('target', nargs='?', default='corp.kicb.net:443')
+    parser.add_argument('target', nargs='?', default='newibankdevcorp.kicb.net:443')
     parser.add_argument('--proto', default='protofile.proto')
     parser.add_argument('--call', default='dmz_api.WebAuthApi/authenticate')
-    parser.add_argument('-d', '--data', default='{"username":"ataiy","password":"Wsvoboda666"}')
+    parser.add_argument('-d', '--data', default='{"username":"01229","password":"password1"}')
     parser.add_argument('-m', '--metadata', default='{"refid":"45f465bf-9729-40bc-b78e-78e678d6cc52","device-type":"ios","user-agent":"15_Iphone_16_pro"}')
-    parser.add_argument('--concurrency', type=int, default=1)
-    parser.add_argument('--total', type=int, default=20)
+    parser.add_argument('--concurrency', type=int, default=5)
+    parser.add_argument('--total', type=int, default=100)
     parser.add_argument('--duration', type=float)
     parser.add_argument('--timeout', type=float, default=10.0)
     parser.add_argument('--format', default='pretty', choices=['pretty', 'json'])
-    parser.add_argument('--insecure', action='store_true')
+    parser.add_argument('--insecure', action='store_true', default=False)
+    parser.add_argument('--grpc-web', action='store_true', help='Use gRPC-Web content type')
     parser.add_argument('--proxy-file')
     
     args = parser.parse_args()
@@ -380,7 +397,7 @@ def main():
         return 1
     
     # Create tester
-    tester = GrpcStressTester(args.target, args.proto, args.insecure, args.proxy_file)
+    tester = GrpcStressTester(args.target, args.proto, args.insecure, args.proxy_file, args.grpc_web)
     
     # Run test
     try:
@@ -410,32 +427,34 @@ def main():
 
 class LoadTestConfig:
     def __init__(self):
-        self.target = "corp.kicb.net:443"
+        self.target = "newibankdevcorp.kicb.net:443"
         self.proto_file = "protofile.proto"
         self.insecure = False
         
-        self.data = {"username": "ataiy", "password": "Wsvoboda666"}
+        self.data = {"username": "01229", "password": "password1"}
         self.metadata = {
             "refid": "45f465bf-9729-40bc-b78e-78e678d6cc52",
             "device-type": "ios",
             "user-agent": "15_Iphone_16_pro"
         }
         
-        self.concurrency = 1
-        self.total_requests = 20
+        self.concurrency = 5
+        self.total_requests = 100
         self.duration = None
         self.timeout = 10.0
         
         self.proxy_file = "working_proxies.txt"
         self.format = "pretty"
         self.verbose = True
+        self.grpc_web = False
     
     def run_test(self):
         tester = GrpcStressTester(
             self.target, 
             self.proto_file, 
             self.insecure, 
-            self.proxy_file
+            self.proxy_file,
+            self.grpc_web
         )
         
         try:
@@ -462,12 +481,12 @@ class LoadTestConfig:
 def run_custom_test():
     config = LoadTestConfig()
     
-    config.concurrency = 1
+    config.concurrency = 5
     config.total_requests = 100
-    config.duration = 60
-    config.timeout = 10
+    config.duration = None
+    config.timeout = 5
     
-    config.data = {"username": "ataiy", "password": "Wsvoboda666"}
+    config.data = {"username": "01229", "password": "password1"}
     config.proxy_file = "working_proxies.txt"
     
     config.run_test()
