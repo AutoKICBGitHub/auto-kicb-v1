@@ -7,6 +7,7 @@ import os
 import time
 import threading
 import requests
+import re
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
@@ -21,8 +22,8 @@ class EnvoyLoadTester:
         self.server = 'newibanktest.kicb.net:443'
         self.options = [('grpc.max_receive_message_length', -1), ('grpc.max_send_message_length', -1)]
         self.session_data = {
-            'sessionKey': '1jhqCaBADD96rOX8dwRi8Y',
-            'sessionId': '6vWtxJzAxt7MJoxyDFVjZ5',
+            'sessionKey': '1o8zZx5QBmvWDPizh0cp5W',
+            'sessionId': '3f8ZhzbT9jLYvPjrYs6LLq',
             'device-type': 'ios',
             'x-real-ip': '93.170.8.20',
             'user-agent': '{"ua": {"device": "iPhone X", "osVersion": "16.7.7"}, "imei": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6", "deviceName": "", "deviceType": "ios", "macAddress": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6"}',
@@ -114,8 +115,14 @@ class EnvoyLoadTester:
                         api_times = current_times[-api_stats['requests']:]
                         api_stats['avg_time'] = round(sum(api_times) / len(api_times), 2)
 
-    def record_result(self, thread_id, attack_num, api_name, endpoint, start_time, end_time, success, error_code=None, response_size=0):
-        """Записывает результат запроса в общий список и обновляет статистику потока"""
+    def record_result(self, thread_id, attack_num, api_name, endpoint, start_time, end_time, success,
+                      error_code=None, response_size=0, request_payload=None, error_message=None,
+                      error_key=None, response_data_sample=None):
+        """Записывает результат запроса в общий список и обновляет статистику потока.
+
+        Для неуспешных запросов сохраняем подробности: payload, код/сообщение ошибки,
+        нормализованный ключ ошибки для группировки и фрагмент ответа (если есть).
+        """
         response_time_ms = round((end_time - start_time) * 1000, 2)
         
         with self.lock:
@@ -128,7 +135,11 @@ class EnvoyLoadTester:
                 'response_time_ms': response_time_ms,
                 'success': success,
                 'error_code': error_code,
-                'response_size_bytes': response_size
+                'response_size_bytes': response_size,
+                'request_payload': request_payload,
+                'error_message': error_message,
+                'error_key': error_key,
+                'response_data_sample': response_data_sample
             })
         
         # Обновляем статистику потока
@@ -185,11 +196,36 @@ class EnvoyLoadTester:
                     response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
                     self.record_result(thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, True, response_size=response_size)
                 else:
-                    error_code = response.error.code if response.error else "UNKNOWN_ERROR"
-                    self.record_result(thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, False, error_code)
+                    error_code = response.error.code if getattr(response, 'error', None) else "UNKNOWN_ERROR"
+                    error_message = getattr(getattr(response, 'error', None), 'message', '') or getattr(getattr(response, 'error', None), 'details', '') or ''
+                    response_snippet = None
+                    if hasattr(response, 'data') and response.data:
+                        try:
+                            response_snippet = (response.data[:500] if isinstance(response.data, (bytes, bytearray)) else str(response.data)[:500])
+                        except Exception:
+                            response_snippet = None
+                    error_key = f"{error_code}:{(error_message or 'NO_MESSAGE').strip()}"
+                    self.record_result(
+                        thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, False,
+                        error_code=error_code, request_payload=json.dumps(data, ensure_ascii=False),
+                        error_message=error_message, error_key=error_key, response_data_sample=response_snippet
+                    )
             except Exception as e:
                 end_time = time.time()
-                self.record_result(thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, False, str(e))
+                if isinstance(e, grpc.RpcError):
+                    code_name = e.code().name if hasattr(e, 'code') and e.code() else 'RpcError'
+                    details = e.details() if hasattr(e, 'details') else str(e)
+                    error_code = code_name
+                    error_message = details
+                else:
+                    error_code = type(e).__name__
+                    error_message = str(e)
+                error_key = f"{error_code}:{(error_message or 'NO_MESSAGE').strip()}"
+                self.record_result(
+                    thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, False,
+                    error_code=error_code, request_payload=json.dumps(data, ensure_ascii=False),
+                    error_message=error_message, error_key=error_key
+                )
         channel.close()
 
     def test_webaccount_v2_api(self, thread_id, attack_num):
@@ -215,11 +251,36 @@ class EnvoyLoadTester:
                     response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
                     self.record_result(thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, True, response_size=response_size)
                 else:
-                    error_code = response.error.code if response.error else "UNKNOWN_ERROR"
-                    self.record_result(thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, False, error_code)
+                    error_code = response.error.code if getattr(response, 'error', None) else "UNKNOWN_ERROR"
+                    error_message = getattr(getattr(response, 'error', None), 'message', '') or getattr(getattr(response, 'error', None), 'details', '') or ''
+                    response_snippet = None
+                    if hasattr(response, 'data') and response.data:
+                        try:
+                            response_snippet = (response.data[:500] if isinstance(response.data, (bytes, bytearray)) else str(response.data)[:500])
+                        except Exception:
+                            response_snippet = None
+                    error_key = f"{error_code}:{(error_message or 'NO_MESSAGE').strip()}"
+                    self.record_result(
+                        thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, False,
+                        error_code=error_code, request_payload=json.dumps(data, ensure_ascii=False),
+                        error_message=error_message, error_key=error_key, response_data_sample=response_snippet
+                    )
             except Exception as e:
                 end_time = time.time()
-                self.record_result(thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, False, str(e))
+                if isinstance(e, grpc.RpcError):
+                    code_name = e.code().name if hasattr(e, 'code') and e.code() else 'RpcError'
+                    details = e.details() if hasattr(e, 'details') else str(e)
+                    error_code = code_name
+                    error_message = details
+                else:
+                    error_code = type(e).__name__
+                    error_message = str(e)
+                error_key = f"{error_code}:{(error_message or 'NO_MESSAGE').strip()}"
+                self.record_result(
+                    thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, False,
+                    error_code=error_code, request_payload=json.dumps(data, ensure_ascii=False),
+                    error_message=error_message, error_key=error_key
+                )
         channel.close()
 
     def test_webdirectory_api(self, thread_id, attack_num):
@@ -237,10 +298,28 @@ class EnvoyLoadTester:
                     response_size = len(response.data)
                     self.record_result(thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, True, response_size=response_size)
                 else:
-                    self.record_result(thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, False, "EMPTY_RESPONSE")
+                    error_code = "EMPTY_RESPONSE"
+                    error_message = "Пустой ответ от сервиса"
+                    error_key = f"{error_code}:{error_message}"
+                    self.record_result(
+                        thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, False,
+                        error_code=error_code, request_payload=None, error_message=error_message, error_key=error_key
+                    )
             except Exception as e:
                 end_time = time.time()
-                self.record_result(thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, False, str(e))
+                if isinstance(e, grpc.RpcError):
+                    code_name = e.code().name if hasattr(e, 'code') and e.code() else 'RpcError'
+                    details = e.details() if hasattr(e, 'details') else str(e)
+                    error_code = code_name
+                    error_message = details
+                else:
+                    error_code = type(e).__name__
+                    error_message = str(e)
+                error_key = f"{error_code}:{(error_message or 'NO_MESSAGE').strip()}"
+                self.record_result(
+                    thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, False,
+                    error_code=error_code, request_payload=None, error_message=error_message, error_key=error_key
+                )
         channel.close()
 
 
@@ -259,7 +338,7 @@ class EnvoyLoadTester:
         self.finalize_thread_stats(thread_id)
     
     def save_to_excel(self):
-        """Сохраняет статистику по потокам в Excel файл"""
+        """Сохраняет статистику по потокам и детальные логи ошибок в Excel файл"""
         if not self.thread_stats:
             print("Нет данных для сохранения")
             return
@@ -350,6 +429,63 @@ class EnvoyLoadTester:
             
             summary_df = pd.DataFrame(summary_data)
             summary_df.to_excel(writer, sheet_name='Общая сводка', index=False)
+
+            # ЛОГИ НЕУДАЧНЫХ ЗАПРОСОВ (ГРУППЫ И ДЕТАЛИ)
+            failed = [r for r in self.results if not r.get('success')]
+            if failed:
+                # Гарантируем ключи ошибок
+                for r in failed:
+                    if not r.get('error_key'):
+                        code = r.get('error_code') or 'UNKNOWN_ERROR'
+                        msg = (r.get('error_message') or '').strip() or 'NO_MESSAGE'
+                        r['error_key'] = f"{code}:{msg}"
+
+                failed_df = pd.DataFrame([
+                    {
+                        'Время': r.get('timestamp'),
+                        'Поток №': r.get('thread_id'),
+                        'Атака №': r.get('attack_number'),
+                        'API': r.get('api_name'),
+                        'Эндпоинт': r.get('endpoint'),
+                        'Время ответа (мс)': r.get('response_time_ms'),
+                        'Код ошибки': r.get('error_code'),
+                        'Сообщение ошибки': r.get('error_message'),
+                        'Ключ ошибки': r.get('error_key'),
+                        'Запрос (payload)': r.get('request_payload'),
+                        'Ответ (фрагмент)': r.get('response_data_sample'),
+                    }
+                    for r in failed
+                ])
+
+                # Итог по группам
+                grouping = failed_df.groupby('Ключ ошибки', dropna=False)
+                summary_rows = []
+                for key, group in grouping:
+                    summary_rows.append({
+                        'Ключ ошибки': key,
+                        'Кол-во': len(group),
+                        'Уникальные коды ошибок': ', '.join(sorted(set([str(v) for v in group['Код ошибки'].dropna().tolist()]))),
+                        'Примеры эндпоинтов': ', '.join(sorted(set(group['Эндпоинт'].dropna().astype(str).tolist()))[:5])
+                    })
+                errors_summary_df = pd.DataFrame(summary_rows).sort_values(by='Кол-во', ascending=False)
+                errors_summary_df.to_excel(writer, sheet_name='Ошибки (группы)', index=False)
+
+                # Отдельные листы по каждой группе ошибок
+                def sanitize_sheet_name(name: str) -> str:
+                    # Excel: max 31 символ, нельзя: : \\ / ? * [ ]
+                    name = re.sub(r'[:\\/\?\*\[\]]', ' ', str(name))
+                    name = re.sub(r'\s+', ' ', name).strip()
+                    return name[:31] if len(name) > 31 else name
+
+                for idx, (key, group) in enumerate(grouping, start=1):
+                    sheet_name = sanitize_sheet_name(f"Ошибка {idx}")
+                    cols_order = [
+                        'Время', 'Поток №', 'Атака №', 'API', 'Эндпоинт',
+                        'Код ошибки', 'Сообщение ошибки', 'Ключ ошибки',
+                        'Время ответа (мс)', 'Запрос (payload)', 'Ответ (фрагмент)'
+                    ]
+                    group = group.reindex(columns=cols_order)
+                    group.to_excel(writer, sheet_name=sheet_name, index=False)
             
         print(f"✅ Статистика по потокам сохранена в файл: {os.path.basename(filename)}")
         print(f"📁 Полный путь: {filename}")

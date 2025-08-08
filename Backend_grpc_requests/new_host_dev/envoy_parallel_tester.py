@@ -5,10 +5,9 @@ import uuid
 import sys
 import os
 import time
-import threading
 import requests
+import threading
 from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -18,11 +17,11 @@ from protofile_pb2 import WebAccountsRequest, IncomingWebDirectory
 
 class EnvoyLoadTester:
     def __init__(self):
-        self.server = 'newibankdevcorp.kicb.net:443'
+        self.server = 'newibanktest.kicb.net:443'
         self.options = [('grpc.max_receive_message_length', -1), ('grpc.max_send_message_length', -1)]
         self.session_data = {
-            'sessionKey': '1jhqCaBADD96rOX8dwRi8Y',
-            'sessionId': '6vWtxJzAxt7MJoxyDFVjZ5',
+            'sessionKey': '1o8zZx5QBmvWDPizh0cp5W',
+            'sessionId': '3f8ZhzbT9jLYvPjrYs6LLq',
             'device-type': 'ios',
             'x-real-ip': '93.170.8.20',
             'user-agent': '{"ua": {"device": "iPhone X", "osVersion": "16.7.7"}, "imei": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6", "deviceName": "", "deviceType": "ios", "macAddress": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6"}',
@@ -31,8 +30,8 @@ class EnvoyLoadTester:
             'imei': 'A428AB95-421E-4D78-9A86-0D6BDB1E39C6',
             'userId': '134'
         }
-        self.results = []
-        self.thread_stats = {}  # Статистика по потокам
+        self.results = []  # Детальные результаты по каждому запросу
+        self.api_stats = {}  # Статистика по каждой API
         self.errors = []  # Список всех ошибок
         self.lock = threading.Lock()
 
@@ -69,11 +68,11 @@ class EnvoyLoadTester:
         except:
             return 0
     
-    def init_thread_stats(self, thread_id):
-        """Инициализирует статистику для потока"""
-        with self.lock:
-            self.thread_stats[thread_id] = {
-                'thread_id': thread_id,
+    def init_api_stats(self, api_name: str):
+        """Инициализирует статистику для API"""
+        if api_name not in self.api_stats:
+            self.api_stats[api_name] = {
+                'api_name': api_name,
                 'start_time': datetime.now(),
                 'end_time': None,
                 'internet_speed_start': self.measure_internet_speed(),
@@ -82,48 +81,17 @@ class EnvoyLoadTester:
                 'successful_requests': 0,
                 'failed_requests': 0,
                 'response_times': [],
-                'apis_tested': {
-                    'WebAccountApi': {'requests': 0, 'success': 0, 'avg_time': 0},
-                    'WebAccountV2Api': {'requests': 0, 'success': 0, 'avg_time': 0},
-                    'WebDirectoryApi': {'requests': 0, 'success': 0, 'avg_time': 0}
-                }
+                'per_endpoint': {}
             }
-    
-    def update_thread_stats(self, thread_id, api_name, response_time_ms, success):
-        """Обновляет статистику потока"""
-        with self.lock:
-            if thread_id in self.thread_stats:
-                stats = self.thread_stats[thread_id]
-                stats['total_requests'] += 1
-                stats['response_times'].append(response_time_ms)
-                
-                if success:
-                    stats['successful_requests'] += 1
-                else:
-                    stats['failed_requests'] += 1
-                
-                # Обновляем статистику по API
-                if api_name in stats['apis_tested']:
-                    api_stats = stats['apis_tested'][api_name]
-                    api_stats['requests'] += 1
-                    if success:
-                        api_stats['success'] += 1
-                    
-                    # Пересчитываем среднее время
-                    if api_stats['requests'] > 0:
-                        current_times = [t for t in stats['response_times']]
-                        api_times = current_times[-api_stats['requests']:]
-                        api_stats['avg_time'] = round(sum(api_times) / len(api_times), 2)
 
-    def record_result(self, thread_id, attack_num, api_name, endpoint, start_time, end_time, success, error_code=None, response_size=0):
-        """Записывает результат запроса в общий список и обновляет статистику потока"""
+    def record_result(self, api_name, endpoint, start_time, end_time, success, error_code=None, response_size=0):
+        """Записывает результат запроса и обновляет статистику API"""
         response_time_ms = round((end_time - start_time) * 1000, 2)
-        
+
+        # Детальный лог
         with self.lock:
             self.results.append({
                 'timestamp': datetime.fromtimestamp(start_time).strftime('%Y-%m-%d %H:%M:%S.%f')[:-3],
-                'thread_id': thread_id,
-                'attack_number': attack_num,
                 'api_name': api_name,
                 'endpoint': endpoint,
                 'response_time_ms': response_time_ms,
@@ -131,48 +99,66 @@ class EnvoyLoadTester:
                 'error_code': error_code,
                 'response_size_bytes': response_size
             })
-        
-        # Обновляем статистику потока
-        self.update_thread_stats(thread_id, api_name, response_time_ms, success)
+
+        # Статистика по API
+        self.init_api_stats(api_name)
+        with self.lock:
+            stats = self.api_stats[api_name]
+            stats['total_requests'] += 1
+            stats['response_times'].append(response_time_ms)
+            if success:
+                stats['successful_requests'] += 1
+            else:
+                stats['failed_requests'] += 1
+
+            # По эндпоинту
+            if endpoint not in stats['per_endpoint']:
+                stats['per_endpoint'][endpoint] = {
+                    'requests': 0,
+                    'success': 0,
+                    'response_times': []
+                }
+            ep = stats['per_endpoint'][endpoint]
+            ep['requests'] += 1
+            if success:
+                ep['success'] += 1
+            ep['response_times'].append(response_time_ms)
     
-    def log_error(self, thread_id, api_name, endpoint, error_message, attack_num=None):
+    def log_error(self, api_name, endpoint, error_message):
         """Записывает ошибку в список и выводит в консоль"""
         error_info = {
             'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3],
-            'thread_id': thread_id,
-            'attack_number': attack_num,
             'api_name': api_name,
             'endpoint': endpoint,
             'error_message': str(error_message)
         }
-        
         with self.lock:
             self.errors.append(error_info)
-            # Выводим ошибку в консоль сразу
-            print(f"❌ [Поток {thread_id}] {api_name}.{endpoint}: {error_message}")
+        # Выводим ошибку в консоль сразу
+        print(f"❌ {api_name}.{endpoint}: {error_message}")
         
         return str(error_message)
-    
-    def finalize_thread_stats(self, thread_id):
-        """Завершает сбор статистики для потока"""
-        with self.lock:
-            if thread_id in self.thread_stats:
-                stats = self.thread_stats[thread_id]
-                stats['end_time'] = datetime.now()
-                stats['internet_speed_end'] = self.measure_internet_speed()
-                
-                # Рассчитываем общие метрики
-                if stats['response_times']:
-                    stats['avg_response_time'] = round(sum(stats['response_times']) / len(stats['response_times']), 2)
-                    stats['min_response_time'] = round(min(stats['response_times']), 2)
-                    stats['max_response_time'] = round(max(stats['response_times']), 2)
-                else:
-                    stats['avg_response_time'] = 0
-                    stats['min_response_time'] = 0
-                    stats['max_response_time'] = 0
-                
-                stats['success_rate'] = round((stats['successful_requests'] / stats['total_requests']) * 100, 2) if stats['total_requests'] > 0 else 0
-                stats['duration_seconds'] = (stats['end_time'] - stats['start_time']).total_seconds()
+
+    def finalize_api_stats(self, api_name: str):
+        """Финализирует статистику по API"""
+        if api_name in self.api_stats:
+            stats = self.api_stats[api_name]
+            stats['end_time'] = datetime.now()
+            stats['internet_speed_end'] = self.measure_internet_speed()
+
+            if stats['response_times']:
+                stats['avg_response_time'] = round(sum(stats['response_times']) / len(stats['response_times']), 2)
+                stats['min_response_time'] = round(min(stats['response_times']), 2)
+                stats['max_response_time'] = round(max(stats['response_times']), 2)
+            else:
+                stats['avg_response_time'] = 0
+                stats['min_response_time'] = 0
+                stats['max_response_time'] = 0
+
+            total = stats['total_requests']
+            succ = stats['successful_requests']
+            stats['success_rate'] = round((succ / total) * 100, 2) if total > 0 else 0
+            stats['duration_seconds'] = (stats['end_time'] - stats['start_time']).total_seconds()
     
     def get_v2_metadata(self):
         """Метаданные для WebAccountV2Api и WebTransferApi - без sessionid (передается в data)"""
@@ -188,121 +174,389 @@ class EnvoyLoadTester:
             ('imei', self.session_data['imei'])
         ]
 
-    def test_webaccount_api(self, thread_id, attack_num):
+    def _call_webaccount_api(self, stub: WebAccountApiStub, endpoint: str):
+        start_time = time.time()
+        try:
+            data = {"userId": int(self.session_data['userId'])}
+            request = WebAccountsRequest(code=endpoint, data=json.dumps(data))
+            metadata = self.get_session_metadata()
+            response = stub.makeWebAccount(request, metadata=metadata)
+            end_time = time.time()
+
+            if response.success:
+                response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
+                return True, start_time, end_time, None, response_size
+            else:
+                error_code = response.error.code if response.error else "UNKNOWN_ERROR"
+                error_msg = response.error.message if response.error and hasattr(response.error, 'message') else "Неизвестная ошибка сервера"
+                full_error = f"{error_code}: {error_msg}"
+                return False, start_time, end_time, full_error, 0
+        except Exception as e:
+            end_time = time.time()
+            return False, start_time, end_time, f"Exception: {str(e)}", 0
+
+    def _schedule_webaccount_api(self, stub: WebAccountApiStub, endpoint: str):
+        """Планирует асинхронный вызов WebAccountApi и возвращает (future, start_time, endpoint)"""
+        start_time = time.time()
+        data = {"userId": int(self.session_data['userId'])}
+        request = WebAccountsRequest(code=endpoint, data=json.dumps(data))
+        metadata = self.get_session_metadata()
+        future = stub.makeWebAccount.future(request, metadata=metadata)
+        return future, start_time, endpoint
+
+    def _call_webaccount_v2_api(self, stub: WebAccountV2ApiStub, endpoint: str, payload_template: dict):
+        start_time = time.time()
+        try:
+            data = dict(payload_template)
+            data['userId'] = int(self.session_data['userId'])
+            data['sessionId'] = self.session_data['sessionId']
+            request = WebAccountsRequest(code=endpoint, data=json.dumps(data))
+            metadata = self.get_v2_metadata()
+            response = stub.makeWebAccountV2(request, metadata=metadata)
+            end_time = time.time()
+
+            if response.success:
+                response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
+                return True, start_time, end_time, None, response_size
+            else:
+                error_code = response.error.code if response.error else "UNKNOWN_ERROR"
+                error_msg = response.error.message if response.error and hasattr(response.error, 'message') else "Неизвестная ошибка сервера"
+                full_error = f"{error_code}: {error_msg}"
+                return False, start_time, end_time, full_error, 0
+        except Exception as e:
+            end_time = time.time()
+            return False, start_time, end_time, f"Exception: {str(e)}", 0
+
+    def _schedule_webaccount_v2_api(self, stub: WebAccountV2ApiStub, endpoint: str, payload_template: dict):
+        """Планирует асинхронный вызов WebAccountV2Api и возвращает (future, start_time, endpoint)"""
+        start_time = time.time()
+        data = dict(payload_template)
+        data['userId'] = int(self.session_data['userId'])
+        data['sessionId'] = self.session_data['sessionId']
+        request = WebAccountsRequest(code=endpoint, data=json.dumps(data))
+        metadata = self.get_v2_metadata()
+        future = stub.makeWebAccountV2.future(request, metadata=metadata)
+        return future, start_time, endpoint
+
+    def _call_webdirectory_api(self, stub: WebDirectoryApiStub, endpoint: str):
+        start_time = time.time()
+        try:
+            request = IncomingWebDirectory(code=endpoint, data=None)
+            metadata = self.get_basic_metadata()
+            response = stub.makeWebDirectory(request, metadata=metadata)
+            end_time = time.time()
+
+            if response.data and len(response.data) > 0:
+                response_size = len(response.data)
+                return True, start_time, end_time, None, response_size
+            else:
+                return False, start_time, end_time, "EMPTY_RESPONSE: Сервер вернул пустой ответ", 0
+        except Exception as e:
+            end_time = time.time()
+            return False, start_time, end_time, f"Exception: {str(e)}", 0
+
+    def _schedule_webdirectory_api(self, stub: WebDirectoryApiStub, endpoint: str):
+        """Планирует асинхронный вызов WebDirectoryApi и возвращает (future, start_time, endpoint)"""
+        start_time = time.time()
+        request = IncomingWebDirectory(code=endpoint, data=None)
+        metadata = self.get_basic_metadata()
+        future = stub.makeWebDirectory.future(request, metadata=metadata)
+        return future, start_time, endpoint
+
+
+    def run_webaccount_api_sequential(self, rps: int = 8):
+        api_name = 'WebAccountApi'
+        endpoints = ['GET_ACCOUNTS', 'GET_LOANS', 'GET_DEPOSITS']
+        self.init_api_stats(api_name)
         channel = grpc.secure_channel(self.server, grpc.ssl_channel_credentials(), self.options)
         stub = WebAccountApiStub(channel)
-        for endpoint in ['GET_ACCOUNTS', 'GET_LOANS', 'GET_DEPOSITS']:
-            start_time = time.time()
+        interval = 1.0 / max(1, rps)
+        next_time = time.perf_counter()
+        futures = []
+        for i in range(1000):
+            now = time.perf_counter()
+            if now < next_time:
+                time.sleep(next_time - now)
+                next_time += interval
+            else:
+                next_time = now + interval
+            endpoint = endpoints[i % len(endpoints)]
+            future, start_ts, ep = self._schedule_webaccount_api(stub, endpoint)
+            def _cb(fut, api=api_name, endpoint=ep, start=start_ts):
+                end_ts = time.time()
+                try:
+                    response = fut.result()
+                    if getattr(response, 'success', False):
+                        response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
+                        self.record_result(api, endpoint, start, end_ts, True, response_size=response_size)
+                    else:
+                        error_code = response.error.code if getattr(response, 'error', None) else "UNKNOWN_ERROR"
+                        error_msg = getattr(getattr(response, 'error', None), 'message', '') or "Неизвестная ошибка сервера"
+                        logged_error = self.log_error(api, endpoint, f"{error_code}: {error_msg}")
+                        self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                except Exception as e:
+                    logged_error = self.log_error(api, endpoint, f"Exception: {str(e)}")
+                    self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+            future.add_done_callback(_cb)
+            futures.append(future)
+        # Дождаться завершения всех future
+        for fut in futures:
             try:
-                data = {"userId": int(self.session_data['userId'])}
-                request = WebAccountsRequest(code=endpoint, data=json.dumps(data))
-                metadata = self.get_session_metadata()
-                response = stub.makeWebAccount(request, metadata=metadata)
-                end_time = time.time()
-                
-                if response.success:
-                    response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
-                    self.record_result(thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, True, response_size=response_size)
-                else:
-                    error_code = response.error.code if response.error else "UNKNOWN_ERROR"
-                    error_msg = response.error.message if response.error and hasattr(response.error, 'message') else "Неизвестная ошибка сервера"
-                    full_error = f"{error_code}: {error_msg}"
-                    logged_error = self.log_error(thread_id, 'WebAccountApi', endpoint, full_error, attack_num)
-                    self.record_result(thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, False, logged_error)
-            except Exception as e:
-                end_time = time.time()
-                logged_error = self.log_error(thread_id, 'WebAccountApi', endpoint, f"Exception: {str(e)}", attack_num)
-                self.record_result(thread_id, attack_num, 'WebAccountApi', endpoint, start_time, end_time, False, logged_error)
+                fut.result()
+            except Exception:
+                pass
         channel.close()
+        self.finalize_api_stats(api_name)
 
-    def test_webaccount_v2_api(self, thread_id, attack_num):
-        channel = grpc.secure_channel(self.server, grpc.ssl_channel_credentials(), self.options)
-        stub = WebAccountV2ApiStub(channel)
-        endpoints = [
+    def run_webaccount_v2_api_sequential(self, rps: int = 8):
+        api_name = 'WebAccountV2Api'
+        endpoints_tpls = [
             ('GET_LIST_OF_STORIES', {}),
             ('GET_ACCOUNTS', {'accountStatus': 'O'}),
             ('GET_EXCHANGE_RATE', {'rateType': 'cash'}),
             ('GET_LIST_OF_TEMPLATES', {'pageNumber': 1, 'pageSize': 20, 'templateName': ''})
         ]
-        for endpoint, data in endpoints:
-            start_time = time.time()
+        endpoints = [code for code, _ in endpoints_tpls]
+        templates = {code: tpl for code, tpl in endpoints_tpls}
+        self.init_api_stats(api_name)
+        channel = grpc.secure_channel(self.server, grpc.ssl_channel_credentials(), self.options)
+        stub = WebAccountV2ApiStub(channel)
+        interval = 1.0 / max(1, rps)
+        next_time = time.perf_counter()
+        futures = []
+        for i in range(1000):
+            now = time.perf_counter()
+            if now < next_time:
+                time.sleep(next_time - now)
+                next_time += interval
+            else:
+                next_time = now + interval
+            endpoint = endpoints[i % len(endpoints)]
+            tpl = templates.get(endpoint, {})
+            future, start_ts, ep = self._schedule_webaccount_v2_api(stub, endpoint, tpl)
+            def _cb(fut, api=api_name, endpoint=ep, start=start_ts):
+                end_ts = time.time()
+                try:
+                    response = fut.result()
+                    if getattr(response, 'success', False):
+                        response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
+                        self.record_result(api, endpoint, start, end_ts, True, response_size=response_size)
+                    else:
+                        error_code = response.error.code if getattr(response, 'error', None) else "UNKNOWN_ERROR"
+                        error_msg = getattr(getattr(response, 'error', None), 'message', '') or "Неизвестная ошибка сервера"
+                        logged_error = self.log_error(api, endpoint, f"{error_code}: {error_msg}")
+                        self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                except Exception as e:
+                    logged_error = self.log_error(api, endpoint, f"Exception: {str(e)}")
+                    self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+            future.add_done_callback(_cb)
+            futures.append(future)
+        for fut in futures:
             try:
-                data['userId'] = int(self.session_data['userId'])
-                data['sessionId'] = self.session_data['sessionId']
-                request = WebAccountsRequest(code=endpoint, data=json.dumps(data))
-                metadata = self.get_v2_metadata()
-                response = stub.makeWebAccountV2(request, metadata=metadata)
-                end_time = time.time()
-                
-                if response.success:
-                    response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
-                    self.record_result(thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, True, response_size=response_size)
-                else:
-                    error_code = response.error.code if response.error else "UNKNOWN_ERROR"
-                    error_msg = response.error.message if response.error and hasattr(response.error, 'message') else "Неизвестная ошибка сервера"
-                    full_error = f"{error_code}: {error_msg}"
-                    logged_error = self.log_error(thread_id, 'WebAccountV2Api', endpoint, full_error, attack_num)
-                    self.record_result(thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, False, logged_error)
-            except Exception as e:
-                end_time = time.time()
-                logged_error = self.log_error(thread_id, 'WebAccountV2Api', endpoint, f"Exception: {str(e)}", attack_num)
-                self.record_result(thread_id, attack_num, 'WebAccountV2Api', endpoint, start_time, end_time, False, logged_error)
+                fut.result()
+            except Exception:
+                pass
         channel.close()
+        self.finalize_api_stats(api_name)
 
-    def test_webdirectory_api(self, thread_id, attack_num):
+    def run_webdirectory_api_sequential(self, rps: int = 8):
+        api_name = 'WebDirectoryApi'
+        endpoints = ['GET_DIRECTORY_EXCHANGE_RATES', 'GET_DV_OF_DIRECTORIES', 'GET_DIRECTORY_BRANCHES_ATMS']
+        self.init_api_stats(api_name)
         channel = grpc.secure_channel(self.server, grpc.ssl_channel_credentials(), self.options)
         stub = WebDirectoryApiStub(channel)
-        for endpoint in ['GET_DIRECTORY_EXCHANGE_RATES', 'GET_DV_OF_DIRECTORIES', 'GET_DIRECTORY_BRANCHES_ATMS']:
-            start_time = time.time()
+        interval = 1.0 / max(1, rps)
+        next_time = time.perf_counter()
+        futures = []
+        for i in range(1000):
+            now = time.perf_counter()
+            if now < next_time:
+                time.sleep(next_time - now)
+                next_time += interval
+            else:
+                next_time = now + interval
+            endpoint = endpoints[i % len(endpoints)]
+            future, start_ts, ep = self._schedule_webdirectory_api(stub, endpoint)
+            def _cb(fut, api=api_name, endpoint=ep, start=start_ts):
+                end_ts = time.time()
+                try:
+                    response = fut.result()
+                    if getattr(response, 'data', None) and len(response.data) > 0:
+                        response_size = len(response.data)
+                        self.record_result(api, endpoint, start, end_ts, True, response_size=response_size)
+                    else:
+                        logged_error = self.log_error(api, endpoint, "EMPTY_RESPONSE: Сервер вернул пустой ответ")
+                        self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                except Exception as e:
+                    logged_error = self.log_error(api, endpoint, f"Exception: {str(e)}")
+                    self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+            future.add_done_callback(_cb)
+            futures.append(future)
+        for fut in futures:
             try:
-                request = IncomingWebDirectory(code=endpoint, data=None)
-                metadata = self.get_basic_metadata()
-                response = stub.makeWebDirectory(request, metadata=metadata)
-                end_time = time.time()
-                
-                if response.data and len(response.data) > 0:
-                    response_size = len(response.data)
-                    self.record_result(thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, True, response_size=response_size)
-                else:
-                    logged_error = self.log_error(thread_id, 'WebDirectoryApi', endpoint, "EMPTY_RESPONSE: Сервер вернул пустой ответ", attack_num)
-                    self.record_result(thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, False, logged_error)
-            except Exception as e:
-                end_time = time.time()
-                logged_error = self.log_error(thread_id, 'WebDirectoryApi', endpoint, f"Exception: {str(e)}", attack_num)  
-                self.record_result(thread_id, attack_num, 'WebDirectoryApi', endpoint, start_time, end_time, False, logged_error)
+                fut.result()
+            except Exception:
+                pass
         channel.close()
+        self.finalize_api_stats(api_name)
 
+    def run_all_apis_concurrent(self, rps_per_api: int = 8):
+        """Одновременная отправка 1000 запросов в каждую из 3 API с заданным RPS на каждую API."""
+        wa_name = 'WebAccountApi'
+        v2_name = 'WebAccountV2Api'
+        wd_name = 'WebDirectoryApi'
 
-    def worker_thread(self, thread_id):
-        """Выполняет 10 атак в одном потоке"""
-        # Инициализируем статистику потока
-        self.init_thread_stats(thread_id)
-        
-        for attack_num in range(1, 11):
-            # Каждая атака тестирует все 3 API
-            self.test_webaccount_api(thread_id, attack_num)
-            self.test_webaccount_v2_api(thread_id, attack_num)
-            self.test_webdirectory_api(thread_id, attack_num)
-        
-        # Финализируем статистику потока
-        self.finalize_thread_stats(thread_id)
+        # Инициализация статистики
+        self.init_api_stats(wa_name)
+        self.init_api_stats(v2_name)
+        self.init_api_stats(wd_name)
+
+        # Каналы и стабы
+        wa_channel = grpc.secure_channel(self.server, grpc.ssl_channel_credentials(), self.options)
+        wa_stub = WebAccountApiStub(wa_channel)
+
+        v2_channel = grpc.secure_channel(self.server, grpc.ssl_channel_credentials(), self.options)
+        v2_stub = WebAccountV2ApiStub(v2_channel)
+
+        wd_channel = grpc.secure_channel(self.server, grpc.ssl_channel_credentials(), self.options)
+        wd_stub = WebDirectoryApiStub(wd_channel)
+
+        # Эндпоинты и шаблоны
+        wa_endpoints = ['GET_ACCOUNTS', 'GET_LOANS', 'GET_DEPOSITS']
+        v2_tpls = [
+            ('GET_LIST_OF_STORIES', {}),
+            ('GET_ACCOUNTS', {'accountStatus': 'O'}),
+            ('GET_EXCHANGE_RATE', {'rateType': 'cash'}),
+            ('GET_LIST_OF_TEMPLATES', {'pageNumber': 1, 'pageSize': 20, 'templateName': ''})
+        ]
+        v2_endpoints = [code for code, _ in v2_tpls]
+        v2_templates = {code: tpl for code, tpl in v2_tpls}
+        wd_endpoints = ['GET_DIRECTORY_EXCHANGE_RATES', 'GET_DV_OF_DIRECTORIES', 'GET_DIRECTORY_BRANCHES_ATMS']
+
+        # Планировщики RPS
+        interval = 1.0 / max(1, rps_per_api)
+        next_time = {
+            wa_name: time.perf_counter(),
+            v2_name: time.perf_counter(),
+            wd_name: time.perf_counter(),
+        }
+        sent = {wa_name: 0, v2_name: 0, wd_name: 0}
+        idx = {wa_name: 0, v2_name: 0, wd_name: 0}
+        scheduled = []  # элементы: {api, endpoint, start_time, future}
+
+        # Фаза отправки
+        while sent[wa_name] < 1000 or sent[v2_name] < 1000 or sent[wd_name] < 1000:
+            now = time.perf_counter()
+
+            if sent[wa_name] < 1000 and now >= next_time[wa_name]:
+                ep = wa_endpoints[idx[wa_name] % len(wa_endpoints)]
+                fut, start_ts, endpoint = self._schedule_webaccount_api(wa_stub, ep)
+                def _cb(f, api=wa_name, endpoint=endpoint, start=start_ts):
+                    end_ts = time.time()
+                    try:
+                        response = f.result()
+                        if getattr(response, 'success', False):
+                            response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
+                            self.record_result(api, endpoint, start, end_ts, True, response_size=response_size)
+                        else:
+                            error_code = response.error.code if getattr(response, 'error', None) else "UNKNOWN_ERROR"
+                            error_msg = getattr(getattr(response, 'error', None), 'message', '') or "Неизвестная ошибка сервера"
+                            logged_error = self.log_error(api, endpoint, f"{error_code}: {error_msg}")
+                            self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                    except Exception as e:
+                        logged_error = self.log_error(api, endpoint, f"Exception: {str(e)}")
+                        self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                fut.add_done_callback(_cb)
+                scheduled.append(fut)
+                sent[wa_name] += 1
+                idx[wa_name] += 1
+                next_time[wa_name] += interval
+
+            if sent[v2_name] < 1000 and now >= next_time[v2_name]:
+                ep = v2_endpoints[idx[v2_name] % len(v2_endpoints)]
+                tpl = v2_templates.get(ep, {})
+                fut, start_ts, endpoint = self._schedule_webaccount_v2_api(v2_stub, ep, tpl)
+                def _cb(f, api=v2_name, endpoint=endpoint, start=start_ts):
+                    end_ts = time.time()
+                    try:
+                        response = f.result()
+                        if getattr(response, 'success', False):
+                            response_size = len(response.data) if hasattr(response, 'data') and response.data else 0
+                            self.record_result(api, endpoint, start, end_ts, True, response_size=response_size)
+                        else:
+                            error_code = response.error.code if getattr(response, 'error', None) else "UNKNOWN_ERROR"
+                            error_msg = getattr(getattr(response, 'error', None), 'message', '') or "Неизвестная ошибка сервера"
+                            logged_error = self.log_error(api, endpoint, f"{error_code}: {error_msg}")
+                            self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                    except Exception as e:
+                        logged_error = self.log_error(api, endpoint, f"Exception: {str(e)}")
+                        self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                fut.add_done_callback(_cb)
+                scheduled.append(fut)
+                sent[v2_name] += 1
+                idx[v2_name] += 1
+                next_time[v2_name] += interval
+
+            if sent[wd_name] < 1000 and now >= next_time[wd_name]:
+                ep = wd_endpoints[idx[wd_name] % len(wd_endpoints)]
+                fut, start_ts, endpoint = self._schedule_webdirectory_api(wd_stub, ep)
+                def _cb(f, api=wd_name, endpoint=endpoint, start=start_ts):
+                    end_ts = time.time()
+                    try:
+                        response = f.result()
+                        if getattr(response, 'data', None) and len(response.data) > 0:
+                            response_size = len(response.data)
+                            self.record_result(api, endpoint, start, end_ts, True, response_size=response_size)
+                        else:
+                            logged_error = self.log_error(api, endpoint, "EMPTY_RESPONSE: Сервер вернул пустой ответ")
+                            self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                    except Exception as e:
+                        logged_error = self.log_error(api, endpoint, f"Exception: {str(e)}")
+                        self.record_result(api, endpoint, start, end_ts, False, error_code=logged_error)
+                fut.add_done_callback(_cb)
+                scheduled.append(fut)
+                sent[wd_name] += 1
+                idx[wd_name] += 1
+                next_time[wd_name] += interval
+
+            if sent[wa_name] < 1000 or sent[v2_name] < 1000 or sent[wd_name] < 1000:
+                nearest = min(next_time[a] for a in [wa_name, v2_name, wd_name] if sent[a] < 1000)
+                sleep_for = max(0.0, min(0.01, nearest - time.perf_counter()))
+                if sleep_for > 0:
+                    time.sleep(sleep_for)
+
+        # Фаза ожидания завершения всех запросов
+        for fut in scheduled:
+            try:
+                fut.result()
+            except Exception:
+                pass
+
+        # Закрываем каналы и финализируем статистику
+        wa_channel.close()
+        v2_channel.close()
+        wd_channel.close()
+
+        self.finalize_api_stats(wa_name)
+        self.finalize_api_stats(v2_name)
+        self.finalize_api_stats(wd_name)
     
     def save_to_excel(self):
-        """Сохраняет статистику по потокам в Excel файл"""
-        if not self.thread_stats:
+        """Сохраняет статистику по API в Excel файл"""
+        if not self.api_stats:
             print("Нет данных для сохранения")
             return
-        
+
         # Сохраняем в той же папке где находится скрипт
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        filename = os.path.join(script_dir, f"thread_stats_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx")
-        
+        filename = os.path.join(script_dir, f"api_stats_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx")
+
         with pd.ExcelWriter(filename, engine='openpyxl') as writer:
-            # ОСНОВНАЯ СТАТИСТИКА ПО ПОТОКАМ
-            thread_data = []
-            for thread_id, stats in self.thread_stats.items():
-                thread_data.append({
-                    'Поток №': thread_id,
+            # СТАТИСТИКА ПО API
+            api_rows = []
+            for api_name, stats in self.api_stats.items():
+                api_rows.append({
+                    'API': api_name,
                     'Время старта': stats['start_time'].strftime('%H:%M:%S'),
                     'Время завершения': stats['end_time'].strftime('%H:%M:%S'),
                     'Длительность (сек)': stats['duration_seconds'],
@@ -316,41 +570,45 @@ class EnvoyLoadTester:
                     'Скорость интернета в начале (КБ/с)': stats['internet_speed_start'],
                     'Скорость интернета в конце (КБ/с)': stats['internet_speed_end']
                 })
-            
-            thread_df = pd.DataFrame(thread_data)
-            thread_df.to_excel(writer, sheet_name='Статистика по потокам', index=False)
-            
-            # ДЕТАЛИЗАЦИЯ ПО API ДЛЯ КАЖДОГО ПОТОКА
-            api_details = []
-            for thread_id, stats in self.thread_stats.items():
-                for api_name, api_stats in stats['apis_tested'].items():
-                    if api_stats['requests'] > 0:  # Только если были запросы
-                        success_rate = round((api_stats['success'] / api_stats['requests']) * 100, 2) if api_stats['requests'] > 0 else 0
-                        api_details.append({
-                            'Поток №': thread_id,
-                            'API': api_name,
-                            'Всего запросов': api_stats['requests'],
-                            'Успешных': api_stats['success'],
-                            'Процент успеха (%)': success_rate,
-                            'Среднее время ответа (мс)': api_stats['avg_time']
-                        })
-            
-            api_df = pd.DataFrame(api_details)
-            api_df.to_excel(writer, sheet_name='Детализация по API', index=False)
-            
+
+            pd.DataFrame(api_rows).to_excel(writer, sheet_name='Статистика по API', index=False)
+
+            # ДЕТАЛИ ПО ЭНДПОИНТАМ
+            endpoint_rows = []
+            for api_name, stats in self.api_stats.items():
+                for endpoint, ep_stats in stats['per_endpoint'].items():
+                    if ep_stats['response_times']:
+                        avg_time = round(sum(ep_stats['response_times']) / len(ep_stats['response_times']), 2)
+                        min_time = round(min(ep_stats['response_times']), 2)
+                        max_time = round(max(ep_stats['response_times']), 2)
+                    else:
+                        avg_time = min_time = max_time = 0
+                    success_rate = round((ep_stats['success'] / ep_stats['requests']) * 100, 2) if ep_stats['requests'] > 0 else 0
+                    endpoint_rows.append({
+                        'API': api_name,
+                        'Эндпоинт': endpoint,
+                        'Всего запросов': ep_stats['requests'],
+                        'Успешных': ep_stats['success'],
+                        'Процент успеха (%)': success_rate,
+                        'Среднее время ответа (мс)': avg_time,
+                        'Минимальное время (мс)': min_time,
+                        'Максимальное время (мс)': max_time,
+                    })
+            pd.DataFrame(endpoint_rows).to_excel(writer, sheet_name='Детализация по эндпоинтам', index=False)
+
             # ОБЩАЯ СВОДКА
-            total_requests = sum(stats['total_requests'] for stats in self.thread_stats.values())
-            total_successful = sum(stats['successful_requests'] for stats in self.thread_stats.values())
-            avg_internet_speed_start = round(sum(stats['internet_speed_start'] for stats in self.thread_stats.values()) / len(self.thread_stats), 2)
-            avg_internet_speed_end = round(sum(stats['internet_speed_end'] for stats in self.thread_stats.values()) / len(self.thread_stats), 2)
-            
+            total_requests = sum(stats['total_requests'] for stats in self.api_stats.values())
+            total_successful = sum(stats['successful_requests'] for stats in self.api_stats.values())
+            avg_internet_speed_start = round(sum(stats['internet_speed_start'] for stats in self.api_stats.values()) / len(self.api_stats), 2)
+            avg_internet_speed_end = round(sum(stats['internet_speed_end'] for stats in self.api_stats.values()) / len(self.api_stats), 2)
+
             all_response_times = []
-            for stats in self.thread_stats.values():
+            for stats in self.api_stats.values():
                 all_response_times.extend(stats['response_times'])
-            
+
             summary_data = [{
-                'Параметр': 'Общее количество потоков',
-                'Значение': len(self.thread_stats)
+                'Параметр': 'Количество API',
+                'Значение': len(self.api_stats)
             }, {
                 'Параметр': 'Всего запросов',
                 'Значение': total_requests
@@ -376,88 +634,44 @@ class EnvoyLoadTester:
                 'Параметр': 'Средняя скорость интернета в конце (КБ/с)',
                 'Значение': avg_internet_speed_end
             }]
-            
-            summary_df = pd.DataFrame(summary_data)
-            summary_df.to_excel(writer, sheet_name='Общая сводка', index=False)
-            
-            # ЛИСТ С ОШИБКАМИ
+
+            pd.DataFrame(summary_data).to_excel(writer, sheet_name='Общая сводка', index=False)
+
+            # ОШИБКИ
             if self.errors:
-                errors_df = pd.DataFrame(self.errors)
-                errors_df.to_excel(writer, sheet_name='Ошибки', index=False)
-                
-                # СТАТИСТИКА ОШИБОК
-                error_stats = []
-                error_counts = {}
-                for error in self.errors:
-                    api_endpoint = f"{error['api_name']}.{error['endpoint']}"
-                    if api_endpoint not in error_counts:
-                        error_counts[api_endpoint] = 0
-                    error_counts[api_endpoint] += 1
-                
-                for api_endpoint, count in sorted(error_counts.items(), key=lambda x: x[1], reverse=True):
-                    error_stats.append({
-                        'API.Endpoint': api_endpoint,
-                        'Количество ошибок': count
-                    })
-                
-                if error_stats:
-                    error_stats_df = pd.DataFrame(error_stats)
-                    error_stats_df.to_excel(writer, sheet_name='Статистика ошибок', index=False)
-            
-        print(f"✅ Статистика по потокам сохранена в файл: {os.path.basename(filename)}")
+                pd.DataFrame(self.errors).to_excel(writer, sheet_name='Ошибки', index=False)
+
+        print(f"✅ Статистика по API сохранена в файл: {os.path.basename(filename)}")
         print(f"📁 Полный путь: {filename}")
-        
+
         # Краткая статистика в консоль
         print(f"\n📊 РЕЗУЛЬТАТЫ НАГРУЗОЧНОГО ТЕСТА:")
-        print(f"   🧵 Потоков: {len(self.thread_stats)}")
-        print(f"   📝 Всего запросов: {total_requests}")
-        print(f"   ✅ Успешных: {total_successful} ({round((total_successful/total_requests)*100, 1)}%)")
+        print(f"   API: {', '.join(self.api_stats.keys())}")
+        print(f"   📝 Всего запросов: {sum(s['total_requests'] for s in self.api_stats.values())}")
+        print(f"   ✅ Успешных: {sum(s['successful_requests'] for s in self.api_stats.values())}")
         print(f"   ❌ Ошибок: {len(self.errors)}")
-        print(f"   ⏱️  Среднее время ответа: {round(sum(all_response_times)/len(all_response_times), 2)} мс")
-        print(f"   🌐 Скорость интернета: {avg_internet_speed_start} → {avg_internet_speed_end} КБ/с")
-        
-        # Показываем топ ошибок
-        if self.errors:
-            print(f"\n🚨 ТОП ОШИБОК:")
-            error_counts = {}
-            for error in self.errors:
-                error_key = error['error_message']
-                if error_key not in error_counts:
-                    error_counts[error_key] = 0
-                error_counts[error_key] += 1
-            
-            for error_msg, count in sorted(error_counts.items(), key=lambda x: x[1], reverse=True)[:5]:
-                print(f"   • {error_msg} ({count}x)")
-        
-        print(f"\n🧵 РЕЗУЛЬТАТЫ ПО ПОТОКАМ:")
-        for thread_id, stats in sorted(self.thread_stats.items()):
-            print(f"   Поток #{thread_id}: {stats['success_rate']}% успех, {stats['avg_response_time']}мс среднее время")
 
     def run_load_test(self):
         print("🚀 ЗАПУСК НАГРУЗОЧНОГО ТЕСТА ENVOY")
         print("=" * 50)
-        print(f"📊 Параметры теста:")
-        print(f"   🧵 Потоков: 5")
-        print(f"   🔄 Атак на поток: 10") 
-        print(f"   🎯 Эндпоинтов: 10 (WebAccountApi: 3, WebAccountV2Api: 4, WebDirectoryApi: 3)")
-        print(f"   📝 Всего запросов: {5 * 10 * 10} (5 потоков × 10 атак × 10 эндпоинтов)")
+        print("📊 Параметры теста:")
+        print("   🔄 Запросов на API: 1000")
+        print("   ⚙️ Режим: одновременная нагрузка 3 API по 8 rps каждая")
         print("🔥 НАЧИНАЕМ НАГРУЗОЧНОЕ ТЕСТИРОВАНИЕ...")
-        
+
         start_time = time.time()
-        
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            futures = [executor.submit(self.worker_thread, thread_id) for thread_id in range(1, 6)]
-            for future in futures:
-                future.result()
-        
+
+        # Одновременная нагрузка всех трех API по 8 rps на каждую
+        self.run_all_apis_concurrent(rps_per_api=8)
+
         end_time = time.time()
         total_time = end_time - start_time
-        
+
         print(f"\n⏱️ Общее время выполнения: {total_time:.2f} секунд")
-        print("💾 Сохраняем статистику по потокам в Excel...")
-        
+        print("💾 Сохраняем статистику в Excel...")
+
         self.save_to_excel()
-        
+
         print("\n🏁 НАГРУЗОЧНЫЙ ТЕСТ ЗАВЕРШЕН")
         print("=" * 50)
 
