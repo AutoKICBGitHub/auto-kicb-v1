@@ -19,9 +19,10 @@ class EnvoyLoadTester:
     def __init__(self):
         self.server = 'newibanktest.kicb.net:443'
         self.options = [('grpc.max_receive_message_length', -1), ('grpc.max_send_message_length', -1)]
+        self.requests_per_api = 500
         self.session_data = {
-            'sessionKey': '1o8zZx5QBmvWDPizh0cp5W',
-            'sessionId': '3f8ZhzbT9jLYvPjrYs6LLq',
+            'sessionKey': '2ez3dQjhtbhj5gQnraG1x8',
+            'sessionId': '0lbcQlNJsSxT16jNuO84Bl',
             'device-type': 'ios',
             'x-real-ip': '93.170.8.20',
             'user-agent': '{"ua": {"device": "iPhone X", "osVersion": "16.7.7"}, "imei": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6", "deviceName": "", "deviceType": "ios", "macAddress": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6"}',
@@ -146,10 +147,13 @@ class EnvoyLoadTester:
             stats['end_time'] = datetime.now()
             stats['internet_speed_end'] = self.measure_internet_speed()
 
-            if stats['response_times']:
-                stats['avg_response_time'] = round(sum(stats['response_times']) / len(stats['response_times']), 2)
-                stats['min_response_time'] = round(min(stats['response_times']), 2)
-                stats['max_response_time'] = round(max(stats['response_times']), 2)
+            # Фильтруем только успешные запросы для расчёта времени ответа
+            successful_times = [t for i, t in enumerate(stats['response_times']) 
+                              if i < stats['successful_requests']]
+            if successful_times:
+                stats['avg_response_time'] = round(sum(successful_times) / len(successful_times), 2)
+                stats['min_response_time'] = round(min(successful_times), 2)
+                stats['max_response_time'] = round(max(successful_times), 2)
             else:
                 stats['avg_response_time'] = 0
                 stats['min_response_time'] = 0
@@ -273,7 +277,7 @@ class EnvoyLoadTester:
         interval = 1.0 / max(1, rps)
         next_time = time.perf_counter()
         futures = []
-        for i in range(1000):
+        for i in range(self.requests_per_api):
             now = time.perf_counter()
             if now < next_time:
                 time.sleep(next_time - now)
@@ -324,7 +328,7 @@ class EnvoyLoadTester:
         interval = 1.0 / max(1, rps)
         next_time = time.perf_counter()
         futures = []
-        for i in range(1000):
+        for i in range(self.requests_per_api):
             now = time.perf_counter()
             if now < next_time:
                 time.sleep(next_time - now)
@@ -368,7 +372,7 @@ class EnvoyLoadTester:
         interval = 1.0 / max(1, rps)
         next_time = time.perf_counter()
         futures = []
-        for i in range(1000):
+        for i in range(self.requests_per_api):
             now = time.perf_counter()
             if now < next_time:
                 time.sleep(next_time - now)
@@ -401,7 +405,7 @@ class EnvoyLoadTester:
         self.finalize_api_stats(api_name)
 
     def run_all_apis_concurrent(self, rps_per_api: int = 8):
-        """Одновременная отправка 1000 запросов в каждую из 3 API с заданным RPS на каждую API."""
+        """Одновременная отправка заданного количества запросов в каждую из 3 API с заданным RPS на каждую API."""
         wa_name = 'WebAccountApi'
         v2_name = 'WebAccountV2Api'
         wd_name = 'WebDirectoryApi'
@@ -445,10 +449,10 @@ class EnvoyLoadTester:
         scheduled = []  # элементы: {api, endpoint, start_time, future}
 
         # Фаза отправки
-        while sent[wa_name] < 1000 or sent[v2_name] < 1000 or sent[wd_name] < 1000:
+        while sent[wa_name] < self.requests_per_api or sent[v2_name] < self.requests_per_api or sent[wd_name] < self.requests_per_api:
             now = time.perf_counter()
 
-            if sent[wa_name] < 1000 and now >= next_time[wa_name]:
+            if sent[wa_name] < self.requests_per_api and now >= next_time[wa_name]:
                 ep = wa_endpoints[idx[wa_name] % len(wa_endpoints)]
                 fut, start_ts, endpoint = self._schedule_webaccount_api(wa_stub, ep)
                 def _cb(f, api=wa_name, endpoint=endpoint, start=start_ts):
@@ -472,7 +476,7 @@ class EnvoyLoadTester:
                 idx[wa_name] += 1
                 next_time[wa_name] += interval
 
-            if sent[v2_name] < 1000 and now >= next_time[v2_name]:
+            if sent[v2_name] < self.requests_per_api and now >= next_time[v2_name]:
                 ep = v2_endpoints[idx[v2_name] % len(v2_endpoints)]
                 tpl = v2_templates.get(ep, {})
                 fut, start_ts, endpoint = self._schedule_webaccount_v2_api(v2_stub, ep, tpl)
@@ -497,7 +501,7 @@ class EnvoyLoadTester:
                 idx[v2_name] += 1
                 next_time[v2_name] += interval
 
-            if sent[wd_name] < 1000 and now >= next_time[wd_name]:
+            if sent[wd_name] < self.requests_per_api and now >= next_time[wd_name]:
                 ep = wd_endpoints[idx[wd_name] % len(wd_endpoints)]
                 fut, start_ts, endpoint = self._schedule_webdirectory_api(wd_stub, ep)
                 def _cb(f, api=wd_name, endpoint=endpoint, start=start_ts):
@@ -519,8 +523,8 @@ class EnvoyLoadTester:
                 idx[wd_name] += 1
                 next_time[wd_name] += interval
 
-            if sent[wa_name] < 1000 or sent[v2_name] < 1000 or sent[wd_name] < 1000:
-                nearest = min(next_time[a] for a in [wa_name, v2_name, wd_name] if sent[a] < 1000)
+            if sent[wa_name] < self.requests_per_api or sent[v2_name] < self.requests_per_api or sent[wd_name] < self.requests_per_api:
+                nearest = min(next_time[a] for a in [wa_name, v2_name, wd_name] if sent[a] < self.requests_per_api)
                 sleep_for = max(0.0, min(0.01, nearest - time.perf_counter()))
                 if sleep_for > 0:
                     time.sleep(sleep_for)
@@ -577,10 +581,13 @@ class EnvoyLoadTester:
             endpoint_rows = []
             for api_name, stats in self.api_stats.items():
                 for endpoint, ep_stats in stats['per_endpoint'].items():
-                    if ep_stats['response_times']:
-                        avg_time = round(sum(ep_stats['response_times']) / len(ep_stats['response_times']), 2)
-                        min_time = round(min(ep_stats['response_times']), 2)
-                        max_time = round(max(ep_stats['response_times']), 2)
+                    # Фильтруем только успешные запросы для расчёта времени ответа
+                    successful_times = [t for i, t in enumerate(ep_stats['response_times']) 
+                                    if i < ep_stats['success']]
+                    if successful_times:
+                        avg_time = round(sum(successful_times) / len(successful_times), 2)
+                        min_time = round(min(successful_times), 2)
+                        max_time = round(max(successful_times), 2)
                     else:
                         avg_time = min_time = max_time = 0
                     success_rate = round((ep_stats['success'] / ep_stats['requests']) * 100, 2) if ep_stats['requests'] > 0 else 0
@@ -602,9 +609,12 @@ class EnvoyLoadTester:
             avg_internet_speed_start = round(sum(stats['internet_speed_start'] for stats in self.api_stats.values()) / len(self.api_stats), 2)
             avg_internet_speed_end = round(sum(stats['internet_speed_end'] for stats in self.api_stats.values()) / len(self.api_stats), 2)
 
-            all_response_times = []
+            # Собираем только успешные времена ответа
+            all_successful_times = []
             for stats in self.api_stats.values():
-                all_response_times.extend(stats['response_times'])
+                successful_times = [t for i, t in enumerate(stats['response_times']) 
+                                if i < stats['successful_requests']]
+                all_successful_times.extend(successful_times)
 
             summary_data = [{
                 'Параметр': 'Количество API',
@@ -620,13 +630,13 @@ class EnvoyLoadTester:
                 'Значение': round((total_successful / total_requests) * 100, 2) if total_requests > 0 else 0
             }, {
                 'Параметр': 'Среднее время ответа (мс)',
-                'Значение': round(sum(all_response_times) / len(all_response_times), 2) if all_response_times else 0
+                'Значение': round(sum(all_successful_times) / len(all_successful_times), 2) if all_successful_times else 0
             }, {
                 'Параметр': 'Минимальное время ответа (мс)',
-                'Значение': round(min(all_response_times), 2) if all_response_times else 0
+                'Значение': round(min(all_successful_times), 2) if all_successful_times else 0
             }, {
                 'Параметр': 'Максимальное время ответа (мс)',
-                'Значение': round(max(all_response_times), 2) if all_response_times else 0
+                'Значение': round(max(all_successful_times), 2) if all_successful_times else 0
             }, {
                 'Параметр': 'Средняя скорость интернета в начале (КБ/с)',
                 'Значение': avg_internet_speed_start
@@ -655,7 +665,7 @@ class EnvoyLoadTester:
         print("🚀 ЗАПУСК НАГРУЗОЧНОГО ТЕСТА ENVOY")
         print("=" * 50)
         print("📊 Параметры теста:")
-        print("   🔄 Запросов на API: 1000")
+        print(f"   🔄 Запросов на API: {self.requests_per_api}")
         print("   ⚙️ Режим: одновременная нагрузка 3 API по 8 rps каждая")
         print("🔥 НАЧИНАЕМ НАГРУЗОЧНОЕ ТЕСТИРОВАНИЕ...")
 

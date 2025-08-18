@@ -79,9 +79,9 @@ def add_single_referral(reg_ref, user_id, referrer_id):
             connection.close()
 
 def add_multiple_referrals(count=10):
-    fixed_user_id = '3145'
+    fixed_user_id = '134'
     for i in range(count):
-        success = add_single_referral('XYJZ8MXST0MV6G6SI3I47PW8WGIP', fixed_user_id, '3085')
+        success = add_single_referral('Y7YKEB1MGXIGPJQUP5J1EI6MYOE', fixed_user_id, '66937')
         if not success:
             print(f"Ошибка при добавлении записи {i+1}")
             break
@@ -89,6 +89,6 @@ def add_multiple_referrals(count=10):
     print(f"Завершено добавление {count} записей")
 
 if __name__ == "__main__":
-    add_multiple_referrals(100)
+    add_multiple_referrals(20)
 
 
