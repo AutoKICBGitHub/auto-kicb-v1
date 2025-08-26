@@ -17,19 +17,19 @@ from protofile_pb2 import WebAccountsRequest, IncomingWebDirectory
 
 class EnvoyLoadTester:
     def __init__(self):
-        self.server = 'newibanktest.kicb.net:443'
+        self.server = 'remote.kicb.net:443'
         self.options = [('grpc.max_receive_message_length', -1), ('grpc.max_send_message_length', -1)]
-        self.requests_per_api = 500
+        self.requests_per_api = 333
         self.session_data = {
-            'sessionKey': '2ez3dQjhtbhj5gQnraG1x8',
-            'sessionId': '0lbcQlNJsSxT16jNuO84Bl',
+            'sessionKey': '2cDOGN1zB4Ys4cXG0g2xii',
+            'sessionId': '0Ac0BF35veDHYjCgfUwETc',
             'device-type': 'ios',
             'x-real-ip': '93.170.8.20',
             'user-agent': '{"ua": {"device": "iPhone X", "osVersion": "16.7.7"}, "imei": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6", "deviceName": "", "deviceType": "ios", "macAddress": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6"}',
             'user-agent-c': '16.7.7; iPhone X',
             'app-type': 'I',
             'imei': 'A428AB95-421E-4D78-9A86-0D6BDB1E39C6',
-            'userId': '134'
+            'userId': '131906'
         }
         self.results = []  # Детальные результаты по каждому запросу
         self.api_stats = {}  # Статистика по каждой API
