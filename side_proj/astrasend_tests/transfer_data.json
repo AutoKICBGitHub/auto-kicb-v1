@@ -1,0 +1,24 @@
+{
+    "customer_no": "00203088",
+    "selected_account_index": 0,
+    "available_accounts": [
+        {
+            "account_id": 15097,
+            "ccy": "RUB",
+            "balance": 484095.53
+        },
+        {
+            "account_id": 15127,
+            "ccy": "KGS",
+            "balance": 275346.68
+        }
+    ],
+    "data": {
+        "sessionKey": "4KSUmlvLIpyzS91tBC6y40",
+        "creditCcy": "RUB",
+        "accountIdDebit": 15097,
+        "recipientFirstName": "Lu",
+        "recipientLastName": "Dzhang",
+        "propValue": "Иван Иванов"
+    }
+}

@@ -22,8 +22,8 @@ class EnvoyLoadTester:
         self.server = 'newibanktest.kicb.net:443'
         self.options = [('grpc.max_receive_message_length', -1), ('grpc.max_send_message_length', -1)]
         self.session_data = {
-            'sessionKey': '1o8zZx5QBmvWDPizh0cp5W',
-            'sessionId': '3f8ZhzbT9jLYvPjrYs6LLq',
+            'sessionKey': '2WKBy44xQhnniolWWM5a0L',
+            'sessionId': '2abZ2gdfjPEVZgTyH0OXt7',
             'device-type': 'ios',
             'x-real-ip': '93.170.8.20',
             'user-agent': '{"ua": {"device": "iPhone X", "osVersion": "16.7.7"}, "imei": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6", "deviceName": "", "deviceType": "ios", "macAddress": "A428AB95-421E-4D78-9A86-0D6BDB1E39C6"}',
@@ -514,7 +514,7 @@ class EnvoyLoadTester:
         
         start_time = time.time()
         
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        with ThreadPoolExecutor(max_workers=15) as executor:
             futures = [executor.submit(self.worker_thread, thread_id) for thread_id in range(1, 6)]
             for future in futures:
                 future.result()

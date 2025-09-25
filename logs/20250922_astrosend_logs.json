@@ -1,0 +1,371 @@
+[
+    {
+        "timestamp": "2025-09-22T15:31:20.109454",
+        "operation_id": "e44a545c-9796-11f0-b0ee-5c628b9f129b",
+        "status": "error",
+        "request": {},
+        "response": {
+            "error": "request"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:32:05.805815",
+        "operation_id": "3be9aa7c-348f-4456-b6e6-982bc9b25605",
+        "status": "error",
+        "request": {},
+        "response": {
+            "error": "status"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:32:31.792594",
+        "operation_id": "0f43cda2-9797-11f0-8bc5-5c628b9f129b",
+        "status": "error",
+        "request": {},
+        "response": {
+            "error": "request"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:32:39.006847",
+        "operation_id": "1393efc0-9797-11f0-bafe-5c628b9f129b",
+        "status": "error",
+        "request": {},
+        "response": {
+            "error": "name 'payment_data' is not defined"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:32:47.890863",
+        "operation_id": "18f96041-9797-11f0-ae04-5c628b9f129b",
+        "status": "error",
+        "request": {},
+        "response": {
+            "error": "name 'payment_data' is not defined"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:33:05.985416",
+        "operation_id": "23ad9ac9-9797-11f0-9ece-5c628b9f129b",
+        "status": "error",
+        "request": {},
+        "response": {
+            "error": "name 'payment_data' is not defined"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:33:26.249682",
+        "operation_id": "2fae8e22-9797-11f0-8d97-5c628b9f129b",
+        "status": "create",
+        "request": {},
+        "response": {
+            "operationId": "2fae8e22-9797-11f0-8d97-5c628b9f129b",
+            "operationData": {
+                "txnAccount": 15097,
+                "debitAccountCcy": "RUB",
+                "recipientFirstName": "LU",
+                "recipientLastName": "DZHANG",
+                "recipientCountryCode": "KAZ",
+                "recipientCountryName": {
+                    "ru": "КАЗАХСТАН",
+                    "kg": "КАЗАХСТАН",
+                    "default": "КАЗАХСТАН",
+                    "eng": "KAZAKHSTAN"
+                },
+                "txnCcy": "RUB",
+                "txnAmount": "500",
+                "commission": "100",
+                "commissionLcy": "",
+                "exchangeRate": "",
+                "exchangeRateCcy": "",
+                "txnAmountTotal": "600",
+                "txnAmountTotalLcy": ""
+            },
+            "needsOtp": true
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:33:28.924518",
+        "operation_id": "2fae8e22-9797-11f0-8d97-5c628b9f129b",
+        "status": "confirm",
+        "request": {
+            "operationId": "2fae8e22-9797-11f0-8d97-5c628b9f129b",
+            "otp": "111111"
+        },
+        "response": {
+            "txnId": 3797932,
+            "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+            "connector": "ASTRASEND_OUT"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:33:46.533899",
+        "operation_id": "3bb29045-9797-11f0-864a-5c628b9f129b",
+        "status": "create",
+        "request": {},
+        "response": {
+            "operationId": "3bb29045-9797-11f0-864a-5c628b9f129b",
+            "operationData": {
+                "txnAccount": 15097,
+                "debitAccountCcy": "RUB",
+                "recipientFirstName": "LU",
+                "recipientLastName": "DZHANG",
+                "recipientCountryCode": "KAZ",
+                "recipientCountryName": {
+                    "ru": "КАЗАХСТАН",
+                    "kg": "КАЗАХСТАН",
+                    "default": "КАЗАХСТАН",
+                    "eng": "KAZAKHSTAN"
+                },
+                "txnCcy": "RUB",
+                "txnAmount": "500",
+                "commission": "100",
+                "commissionLcy": "",
+                "exchangeRate": "",
+                "exchangeRateCcy": "",
+                "txnAmountTotal": "600",
+                "txnAmountTotalLcy": ""
+            },
+            "needsOtp": true
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:33:49.179071",
+        "operation_id": "3bb29045-9797-11f0-864a-5c628b9f129b",
+        "status": "confirm",
+        "request": {
+            "operationId": "3bb29045-9797-11f0-864a-5c628b9f129b",
+            "otp": "111111"
+        },
+        "response": {
+            "txnId": 3797933,
+            "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+            "connector": "ASTRASEND_OUT"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:35:20.525551",
+        "operation_id": "73953b2c-9797-11f0-892b-5c628b9f129b",
+        "status": "create",
+        "request": {},
+        "response": {
+            "operationId": "73953b2c-9797-11f0-892b-5c628b9f129b",
+            "operationData": {
+                "txnAccount": 15097,
+                "debitAccountCcy": "RUB",
+                "recipientFirstName": "LU",
+                "recipientLastName": "DZHANG",
+                "recipientCountryCode": "KAZ",
+                "recipientCountryName": {
+                    "ru": "КАЗАХСТАН",
+                    "kg": "КАЗАХСТАН",
+                    "default": "КАЗАХСТАН",
+                    "eng": "KAZAKHSTAN"
+                },
+                "txnCcy": "RUB",
+                "txnAmount": "500",
+                "commission": "100",
+                "commissionLcy": "",
+                "exchangeRate": "",
+                "exchangeRateCcy": "",
+                "txnAmountTotal": "600",
+                "txnAmountTotalLcy": ""
+            },
+            "needsOtp": true
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:35:23.184142",
+        "operation_id": "73953b2c-9797-11f0-892b-5c628b9f129b",
+        "status": "confirm",
+        "request": {
+            "operationId": "73953b2c-9797-11f0-892b-5c628b9f129b",
+            "otp": "111111"
+        },
+        "response": {
+            "txnId": 3797935,
+            "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+            "connector": "ASTRASEND_OUT"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:37:43.902549",
+        "operation_id": "c8edad48-9797-11f0-babc-5c628b9f129b",
+        "status": "create",
+        "request": {},
+        "response": {
+            "operationId": "c8edad48-9797-11f0-babc-5c628b9f129b",
+            "operationData": {
+                "txnAccount": 15097,
+                "debitAccountCcy": "RUB",
+                "recipientFirstName": "LU",
+                "recipientLastName": "DZHANG",
+                "recipientCountryCode": "KAZ",
+                "recipientCountryName": {
+                    "ru": "КАЗАХСТАН",
+                    "kg": "КАЗАХСТАН",
+                    "default": "КАЗАХСТАН",
+                    "eng": "KAZAKHSTAN"
+                },
+                "txnCcy": "RUB",
+                "txnAmount": "500",
+                "commission": "100",
+                "commissionLcy": "",
+                "exchangeRate": "",
+                "exchangeRateCcy": "",
+                "txnAmountTotal": "600",
+                "txnAmountTotalLcy": ""
+            },
+            "needsOtp": true
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:37:46.517408",
+        "operation_id": "c8edad48-9797-11f0-babc-5c628b9f129b",
+        "status": "confirm",
+        "request": {
+            "operationId": "c8edad48-9797-11f0-babc-5c628b9f129b",
+            "otp": "111111"
+        },
+        "response": {
+            "txnId": 3797938,
+            "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+            "connector": "ASTRASEND_OUT"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:39:24.650002",
+        "operation_id": "0548766f-9798-11f0-930b-5c628b9f129b",
+        "status": "create",
+        "request": {},
+        "response": {
+            "operationId": "0548766f-9798-11f0-930b-5c628b9f129b",
+            "operationData": {
+                "txnAccount": 15097,
+                "debitAccountCcy": "RUB",
+                "recipientFirstName": "LU",
+                "recipientLastName": "DZHANG",
+                "recipientCountryCode": "KAZ",
+                "recipientCountryName": {
+                    "ru": "КАЗАХСТАН",
+                    "kg": "КАЗАХСТАН",
+                    "default": "КАЗАХСТАН",
+                    "eng": "KAZAKHSTAN"
+                },
+                "txnCcy": "RUB",
+                "txnAmount": "500",
+                "commission": "100",
+                "commissionLcy": "",
+                "exchangeRate": "",
+                "exchangeRateCcy": "",
+                "txnAmountTotal": "600",
+                "txnAmountTotalLcy": ""
+            },
+            "needsOtp": true
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:39:27.247804",
+        "operation_id": "0548766f-9798-11f0-930b-5c628b9f129b",
+        "status": "confirm",
+        "request": {
+            "operationId": "0548766f-9798-11f0-930b-5c628b9f129b",
+            "otp": "111111"
+        },
+        "response": {
+            "txnId": 3797939,
+            "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+            "connector": "ASTRASEND_OUT"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:40:15.603785",
+        "operation_id": "23c2744e-9798-11f0-bd9a-5c628b9f129b",
+        "status": "create",
+        "request": {},
+        "response": {
+            "operationId": "23c2744e-9798-11f0-bd9a-5c628b9f129b",
+            "operationData": {
+                "txnAccount": 15097,
+                "debitAccountCcy": "RUB",
+                "recipientFirstName": "LU",
+                "recipientLastName": "DZHANG",
+                "recipientCountryCode": "KAZ",
+                "recipientCountryName": {
+                    "ru": "КАЗАХСТАН",
+                    "kg": "КАЗАХСТАН",
+                    "default": "КАЗАХСТАН",
+                    "eng": "KAZAKHSTAN"
+                },
+                "txnCcy": "RUB",
+                "txnAmount": "500",
+                "commission": "100",
+                "commissionLcy": "",
+                "exchangeRate": "",
+                "exchangeRateCcy": "",
+                "txnAmountTotal": "600",
+                "txnAmountTotalLcy": ""
+            },
+            "needsOtp": true
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:40:18.198000",
+        "operation_id": "23c2744e-9798-11f0-bd9a-5c628b9f129b",
+        "status": "confirm",
+        "request": {
+            "operationId": "23c2744e-9798-11f0-bd9a-5c628b9f129b",
+            "otp": "111111"
+        },
+        "response": {
+            "txnId": 3797941,
+            "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+            "connector": "ASTRASEND_OUT"
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:40:45.063854",
+        "operation_id": "354209e0-9798-11f0-960f-5c628b9f129b",
+        "status": "create",
+        "request": {},
+        "response": {
+            "operationId": "354209e0-9798-11f0-960f-5c628b9f129b",
+            "operationData": {
+                "txnAccount": 15097,
+                "debitAccountCcy": "RUB",
+                "recipientFirstName": "LU",
+                "recipientLastName": "DZHANG",
+                "recipientCountryCode": "KAZ",
+                "recipientCountryName": {
+                    "ru": "КАЗАХСТАН",
+                    "kg": "КАЗАХСТАН",
+                    "default": "КАЗАХСТАН",
+                    "eng": "KAZAKHSTAN"
+                },
+                "txnCcy": "RUB",
+                "txnAmount": "500",
+                "commission": "100",
+                "commissionLcy": "",
+                "exchangeRate": "",
+                "exchangeRateCcy": "",
+                "txnAmountTotal": "600",
+                "txnAmountTotalLcy": ""
+            },
+            "needsOtp": true
+        }
+    },
+    {
+        "timestamp": "2025-09-22T15:40:47.660286",
+        "operation_id": "354209e0-9798-11f0-960f-5c628b9f129b",
+        "status": "confirm",
+        "request": {
+            "operationId": "354209e0-9798-11f0-960f-5c628b9f129b",
+            "otp": "111111"
+        },
+        "response": {
+            "txnId": 3797942,
+            "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+            "connector": "ASTRASEND_OUT"
+        }
+    }
+]

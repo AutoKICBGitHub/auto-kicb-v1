@@ -1,0 +1,118 @@
+
+================================================================================
+Время: 2025-09-22 15:37:43
+Operation ID: c8edad48-9797-11f0-babc-5c628b9f129b
+Статус: create
+
+Запрос:
+----------------------------------------
+{}
+
+Ответ:
+----------------------------------------
+{
+  "operationId": "c8edad48-9797-11f0-babc-5c628b9f129b",
+  "operationData": {
+    "txnAccount": 15097,
+    "debitAccountCcy": "RUB",
+    "recipientFirstName": "LU",
+    "recipientLastName": "DZHANG",
+    "recipientCountryCode": "KAZ",
+    "recipientCountryName": {
+      "ru": "КАЗАХСТАН",
+      "kg": "КАЗАХСТАН",
+      "default": "КАЗАХСТАН",
+      "eng": "KAZAKHSTAN"
+    },
+    "txnCcy": "RUB",
+    "txnAmount": "500",
+    "commission": "100",
+    "commissionLcy": "",
+    "exchangeRate": "",
+    "exchangeRateCcy": "",
+    "txnAmountTotal": "600",
+    "txnAmountTotalLcy": ""
+  },
+  "needsOtp": true
+}
+
+
+================================================================================
+Время: 2025-09-22 15:37:46
+Operation ID: c8edad48-9797-11f0-babc-5c628b9f129b
+Статус: confirm
+
+Запрос:
+----------------------------------------
+{
+  "operationId": "c8edad48-9797-11f0-babc-5c628b9f129b",
+  "otp": "111111"
+}
+
+Ответ:
+----------------------------------------
+{
+  "txnId": 3797938,
+  "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+  "connector": "ASTRASEND_OUT"
+}
+
+
+================================================================================
+Время: 2025-09-22 15:39:24
+Operation ID: 0548766f-9798-11f0-930b-5c628b9f129b
+Статус: create
+
+Запрос:
+----------------------------------------
+{}
+
+Ответ:
+----------------------------------------
+{
+  "operationId": "0548766f-9798-11f0-930b-5c628b9f129b",
+  "operationData": {
+    "txnAccount": 15097,
+    "debitAccountCcy": "RUB",
+    "recipientFirstName": "LU",
+    "recipientLastName": "DZHANG",
+    "recipientCountryCode": "KAZ",
+    "recipientCountryName": {
+      "ru": "КАЗАХСТАН",
+      "kg": "КАЗАХСТАН",
+      "default": "КАЗАХСТАН",
+      "eng": "KAZAKHSTAN"
+    },
+    "txnCcy": "RUB",
+    "txnAmount": "500",
+    "commission": "100",
+    "commissionLcy": "",
+    "exchangeRate": "",
+    "exchangeRateCcy": "",
+    "txnAmountTotal": "600",
+    "txnAmountTotalLcy": ""
+  },
+  "needsOtp": true
+}
+
+
+================================================================================
+Время: 2025-09-22 15:39:27
+Operation ID: 0548766f-9798-11f0-930b-5c628b9f129b
+Статус: confirm
+
+Запрос:
+----------------------------------------
+{
+  "operationId": "0548766f-9798-11f0-930b-5c628b9f129b",
+  "otp": "111111"
+}
+
+Ответ:
+----------------------------------------
+{
+  "txnId": 3797939,
+  "txnCode": "CURRENT_MONEY_TRANSFER_EXCN",
+  "connector": "ASTRASEND_OUT"
+}
+

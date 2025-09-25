@@ -66,7 +66,7 @@ def run_automation():
         page = context.new_page()
         
         # ID клиента, данные которого будут изменены
-        customer_id = "00849217"
+        customer_id = "00852507"
 
         # Скрытие признаков автоматизации от системы
         page.evaluate("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
