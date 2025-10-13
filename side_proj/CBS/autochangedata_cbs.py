@@ -66,7 +66,7 @@ def run_automation():
         page = context.new_page()
         
         # ID клиента, данные которого будут изменены
-        customer_id = "00852507"
+        customer_id = "00852876"
 
         # Скрытие признаков автоматизации от системы
         page.evaluate("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
@@ -446,7 +446,7 @@ def run_automation():
             
             # Шаг 50: Ввод пароля второго пользователя
             password_field = page.locator("//input [@id='user_pwd']")
-            password_field.fill("Password25+")
+            password_field.fill(" ")
             print("Шаг 50: Введен пароль второго пользователя")
 
             # Шаг 51: Подтверждение входа второго пользователя
