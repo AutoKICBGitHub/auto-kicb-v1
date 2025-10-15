@@ -39,7 +39,7 @@ def create_umai_payment():
     payment_data = {
         "operationId": str(uuid.uuid1()),
         "propValue": "996500776606",
-        "accountIdDebit": 10954,  # ID счета списания
+        "accountIdDebit": 17420,  # ID счета списания
         "amountCredit": "100",  # Сумма платежа
         "serviceId": "AIYL_BANK_PHONE_NUMBER",  # ID сервиса UMAI
         "serviceProviderId": 851
